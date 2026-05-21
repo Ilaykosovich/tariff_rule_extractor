@@ -220,4 +220,30 @@ The current generation loop gives the agent two code attempts per tariff. In pra
 
 The graph also has two processing rounds. The first round uses Anthropic for the initial reasoning and code generation path. If more retrieval or repair is needed, the next round switches to Gemini. This gives the pipeline a second model perspective when the first pass does not produce an accepted calculator.
 
+### Date and Working-Time Enrichment
+
+Tariff rules often depend on the exact moment when an operation happens, not only on vessel size or cargo quantity. During `EnrichInputData`, raw ISO timestamps from the vessel input are expanded into operational calendar fields.
+
+For example, this input timestamp:
+
+```json
+{"arrival_time": "2024-11-15T10:12:00"}
+```
+
+is enriched into fields like:
+
+```json
+{
+  "date": "2024-11-15",
+  "time": "10:12:00",
+  "weekday": "Friday",
+  "is_weekend": false,
+  "is_working_day": true,
+  "is_working_time": true,
+  "is_non_working_time": false
+}
+```
+
+This matters because many port tariffs apply different rates for working hours, after-hours operations, weekends, holidays, night periods, arrival/departure windows, and time alongside.
+
 Many port tariffs depend not only on vessel dimensions or cargo volume, but also on when vessel operations happen. For that reason, the pipeline must extract and preserve date and time fields such as arrival time, departure time, time alongside, operation duration, day/night periods, weekends, holidays, and tariff validity windows whenever the source tariff makes them relevant.
