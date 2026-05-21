@@ -16,24 +16,6 @@
     }
   },
   {
-    "code_path": "successful_tariff_calculator_72553f727700e9d_Port_Dues.py",
-    "rules_hash": "72553f727700e9d2680825cf26f6ea02c8b05def18b3dcf8e02739a8aefadd55",
-    "document_hash": "31471bc01ffe8611c652cb2cc134f8aefcef218bd070541c4d1fef9e5052c3f8",
-    "document_name": "Port Tariff.pdf",
-    "pdf_file": "pdf_data/Port Tariff.pdf",
-    "target_tariffs": [
-      "Port Dues"
-    ],
-    "evidence_pages": {
-      "Port Dues": [
-        21,
-        22,
-        24,
-        25
-      ]
-    }
-  },
-  {
     "code_path": "successful_tariff_calculator_b35b9bfcdc8d1b0_VTS_Dues.py",
     "rules_hash": "b35b9bfcdc8d1b0ef2d85b33ff80591fb5df105047045e2214addcdce939a4b7",
     "document_hash": "31471bc01ffe8611c652cb2cc134f8aefcef218bd070541c4d1fef9e5052c3f8",
@@ -105,6 +87,33 @@
     "submit_feedback": {
       "execution": "ok",
       "evaluation": "{\"ok\": true, \"results\": {\"Running Lines\": {\"ok\": true, \"key\": \"Running Lines\", \"result\": \"outside_20_percent\"}}, \"errors\": {}}"
+    }
+  },
+  {
+    "code_path": "successful_tariff_calculator_72553f727700e9d_Port_Dues.py",
+    "rules_hash": "72553f727700e9d2680825cf26f6ea02c8b05def18b3dcf8e02739a8aefadd55",
+    "document_hash": "31471bc01ffe8611c652cb2cc134f8aefcef218bd070541c4d1fef9e5052c3f8",
+    "document_name": "Port Tariff.pdf",
+    "pdf_file": "pdf_data/Port Tariff.pdf",
+    "target_tariffs": [
+      "Port Dues"
+    ],
+    "evidence_pages": {
+      "Port Dues": [
+        21,
+        22,
+        24,
+        25
+      ]
+    },
+    "status": "success",
+    "accepted": true,
+    "results": {
+      "Port Dues": 199371.3453
+    },
+    "submit_feedback": {
+      "execution": "ok",
+      "evaluation": "{\"ok\": true, \"results\": {\"Port Dues\": {\"ok\": true, \"key\": \"Port Dues\", \"result\": \"within_1_percent\"}}, \"errors\": {}}"
     }
   }
 ]

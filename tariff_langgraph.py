@@ -1061,7 +1061,6 @@ Hard requirements:
 - Define calculate(vessel_data: dict) -> dict[str, float].
 - The result keys must exactly match: {state["target_tariffs"]}.
 - Use only the standard library.
-- Implement the formulas/rates from calculation_rules.
 - If a needed parameter is missing, use a clearly named fallback only when the rules justify it.
 - Do not infer rates from expected answers, previous calculated outputs, percent differences, or evaluation feedback.
 - Do not hardcode final tariff answers.
