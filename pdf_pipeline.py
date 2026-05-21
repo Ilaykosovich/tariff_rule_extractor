@@ -1,0 +1,393 @@
+import os
+import hashlib
+import json
+import re
+import fitz  # PyMuPDF
+from google import genai
+from google.genai import types
+from dotenv import load_dotenv
+
+# --- КОНФИГУРАЦИЯ ---
+MODEL_ID = "gemini-2.5-flash" 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CACHE_DIR = os.path.join(BASE_DIR, "processed_files")
+CHUNK_SIZE = 15
+CACHE_VERSION = "two_page_spread_v1"
+SUMMARY_CACHE_VERSION = "page_summary_v1"
+
+SUMMARY_SYSTEM_PROMPT = """You are preparing page-level summaries of a tariff PDF for a later calculation agent.
+
+You will receive two consecutive pages:
+- previous page
+- target page
+
+Your task is to summarize ONLY the target page.
+
+Use the previous page only to understand context, headings, table continuation, units, and references.
+
+Do not solve any final task.
+Do not calculate final tariff values.
+Do not decide which tariff items are relevant to a later problem.
+
+For the target page, produce a concise but calculation-aware summary.
+
+Include:
+
+1. Page number
+2. Main topic / section heading of the target page
+3. What happens on this page in plain English
+4. Whether the page contains:
+   - formulas
+   - tariff rates
+   - tables
+   - definitions
+   - examples
+   - footnotes or exceptions
+5. If there is a formula:
+   - explain what it calculates
+   - list the input parameters it uses
+   - preserve the formula as written if possible
+   - preserve units and rounding rules
+6. If there is a table:
+   - explain what the table lists
+   - list the table columns
+   - describe what each row category represents
+   - preserve important rates, thresholds, units, minimums, and maximums
+7. Mention all calculation-relevant numeric values exactly as written.
+8. Mention all vessel/cargo/time parameters used on the page, such as:
+   - GT / gross tonnage
+   - NT / net tonnage
+   - DWT / deadweight
+   - LOA / length overall
+   - draft / draught
+   - cargo tonnes
+   - days
+   - hours
+   - movements
+   - arrivals/departures
+   - vessel type
+   - cargo type
+9. Say whether understanding the target page requires reading the previous page.
+10. If yes, explain exactly why:
+   - table header is on previous page
+   - section heading is on previous page
+   - formula starts on previous page
+   - units/rates are defined on previous page
+   - footnote or condition refers back
+   - page is a continuation of a table/list
+11. Say whether the next page is likely needed.
+12. List search keywords that would help find this page later.
+
+Output format:
+
+{
+  "page_number": "...",
+  "section_heading": "...",
+  "plain_summary": "...",
+  "contains_formula": true/false,
+  "contains_tariff_rates": true/false,
+  "contains_table": true/false,
+  "contains_definitions": true/false,
+  "contains_footnotes_or_exceptions": true/false,
+  "formulas": [
+    {
+      "formula_as_written": "...",
+      "what_it_calculates": "...",
+      "parameters_used": [],
+      "units": "...",
+      "rounding_or_conditions": "..."
+    }
+  ],
+  "tables": [
+    {
+      "what_table_lists": "...",
+      "columns": [],
+      "row_categories": [],
+      "important_values": []
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "...",
+      "unit": "...",
+      "context": "..."
+    }
+  ],
+  "parameters_mentioned": [],
+  "requires_previous_page": true/false,
+  "previous_page_dependency_reason": "...",
+  "next_page_likely_needed": true/false,
+  "next_page_reason": "...",
+  "search_keywords": [],
+  "ambiguities_or_risks": []
+}
+
+Return only valid JSON. Do not wrap it in Markdown."""
+
+load_dotenv()
+client = genai.Client(
+    api_key=os.getenv("Gemini_API_KEY") or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+)
+
+def get_response_text(response):
+    content = response.text
+    if content:
+        return content
+
+    candidates = getattr(response, "candidates", None) or []
+    details = []
+    for candidate in candidates:
+        finish_reason = getattr(candidate, "finish_reason", None)
+        if finish_reason:
+            details.append(f"finish_reason={finish_reason}")
+
+        safety_ratings = getattr(candidate, "safety_ratings", None)
+        if safety_ratings:
+            details.append(f"safety_ratings={safety_ratings}")
+
+    detail_text = "; ".join(details) if details else "empty response"
+    raise RuntimeError(f"Gemini did not return text for this chunk: {detail_text}")
+
+def get_pdf_chunk_content_hash(doc, start, end):
+    """Генерирует хеш для фрагмента страниц."""
+    chunk_doc = fitz.open()
+    chunk_doc.insert_pdf(doc, from_page=start, to_page=end)
+    # Используем метод сжатия при записи в байты для консистентности хеша
+    chunk_bytes = chunk_doc.write(clean=True, deflate=True)
+    chunk_doc.close()
+    return hashlib.sha256(chunk_bytes).hexdigest()
+
+def get_file_hash(pdf_path):
+    with open(pdf_path, "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()
+
+def get_chunk_hash(file_hash, start, end):
+    cache_key = f"{file_hash}:{start}:{end}:{MODEL_ID}:{CACHE_VERSION}"
+    return hashlib.sha256(cache_key.encode("utf-8")).hexdigest()
+
+def get_pages_hash(pages):
+    normalized = json.dumps(
+        {str(page_number): pages[page_number] for page_number in sorted(pages)},
+        ensure_ascii=False,
+        sort_keys=True,
+    )
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+
+def get_summary_hash(pdf_path, pages):
+    file_hash = get_file_hash(pdf_path)
+    pages_hash = get_pages_hash(pages)
+    cache_key = f"{file_hash}:{pages_hash}:{MODEL_ID}:{SUMMARY_CACHE_VERSION}:{SUMMARY_SYSTEM_PROMPT}"
+    return hashlib.sha256(cache_key.encode("utf-8")).hexdigest()
+
+def build_ocr_prompt(start, end):
+    first_page = start + 1
+    last_page = end + 1
+    first_logical_page = start * 2 + 1
+    last_logical_page = (end + 1) * 2
+    return (
+        "Extract all text and tables as Markdown. No summaries.\n"
+        f"The uploaded PDF chunk contains physical PDF pages {first_page}-{last_page}.\n"
+        "Each physical PDF page is a two-page spread: it contains two logical document pages side by side.\n"
+        "For every physical PDF page, split the content into the left logical page and the right logical page.\n"
+        "Read each side independently, preserving text and tables as Markdown.\n"
+        "Do not merge the left and right sides.\n"
+        f"Output logical document pages {first_logical_page}-{last_logical_page} in reading order.\n"
+        f"For physical PDF page {first_page}, the left side is logical page {first_logical_page} "
+        f"and the right side is logical page {first_logical_page + 1}. Continue this pattern for each physical page.\n"
+        "Before each page, write a marker line exactly like this:\n"
+        "--- PAGE N ---\n"
+        "Replace N with the logical 1-based document page number. "
+        "Include a marker for every logical page, even if the page has no text."
+    )
+
+def get_logical_page_range(start, end):
+    return start * 2 + 1, (end + 1) * 2
+
+def split_chunk_by_pages(content, start, end):
+    first_logical_page, last_logical_page = get_logical_page_range(start, end)
+    marker_pattern = re.compile(r"(?m)^--- PAGE (\d+) ---\s*$")
+    matches = list(marker_pattern.finditer(content))
+
+    if not matches:
+        return [(first_logical_page, content.strip())]
+
+    pages = {}
+    for index, match in enumerate(matches):
+        page_number = int(match.group(1))
+        page_start = match.end()
+        page_end = matches[index + 1].start() if index + 1 < len(matches) else len(content)
+        pages[page_number] = content[page_start:page_end].strip()
+
+    return [(page_number, pages.get(page_number, "")) for page_number in range(first_logical_page, last_logical_page + 1)]
+
+def extract_json_object(text):
+    text = text.strip()
+    if text.startswith("```"):
+        text = re.sub(r"^```(?:json)?\s*", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*```$", "", text)
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        start = text.find("{")
+        end = text.rfind("}")
+        if start == -1 or end == -1 or end <= start:
+            raise
+        return json.loads(text[start:end + 1])
+
+def build_summary_prompt(previous_page_number, previous_page_content, target_page_number, target_page_content):
+    return (
+        f"{SUMMARY_SYSTEM_PROMPT}\n\n"
+        f"PREVIOUS PAGE NUMBER: {previous_page_number}\n"
+        "PREVIOUS PAGE OCR MARKDOWN:\n"
+        f"{previous_page_content or '[empty page]'}\n\n"
+        f"TARGET PAGE NUMBER: {target_page_number}\n"
+        "TARGET PAGE OCR MARKDOWN:\n"
+        f"{target_page_content or '[empty page]'}"
+    )
+
+def summarize_page_pair(previous_page_number, previous_page_content, target_page_number, target_page_content):
+    response = client.models.generate_content(
+        model=MODEL_ID,
+        contents=[
+            build_summary_prompt(
+                previous_page_number,
+                previous_page_content,
+                target_page_number,
+                target_page_content,
+            )
+        ],
+        config=types.GenerateContentConfig(
+            response_mime_type="application/json",
+            temperature=0,
+        ),
+    )
+    summary = extract_json_object(get_response_text(response))
+    summary["page_number"] = str(summary.get("page_number") or target_page_number)
+    return summary
+
+def summarize_pages(pdf_path, pages):
+    if not os.path.exists(CACHE_DIR):
+        os.makedirs(CACHE_DIR)
+
+    h = get_summary_hash(pdf_path, pages)
+    cache_path = os.path.join(CACHE_DIR, f"{h}.summaries.json")
+    page_cache_dir = os.path.join(CACHE_DIR, f"{h}.summaries")
+
+    page_numbers = sorted(pages)
+    if os.path.exists(cache_path):
+        with open(cache_path, "r", encoding="utf-8") as f:
+            cached_result = json.load(f)
+        if len(cached_result.get("summaries", [])) == len(page_numbers):
+            print(f"[summaries] Загружено из кэша (hash: {h[:8]}...)")
+            return cached_result
+        print(f"[summaries] Найден частичный кэш, продолжаю (hash: {h[:8]}...)")
+
+    if not os.path.exists(page_cache_dir):
+        os.makedirs(page_cache_dir)
+
+    print(f"[summaries] Обработка страниц через Gemini API (hash: {h[:8]}...)")
+    summaries = []
+    result = {
+        "pdf_path": pdf_path,
+        "pdf_hash": get_file_hash(pdf_path),
+        "pages_hash": get_pages_hash(pages),
+        "model": MODEL_ID,
+        "cache_version": SUMMARY_CACHE_VERSION,
+        "cache_path": cache_path,
+        "page_cache_dir": page_cache_dir,
+        "summaries": summaries,
+    }
+
+    for target_page_number in page_numbers:
+        previous_page_number = target_page_number - 1
+        previous_page_content = pages.get(previous_page_number, "")
+        if target_page_number == page_numbers[0]:
+            previous_page_number = -1
+            previous_page_content = ""
+
+        page_cache_path = os.path.join(page_cache_dir, f"page_{target_page_number}.json")
+        if os.path.exists(page_cache_path):
+            print(f"[summaries] Страница {target_page_number}: загружено из page-кэша")
+            with open(page_cache_path, "r", encoding="utf-8") as f:
+                summary = json.load(f)
+        else:
+            print(f"[summaries] Страница {target_page_number}: previous={previous_page_number}")
+            summary = summarize_page_pair(
+                previous_page_number,
+                previous_page_content,
+                target_page_number,
+                pages.get(target_page_number, ""),
+            )
+            with open(page_cache_path, "w", encoding="utf-8") as f:
+                json.dump(summary, f, ensure_ascii=False, indent=2)
+
+        summaries.append(summary)
+
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+
+    print(f"[summaries] Сохранено: {cache_path}")
+    return result
+
+def run_ocr_pipeline(pdf_path):
+    if not os.path.exists(CACHE_DIR):
+        os.makedirs(CACHE_DIR)
+
+    file_hash = get_file_hash(pdf_path)
+    doc = fitz.open(pdf_path)
+    total_pages = len(doc)
+    print(f"--- Запуск pdf-pipeline для: {pdf_path} ({total_pages} стр.) ---")
+
+    final_output = {}
+
+    for i in range(0, total_pages, CHUNK_SIZE):
+        start = i
+        end = min(i + CHUNK_SIZE - 1, total_pages - 1)
+        
+        # Считаем хеш
+        h = get_chunk_hash(file_hash, start, end)
+        cache_path = os.path.join(CACHE_DIR, f"{h}.txt")
+
+        if os.path.exists(cache_path):
+            print(f"[{i+1}-{end+1}] Загружено из кэша (hash: {h[:8]}...)")
+            with open(cache_path, "r", encoding="utf-8") as f:
+                content = f.read()
+        else:
+            print(f"[{i+1}-{end+1}] Обработка через Gemini API...")
+            
+            # Создаем временный файл для отправки в API
+            tmp_path = f"tmp_{h}.pdf"
+            tmp_doc = fitz.open()
+            tmp_doc.insert_pdf(doc, from_page=start, to_page=end)
+            tmp_doc.save(tmp_path)
+            tmp_doc.close()
+
+            uploaded = None
+            try:
+                # Загрузка и генерация
+                uploaded = client.files.upload(file=tmp_path)
+                response = client.models.generate_content(
+                    model=MODEL_ID,
+                    contents=[uploaded, build_ocr_prompt(start, end)]
+                )
+                content = get_response_text(response)
+                
+                # Сохраняем в кэш
+                with open(cache_path, "w", encoding="utf-8") as f:
+                    f.write(content)
+                
+                # Удаляем временные файлы
+            finally:
+                if uploaded is not None:
+                    client.files.delete(name=uploaded.name)
+                if os.path.exists(tmp_path):
+                    os.remove(tmp_path)
+
+        for page_number, page_content in split_chunk_by_pages(content, start, end):
+            final_output[page_number] = page_content
+
+    doc.close()
+    print("--- Обработка завершена успешно ---")
+    return final_output
+
