@@ -1,4 +1,6 @@
-# Tariff Calculator Inference API
+# tariff_rule_extractor — Tariff Calculator Inference API
+
+Repository: `tariff_rule_extractor`
 
 This project generates and serves tariff calculation rules for port tariff PDFs. The current checked-in inference setup uses rules generated from `pdf_data/Port Tariff.pdf` and exposes them through a FastAPI service.
 
