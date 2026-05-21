@@ -1,0 +1,145 @@
+{
+  "page_number": "29",
+  "section_heading": "4.3.4 FIRE EQUIPMENT MAINTENANCE",
+  "plain_summary": "This page lists various tariffs for services related to fire equipment maintenance. It includes charges for labour, servicing, pressure testing, and recharging different types and capacities of fire extinguishers (CO2, powder, water, foam) and mobile fire units, as well as fire hose reels.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": false,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "344.43",
+      "unit": "ZAR",
+      "context": "Labour cost per hour"
+    },
+    {
+      "value": "173.68",
+      "unit": "ZAR",
+      "context": "Service of CO2 fire extinguisher"
+    },
+    {
+      "value": "376.80",
+      "unit": "ZAR",
+      "context": "Pressure test and recharge of CO2 fire extinguisher"
+    },
+    {
+      "value": "376.80",
+      "unit": "ZAR",
+      "context": "Recharge of CO2 fire extinguisher"
+    },
+    {
+      "value": "173.68",
+      "unit": "ZAR",
+      "context": "Service of 9 kg powder fire extinguisher"
+    },
+    {
+      "value": "406.28",
+      "unit": "ZAR",
+      "context": "Pressure test and recharge of 9 kg powder fire extinguisher"
+    },
+    {
+      "value": "376.80",
+      "unit": "ZAR",
+      "context": "Recharge of 9 kg powder fire extinguisher"
+    },
+    {
+      "value": "173.68",
+      "unit": "ZAR",
+      "context": "Service of 9 Lt water fire extinguisher"
+    },
+    {
+      "value": "203.11",
+      "unit": "ZAR",
+      "context": "Pressure test and recharge of 9 Lt water fire extinguisher"
+    },
+    {
+      "value": "173.68",
+      "unit": "ZAR",
+      "context": "Recharge of 9 Lt water fire extinguisher"
+    },
+    {
+      "value": "173.68",
+      "unit": "ZAR",
+      "context": "Service of 9 Lt foam fire extinguisher"
+    },
+    {
+      "value": "220.76",
+      "unit": "ZAR",
+      "context": "Pressure test and recharge of 9 Lt foam fire extinguisher"
+    },
+    {
+      "value": "188.37",
+      "unit": "ZAR",
+      "context": "Recharge of 9 Lt foam fire extinguisher"
+    },
+    {
+      "value": "108.92",
+      "unit": "ZAR",
+      "context": "Service fire hose reel"
+    },
+    {
+      "value": "173.68",
+      "unit": "ZAR",
+      "context": "Service and pressure test hose"
+    },
+    {
+      "value": "173.68",
+      "unit": "ZAR",
+      "context": "Service mobile foam fire unit (>9 Lts capacity)"
+    },
+    {
+      "value": "877.27",
+      "unit": "ZAR",
+      "context": "Pressure test and recharge mobile foam fire unit"
+    },
+    {
+      "value": "659.41",
+      "unit": "ZAR",
+      "context": "Recharge mobile foam fire unit (>9 Lts capacity)"
+    },
+    {
+      "value": "173.68",
+      "unit": "ZAR",
+      "context": "Service mobile powder fire unit"
+    },
+    {
+      "value": "877.27",
+      "unit": "ZAR",
+      "context": "Pressure test and recharge mobile powder fire unit (>9 kg capacity)"
+    },
+    {
+      "value": "659.41",
+      "unit": "ZAR",
+      "context": "Recharge mobile powder fire unit (>9 kg capacity)"
+    }
+  ],
+  "parameters_mentioned": [
+    "hour",
+    "9 kg",
+    "9 Lt",
+    ">9 Lts capacity",
+    ">9 kg capacity"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The previous page provides the general context regarding 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' and establishes the numbering convention (4.3.4 follows 4.3.3).",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This section (4.3.4) appears to be complete on this page, listing all relevant services and tariffs. The next page is likely to start a new section.",
+  "search_keywords": [
+    "Fire equipment maintenance",
+    "extinguisher service",
+    "recharge",
+    "pressure test",
+    "CO2 extinguisher",
+    "powder extinguisher",
+    "water extinguisher",
+    "foam extinguisher",
+    "fire hose reel",
+    "mobile foam unit",
+    "mobile powder unit",
+    "labour cost"
+  ],
+  "ambiguities_or_risks": []
+}

@@ -1,0 +1,74 @@
+{
+  "page_number": "45",
+  "section_heading": "7.6 EXEMPTIONS",
+  "plain_summary": "This page details various exemptions from tariffs, specifically cargo dues, for different types of cargo and vessel activities. It lists general exemptions and then provides a dedicated section with five detailed notes regarding the conditions for exemption of vessel's spares and stores, including scenarios involving bonded warehouses, private warehouses, transhipments, and local/airfreighted supplies.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs (from header)"
+    },
+    {
+      "value": "30",
+      "unit": "day period",
+      "context": "Timeframe for import/export cargo dues refund for vessel's spares/stores moved to a bonded warehouse"
+    }
+  ],
+  "parameters_mentioned": [
+    "vessel's own consumption",
+    "commercial berth",
+    "jetty",
+    "mooring",
+    "cargo landed in error",
+    "fish landed for local consumption",
+    "locally registered fishing vessels",
+    "clip-on units for ISO reefer containers",
+    "cribs",
+    "vessel's spares",
+    "vessel's stores",
+    "bait",
+    "packaging materials",
+    "bona fide transhipments",
+    "import documents",
+    "export documents",
+    "bonded warehouse",
+    "another vessel",
+    "incoming leg",
+    "outgoing transaction",
+    "one vessel to another",
+    "local suppliers",
+    "airfreighted",
+    "private warehouse (not bonded)",
+    "normal import transaction",
+    "30 day period"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The header 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' is a continuation from the previous page, providing the general context for all tariffs and exemptions in this section. The section number '7.6' indicates it is part of a larger Section 7, which began on previous pages.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This page appears to conclude the 'EXEMPTIONS' section (7.6) and its associated notes. While the tariff book continues, this specific topic seems self-contained on this page.",
+  "search_keywords": [
+    "Exemptions",
+    "Cargo Dues",
+    "Vessel's Spares",
+    "Vessel's Stores",
+    "Bunkers",
+    "Water",
+    "Transhipments",
+    "Bonded Warehouse",
+    "Private Warehouse",
+    "30 day period",
+    "Reefer Containers",
+    "Fish"
+  ],
+  "ambiguities_or_risks": [
+    "The interaction between Notes (i), (iv), and (v) regarding vessel's spares/stores and different warehouse types (bonded vs. private) requires careful interpretation to ensure correct application of cargo dues and refunds.",
+    "The condition 'within 30 day period' in Note (i) is critical for the refund of import cargo dues and exoneration of outgoing transactions; failure to meet this period results in normal cargo dues being maintained."
+  ]
+}

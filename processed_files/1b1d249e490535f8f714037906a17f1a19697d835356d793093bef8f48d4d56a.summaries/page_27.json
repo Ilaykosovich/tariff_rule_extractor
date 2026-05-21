@@ -1,0 +1,205 @@
+{
+  "page_number": "27",
+  "section_heading": "4.3 MISCELLANEOUS SERVICES / 4.3.1 FIRE AND EMERGENCY SERVICES / 4.3.2 FIRE PROTECTION",
+  "plain_summary": "This page continues to list fees under '4.3.1 FIRE AND EMERGENCY SERVICES', covering additional chemical protection suits, fire extinguisher foam, and various types of fire extinguishers (water, foam, dry powder, carbon dioxide) including their recharging costs. It also specifies a per-kilometer rate for an emergency support vehicle and introduces fees for Tanker Fire Watch services at the Port of Saldanha, with specific durations (12-36 Hours, 12-48 Hours) and associated maximum fees. A new section, '4.3.2 FIRE PROTECTION', is introduced, detailing hourly rates for vessel and cargo fire protection duties, with specific higher rates for the Port of Durban (which include security), and a flat fee for 'Hotwork' fire safety inspection services.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": false,
+  "contains_examples": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Fees for various types of fire extinguishers, including the cost of material, labour, and supervision involved in recharging the equipment.",
+      "columns": [
+        "Extinguisher Type",
+        "Size",
+        "Fee (ZAR)"
+      ],
+      "row_categories": [
+        "Water fire extinguisher",
+        "Foam fire extinguisher",
+        "Dry powder fire extinguisher",
+        "Carbon Dioxide fire extinguisher"
+      ],
+      "important_values": [
+        {
+          "Extinguisher Type": "Water",
+          "Size": "9 Lt",
+          "Fee (ZAR)": "156.06"
+        },
+        {
+          "Extinguisher Type": "Foam",
+          "Size": "9 Lt",
+          "Fee (ZAR)": "188.37"
+        },
+        {
+          "Extinguisher Type": "Dry powder",
+          "Size": "9 kg",
+          "Fee (ZAR)": "235.52"
+        },
+        {
+          "Extinguisher Type": "Carbon Dioxide",
+          "Size": "5-7 kg",
+          "Fee (ZAR)": "376.80"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    },
+    {
+      "value": "1,881.06",
+      "unit": "ZAR",
+      "context": "Fee per additional chemical protection suit"
+    },
+    {
+      "value": "94.24",
+      "unit": "ZAR",
+      "context": "Fee per litre of fire extinguisher foam"
+    },
+    {
+      "value": "9",
+      "unit": "Lt",
+      "context": "Size of water fire extinguisher"
+    },
+    {
+      "value": "156.06",
+      "unit": "ZAR",
+      "context": "Fee for 9 Lt water fire extinguisher"
+    },
+    {
+      "value": "9",
+      "unit": "Lt",
+      "context": "Size of foam fire extinguisher"
+    },
+    {
+      "value": "188.37",
+      "unit": "ZAR",
+      "context": "Fee for 9 Lt foam fire extinguisher"
+    },
+    {
+      "value": "9",
+      "unit": "kg",
+      "context": "Size of Dry powder fire extinguisher"
+    },
+    {
+      "value": "235.52",
+      "unit": "ZAR",
+      "context": "Fee for 9 kg Dry powder fire extinguisher"
+    },
+    {
+      "value": "5-7",
+      "unit": "kg",
+      "context": "Size range of Carbon Dioxide fire extinguisher"
+    },
+    {
+      "value": "376.80",
+      "unit": "ZAR",
+      "context": "Fee for 5-7 kg Carbon Dioxide fire extinguisher"
+    },
+    {
+      "value": "8.81",
+      "unit": "ZAR/km",
+      "context": "Fee for Emergency support vehicle"
+    },
+    {
+      "value": "12-36",
+      "unit": "Hours",
+      "context": "Duration for Tanker Fire Watch – Tug"
+    },
+    {
+      "value": "8,573.08",
+      "unit": "ZAR",
+      "context": "Fee for 12-36 Hours Tanker Fire Watch – Tug"
+    },
+    {
+      "value": "384,692.90",
+      "unit": "ZAR",
+      "context": "Maximum fee for 12-36 Hours Tanker Fire Watch"
+    },
+    {
+      "value": "12-48",
+      "unit": "Hours",
+      "context": "Duration for Tanker Fire Watch – Tug"
+    },
+    {
+      "value": "6,802.58",
+      "unit": "ZAR",
+      "context": "Fee for 12-48 Hours Tanker Fire Watch – Tug"
+    },
+    {
+      "value": "464,270.97",
+      "unit": "ZAR",
+      "context": "Maximum fee for 12-48 Hours Tanker Fire Watch"
+    },
+    {
+      "value": "350.30",
+      "unit": "ZAR/hour",
+      "context": "Fee for Vessel fire protection duties – fire fighter"
+    },
+    {
+      "value": "594.46",
+      "unit": "ZAR/hour",
+      "context": "Fee for Vessel fire protection duties at the Port of Durban – fire fighter (including security)"
+    },
+    {
+      "value": "350.30",
+      "unit": "ZAR/hour",
+      "context": "Fee for Cargo fire protection duties – fire fighter"
+    },
+    {
+      "value": "594.46",
+      "unit": "ZAR/hour",
+      "context": "Fee for Cargo fire protection duties at the Port of Durban – fire fighter (including security)"
+    },
+    {
+      "value": "376.80",
+      "unit": "ZAR",
+      "context": "Fee for 'Hotwork' fire safety inspection service"
+    }
+  ],
+  "parameters_mentioned": [
+    "suit",
+    "litre",
+    "Lt",
+    "kg",
+    "km",
+    "Hours",
+    "Tug",
+    "Vessel",
+    "Cargo",
+    "hour",
+    "Port of Saldanha",
+    "Port of Durban"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The main section heading '4.3 MISCELLANEOUS SERVICES' and sub-heading '4.3.1 FIRE AND EMERGENCY SERVICES' are established on the previous page, and the numbering (4.3.1.11, etc.) indicates a continuation of the same section. The general context of 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' is also defined on the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The page concludes with sub-section 4.3.2.3, which appears to be the last item under 4.3.2. While section 4.3 (Miscellaneous Services) might continue on the next page with 4.3.3, the current sub-sections seem complete.",
+  "search_keywords": [
+    "Fire and Emergency Services",
+    "Fire Protection",
+    "Chemical protection suits",
+    "Fire extinguishers",
+    "Foam",
+    "Dry powder",
+    "Carbon Dioxide",
+    "Emergency support vehicle",
+    "Tanker Fire Watch",
+    "Saldanha",
+    "Durban",
+    "Vessel fire protection",
+    "Cargo fire protection",
+    "Hotwork inspection",
+    "VAT"
+  ],
+  "ambiguities_or_risks": [
+    "The fee for 'Tanker Fire Watch – Tug' (e.g., 8,573.08 ZAR for 12-36 Hours) is listed without explicitly stating if it's a flat fee for the entire watch period or a rate per hour within that period. Given the 'Maximum fee' listed immediately after, it is assumed to be a flat fee for the specified watch duration, subject to the maximum."
+  ]
+}

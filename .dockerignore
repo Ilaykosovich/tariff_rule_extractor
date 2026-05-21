@@ -1,0 +1,14 @@
+.git
+.venv
+venv
+__pycache__
+*.pyc
+.env
+.idea
+.vscode
+logs
+test_report
+test_api_runs
+uvicorn_*.out
+uvicorn_*.err
+*.log

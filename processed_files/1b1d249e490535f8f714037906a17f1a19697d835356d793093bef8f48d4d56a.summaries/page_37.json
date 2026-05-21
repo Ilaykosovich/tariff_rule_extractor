@@ -1,0 +1,436 @@
+{
+  "page_number": "37",
+  "section_heading": "6.6.1 Drydock: Ports of Cape Town and East London & 6.6.2 Drydock: Port of Durban",
+  "plain_summary": "This page details the drydock dues for vessels at the Ports of Cape Town, East London, and Durban. It presents two separate tables, one for Cape Town/East London and another for Durban, outlining the fees based on vessel gross tonnage and the duration of drydock use (first 24 hours and subsequent 12-hour periods). The fees are structured as a base rate per tonnage category plus an additional rate per ton.",
+  "contains_formula": true,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [
+    {
+      "formula_as_written": "Base Fee (for tonnage category) + (Vessel Gross Tonnage * Per Ton Rate)",
+      "what_it_calculates": "The total drydock fee for a vessel within a specific gross tonnage category and time period.",
+      "parameters_used": [
+        "Base Fee (ZAR)",
+        "Vessel Gross Tonnage (cubic metres)",
+        "Per Ton Rate (ZAR/ton)"
+      ],
+      "units": "ZAR (South African Rand)",
+      "rounding_or_conditions": "Fees are calculated for the 'First period of 24 hours or part thereof' and 'Each subsequent 12 hour period or part thereof'. 'Tons' refers to gross tonnage in cubic metres. Fees for vessels above 80,000 tons are available on application. Tariffs are subject to VAT at 15%."
+    }
+  ],
+  "tables": [
+    {
+      "what_table_lists": "Drydock fees for vessels at the Ports of Cape Town and East London.",
+      "columns": [
+        "Drydock",
+        "First period of 24 hours or part thereof",
+        "Each subsequent 12 hour period or part thereof"
+      ],
+      "row_categories": [
+        "Vessels up to 3 000 tons",
+        "Plus per ton",
+        "3 001 to 6 000 tons",
+        "Plus per ton",
+        "6 001 up to 10 000 tons",
+        "Plus per ton",
+        "10 001 to 30 000 tons",
+        "Plus per ton",
+        "30 001 to 60 000 tons",
+        "Plus per ton",
+        "60 001 to 80 000",
+        "Plus per ton"
+      ],
+      "important_values": [
+        {
+          "category": "Vessels up to 3 000 tons",
+          "first_24_hours_base": "8 585.20 ZAR",
+          "first_24_hours_per_ton": "2.52 ZAR/ton",
+          "subsequent_12_hours_base": "4 292.57 ZAR",
+          "subsequent_12_hours_per_ton": "0.84 ZAR/ton"
+        },
+        {
+          "category": "3 001 to 6 000 tons",
+          "first_24_hours_base": "11 300.73 ZAR",
+          "first_24_hours_per_ton": "2.88 ZAR/ton",
+          "subsequent_12_hours_base": "5 650.38 ZAR",
+          "subsequent_12_hours_per_ton": "0.94 ZAR/ton"
+        },
+        {
+          "category": "6 001 up to 10 000 tons",
+          "first_24_hours_base": "19 846.56 ZAR",
+          "first_24_hours_per_ton": "3.53 ZAR/ton",
+          "subsequent_12_hours_base": "9 923.28 ZAR",
+          "subsequent_12_hours_per_ton": "1.39 ZAR/ton"
+        },
+        {
+          "category": "10 001 to 30 000 tons",
+          "first_24_hours_base": "20 779.85 ZAR",
+          "first_24_hours_per_ton": "3.53 ZAR/ton",
+          "subsequent_12_hours_base": "10 389.93 ZAR",
+          "subsequent_12_hours_per_ton": "1.39 ZAR/ton"
+        },
+        {
+          "category": "30 001 to 60 000 tons",
+          "first_24_hours_base": "43 308.22 ZAR",
+          "first_24_hours_per_ton": "3.53 ZAR/ton",
+          "subsequent_12_hours_base": "21 654.14 ZAR",
+          "subsequent_12_hours_per_ton": "1.20 ZAR/ton"
+        },
+        {
+          "category": "60 001 to 80 000 tons",
+          "first_24_hours_base": "51 494.21 ZAR",
+          "first_24_hours_per_ton": "3.53 ZAR/ton",
+          "subsequent_12_hours_base": "25 747.12 ZAR",
+          "subsequent_12_hours_per_ton": "0.94 ZAR/ton"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Drydock fees for vessels at the Port of Durban.",
+      "columns": [
+        "Drydock",
+        "First period of 24 hours or part thereof",
+        "Each subsequent 12 hour period or part thereof"
+      ],
+      "row_categories": [
+        "0 to 30 000 tons",
+        "Plus per ton",
+        "30 001 to 60 000 tons",
+        "Plus per ton",
+        "60 001 up to 80 000 tons",
+        "Plus per ton"
+      ],
+      "important_values": [
+        {
+          "category": "0 to 30 000 tons",
+          "first_24_hours_base": "20 796.71 ZAR",
+          "first_24_hours_per_ton": "3.53 ZAR/ton",
+          "subsequent_12_hours_base": "10 398.34 ZAR",
+          "subsequent_12_hours_per_ton": "1.37 ZAR/ton"
+        },
+        {
+          "category": "30 001 to 60 000 tons",
+          "first_24_hours_base": "43 308.22 ZAR",
+          "first_24_hours_per_ton": "3.53 ZAR/ton",
+          "subsequent_12_hours_base": "21 654.14 ZAR",
+          "subsequent_12_hours_per_ton": "1.20 ZAR/ton"
+        },
+        {
+          "category": "60 001 up to 80 000 tons",
+          "first_24_hours_base": "51 494.21 ZAR",
+          "first_24_hours_per_ton": "3.53 ZAR/ton",
+          "subsequent_12_hours_base": "25 747.12 ZAR",
+          "subsequent_12_hours_per_ton": "0.93 ZAR/ton"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "8 585.20",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, up to 3000 tons, first 24 hours"
+    },
+    {
+      "value": "2.52",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, up to 3000 tons, first 24 hours, per ton"
+    },
+    {
+      "value": "4 292.57",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, up to 3000 tons, subsequent 12 hours"
+    },
+    {
+      "value": "0.84",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, up to 3000 tons, subsequent 12 hours, per ton"
+    },
+    {
+      "value": "3 000",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London"
+    },
+    {
+      "value": "11 300.73",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, 3001-6000 tons, first 24 hours"
+    },
+    {
+      "value": "2.88",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, 3001-6000 tons, first 24 hours, per ton"
+    },
+    {
+      "value": "5 650.38",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, 3001-6000 tons, subsequent 12 hours"
+    },
+    {
+      "value": "0.94",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, 3001-6000 tons, subsequent 12 hours, per ton"
+    },
+    {
+      "value": "3 001",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London"
+    },
+    {
+      "value": "6 000",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London"
+    },
+    {
+      "value": "19 846.56",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, 6001-10000 tons, first 24 hours"
+    },
+    {
+      "value": "3.53",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, 6001-10000 tons, first 24 hours, per ton"
+    },
+    {
+      "value": "9 923.28",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, 6001-10000 tons, subsequent 12 hours"
+    },
+    {
+      "value": "1.39",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, 6001-10000 tons, subsequent 12 hours, per ton"
+    },
+    {
+      "value": "6 001",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London"
+    },
+    {
+      "value": "10 000",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London"
+    },
+    {
+      "value": "20 779.85",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, 10001-30000 tons, first 24 hours"
+    },
+    {
+      "value": "3.53",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, 10001-30000 tons, first 24 hours, per ton"
+    },
+    {
+      "value": "10 389.93",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, 10001-30000 tons, subsequent 12 hours"
+    },
+    {
+      "value": "1.39",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, 10001-30000 tons, subsequent 12 hours, per ton"
+    },
+    {
+      "value": "10 001",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London"
+    },
+    {
+      "value": "30 000",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London"
+    },
+    {
+      "value": "43 308.22",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, 30001-60000 tons, first 24 hours"
+    },
+    {
+      "value": "3.53",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, 30001-60000 tons, first 24 hours, per ton"
+    },
+    {
+      "value": "21 654.14",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, 30001-60000 tons, subsequent 12 hours"
+    },
+    {
+      "value": "1.20",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, 30001-60000 tons, subsequent 12 hours, per ton"
+    },
+    {
+      "value": "30 001",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London"
+    },
+    {
+      "value": "60 000",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London"
+    },
+    {
+      "value": "51 494.21",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, 60001-80000 tons, first 24 hours"
+    },
+    {
+      "value": "3.53",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, 60001-80000 tons, first 24 hours, per ton"
+    },
+    {
+      "value": "25 747.12",
+      "unit": "ZAR",
+      "context": "Drydock fee, Cape Town/East London, 60001-80000 tons, subsequent 12 hours"
+    },
+    {
+      "value": "0.94",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Cape Town/East London, 60001-80000 tons, subsequent 12 hours, per ton"
+    },
+    {
+      "value": "60 001",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London"
+    },
+    {
+      "value": "80 000",
+      "unit": "tons",
+      "context": "Tonnage threshold, Cape Town/East London and Durban"
+    },
+    {
+      "value": "20 796.71",
+      "unit": "ZAR",
+      "context": "Drydock fee, Durban, 0-30000 tons, first 24 hours"
+    },
+    {
+      "value": "3.53",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Durban, 0-30000 tons, first 24 hours, per ton"
+    },
+    {
+      "value": "10 398.34",
+      "unit": "ZAR",
+      "context": "Drydock fee, Durban, 0-30000 tons, subsequent 12 hours"
+    },
+    {
+      "value": "1.37",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Durban, 0-30000 tons, subsequent 12 hours, per ton"
+    },
+    {
+      "value": "0",
+      "unit": "tons",
+      "context": "Tonnage threshold, Durban"
+    },
+    {
+      "value": "30 000",
+      "unit": "tons",
+      "context": "Tonnage threshold, Durban"
+    },
+    {
+      "value": "43 308.22",
+      "unit": "ZAR",
+      "context": "Drydock fee, Durban, 30001-60000 tons, first 24 hours"
+    },
+    {
+      "value": "3.53",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Durban, 30001-60000 tons, first 24 hours, per ton"
+    },
+    {
+      "value": "21 654.14",
+      "unit": "ZAR",
+      "context": "Drydock fee, Durban, 30001-60000 tons, subsequent 12 hours"
+    },
+    {
+      "value": "1.20",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Durban, 30001-60000 tons, subsequent 12 hours, per ton"
+    },
+    {
+      "value": "30 001",
+      "unit": "tons",
+      "context": "Tonnage threshold, Durban"
+    },
+    {
+      "value": "60 000",
+      "unit": "tons",
+      "context": "Tonnage threshold, Durban"
+    },
+    {
+      "value": "51 494.21",
+      "unit": "ZAR",
+      "context": "Drydock fee, Durban, 60001-80000 tons, first 24 hours"
+    },
+    {
+      "value": "3.53",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Durban, 60001-80000 tons, first 24 hours, per ton"
+    },
+    {
+      "value": "25 747.12",
+      "unit": "ZAR",
+      "context": "Drydock fee, Durban, 60001-80000 tons, subsequent 12 hours"
+    },
+    {
+      "value": "0.93",
+      "unit": "ZAR/ton",
+      "context": "Drydock fee, Durban, 60001-80000 tons, subsequent 12 hours, per ton"
+    },
+    {
+      "value": "60 001",
+      "unit": "tons",
+      "context": "Tonnage threshold, Durban"
+    },
+    {
+      "value": "24",
+      "unit": "hours",
+      "context": "First period duration"
+    },
+    {
+      "value": "12",
+      "unit": "hours",
+      "context": "Subsequent period duration"
+    }
+  ],
+  "parameters_mentioned": [
+    "GT / gross tonnage",
+    "tons",
+    "cubic metres",
+    "days",
+    "hours"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The main section heading (6.6 DRYDOCK, FLOATING DOCK AND SYNCROLIFT DUES) and the specific sub-headings (6.6.1 and 6.6.2) are introduced on the previous page. Crucially, the previous page states that 'All charges under clause 6.6 below are subject to the overstay penalties as specified in Clause 6.3 on page 35', which is a vital condition for calculations.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The tables on this page cover tonnage ranges up to 80,000 tons, with a note that 'Above 80 000 tons, fees are available on application', indicating that further tariff details for these services are not provided in the tariff book.",
+  "search_keywords": [
+    "Drydock Dues",
+    "Cape Town",
+    "East London",
+    "Durban",
+    "Gross Tonnage",
+    "Tariff",
+    "Fees",
+    "Repair Facility",
+    "Cranage",
+    "Salt Water",
+    "Vessel Tonnage Rates",
+    "24 hours",
+    "12 hours"
+  ],
+  "ambiguities_or_risks": [
+    "The exact interpretation of 'Plus per ton' in the tables: it is assumed to be applied to the vessel's total gross tonnage within the specified category, in addition to the base fee for that category. This is a common tariff structure, but explicit clarification is not provided on the page."
+  ]
+}

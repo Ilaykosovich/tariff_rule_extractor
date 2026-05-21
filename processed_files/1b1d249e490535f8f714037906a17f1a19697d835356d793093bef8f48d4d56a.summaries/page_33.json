@@ -1,0 +1,36 @@
+{
+  "page_number": "33",
+  "section_heading": "5.3. FEES PAYABLE FOR LICENCES FOR ENVIRONMENTAL COMPLIANCE",
+  "plain_summary": "This page specifies the annual fee for a Hull Cleaning Permit, which falls under the category of licences for environmental compliance.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": false,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "18 959.00",
+      "unit": "South African Rand",
+      "context": "Hull Cleaning Permit Fee per annum"
+    }
+  ],
+  "parameters_mentioned": [
+    "per annum"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The target page continues Section 5, which started on the previous page. Understanding the overall context of 'PORT SERVICE LICENCE, PORT RULE LICENCE, PORT RULE REGISTRATION AND PORT RULE PERMIT FEES' requires the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This page concludes the specific sub-section 5.3. There is no indication that this section continues onto the next page.",
+  "search_keywords": [
+    "Hull Cleaning Permit Fee",
+    "Environmental Compliance Licence",
+    "Licence Fees",
+    "Port Service Licence",
+    "Port Rule Licence",
+    "Environmental",
+    "Permit"
+  ],
+  "ambiguities_or_risks": []
+}

@@ -1,0 +1,70 @@
+{
+  "page_number": "06",
+  "section_heading": "Definitions",
+  "plain_summary": "This page continues the 'Definitions' section, providing explanations for terms such as 'fees', 'fishing vessel', 'Harbour Master', 'length' (LOA), 'master', 'ISO container', 'owner', 'passenger', 'area of jurisdiction', and 'Port Regulations'. It clarifies what constitutes 'fees' and when they are raised, defines different types of vessels and personnel, and specifies the criteria for 'length overall' and 'passenger' (including exceptions).",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    },
+    {
+      "value": "12",
+      "unit": "passengers",
+      "context": "Threshold for 'passenger vessel' (from previous page) and 'pleasure vessel' (from previous page), and implicitly relevant to 'passenger' definition"
+    },
+    {
+      "value": "1",
+      "unit": "year",
+      "context": "Age threshold for a child to be excluded from the 'passenger' definition"
+    },
+    {
+      "value": "1951",
+      "unit": "year",
+      "context": "Year of the Merchant Shipping Act (Act No. 57 of 1951)"
+    },
+    {
+      "value": "57",
+      "unit": "Act No.",
+      "context": "Number of the Merchant Shipping Act (Act No. 57 of 1951)"
+    },
+    {
+      "value": "2007",
+      "unit": "year",
+      "context": "Year of promulgation for Port Regulations (23 November 2007)"
+    }
+  ],
+  "parameters_mentioned": [
+    "LOA / length overall",
+    "vessel type (fishing vessel, passenger vessel, pleasure vessel)",
+    "cargo type (ISO container)",
+    "age (child under one year)"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The section heading 'Definitions' started on the previous page. The VAT rate and currency are established on the previous page. Some definitions on this page (e.g., 'passenger') refer to concepts or thresholds (e.g., 'passenger vessel', 'pleasure vessel') defined on the previous page.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page is a continuation of a list of definitions. It is common for such lists to span multiple pages, so the next page may contain further definitions.",
+  "search_keywords": [
+    "Definitions",
+    "fees",
+    "fishing vessel",
+    "Harbour Master",
+    "length overall",
+    "LOA",
+    "master",
+    "ISO container",
+    "owner",
+    "passenger",
+    "area of jurisdiction",
+    "Port Regulations",
+    "VAT"
+  ],
+  "ambiguities_or_risks": []
+}

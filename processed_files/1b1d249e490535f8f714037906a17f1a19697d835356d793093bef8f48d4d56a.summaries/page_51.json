@@ -1,0 +1,55 @@
+{
+  "page_number": "51",
+  "section_heading": "8.1.2 TIMING OF DOCUMENTATION (continued)",
+  "plain_summary": "This page details the required timeframes for submitting various documentation related to export, inbound transshipment, coastwise, and outbound transshipment/coastwise activities. It specifies deadlines in days after vessel departure for Cargo Dues Orders and Manifests, including specific rules for empties. It also lists the supporting documents required for Breakbulk and Bulk Cargo Dues Orders and for empty returns/vessel stores. An exception for the calculation of timeframes is noted.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    },
+    {
+      "value": "3",
+      "unit": "days",
+      "context": "Deadline for Export Cargo Dues Orders (all cargo types), Inbound Transshipment/Coastwise Cargo Dues Orders, Inbound Transshipment Manifests, Coastal Manifests (inward moves), Outbound Transshipment/Coastwise Cargo Dues Orders, Outbound Transshipment Manifests, Coastal Manifests (outward moves), and Manifests in respect of empties for Inbound/Outbound Transshipment and Coastwise"
+    },
+    {
+      "value": "7",
+      "unit": "days",
+      "context": "Deadline for Export Manifests and Export Manifests in respect of empties"
+    }
+  ],
+  "parameters_mentioned": [
+    "vessel departure",
+    "cargo types",
+    "empties",
+    "inward moves",
+    "outward moves",
+    "weekend",
+    "public holiday"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The main section heading '8.1.2 TIMING OF DOCUMENTATION' begins on the previous page. The previous page also contains the 'IMPORT DOCUMENTATION' rules, which provide direct context and comparison for the 'EXPORT DOCUMENTATION' rules on the target page. The VAT rate is also introduced on the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This page appears to conclude the 'TIMING OF DOCUMENTATION' section, covering all major categories (Export, Inbound Transshipment/Coastwise, Outbound Transshipment/Coastwise).",
+  "search_keywords": [
+    "Documentation timing",
+    "Export documentation",
+    "Transshipment documentation",
+    "Coastwise documentation",
+    "Cargo Dues Orders",
+    "Manifests",
+    "Deadlines",
+    "Vessel departure",
+    "Empties",
+    "Supporting documents"
+  ],
+  "ambiguities_or_risks": []
+}

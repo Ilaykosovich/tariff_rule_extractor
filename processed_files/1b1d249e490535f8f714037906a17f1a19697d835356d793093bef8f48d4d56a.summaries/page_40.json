@@ -1,0 +1,64 @@
+{
+  "page_number": "40",
+  "section_heading": "6.8 WHARF CRANES and 6.9 MISCELLANEOUS",
+  "plain_summary": "This page outlines the tariffs for wharf cranes at the Ports of Cape Town, East London, and Durban, specifically for services rendered outside ordinary working hours. It specifies a uniform hourly rate for cranes, including additional cranes at Durban. The page also states that fees for miscellaneous services such as fresh water, electricity, and compressed air are available upon application.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_examples": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    },
+    {
+      "value": "1 265.00",
+      "unit": "South African Rand",
+      "context": "Wharf crane rate per hour at Ports of Cape Town and East London, outside ordinary working hours, for one crane per vessel"
+    },
+    {
+      "value": "1 265.00",
+      "unit": "South African Rand",
+      "context": "Wharf crane rate per hour at Port of Durban, outside ordinary working hours, for one crane per vessel"
+    },
+    {
+      "value": "1 265.00",
+      "unit": "South African Rand",
+      "context": "Wharf crane rate per hour for additional cranes at Port of Durban, outside ordinary working hours"
+    }
+  ],
+  "parameters_mentioned": [
+    "vessel",
+    "crane lifting capacity",
+    "hour",
+    "ordinary working hours",
+    "Port of Cape Town",
+    "Port of East London",
+    "Port of Durban"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": false,
+  "next_page_reason": "",
+  "search_keywords": [
+    "Wharf cranes",
+    "Cape Town",
+    "East London",
+    "Durban",
+    "miscellaneous",
+    "fresh water",
+    "electricity",
+    "compressed air",
+    "outside ordinary working hours",
+    "crane tariff",
+    "hourly rate"
+  ],
+  "ambiguities_or_risks": [
+    "The tariff for the first crane at the Port of Durban is implied to be 1 265.00 ZAR per hour, based on its placement directly under the section heading and before the mention of 'additional cranes'."
+  ]
+}

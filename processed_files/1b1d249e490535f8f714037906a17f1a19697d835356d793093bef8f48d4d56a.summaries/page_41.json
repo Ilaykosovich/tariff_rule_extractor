@@ -1,0 +1,166 @@
+{
+  "page_number": "41",
+  "section_heading": "SECTION 7 CARGO DUES ON IMPORTS, EXPORTS, TRANSHIPMENTS AND COASTWISE",
+  "plain_summary": "This page introduces Section 7, which details cargo dues levied at all ports for imports, exports, transhipments, and coastwise movements. It defines the 'UNIT OF TONNAGE' for various cargo types, including a standard metric ton (1,000 kg), a kilolitre for bulk liquids, and specific rules for vehicles. The page outlines general conditions for cargo dues, such as the requirement for tonnage substantiation and minimum fees for breakbulk cargo and containers. It also provides a table of base rates for commodities not specifically listed elsewhere in the Tariff Book, differentiating between import and export rates for various cargo categories.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Base rates applicable for commodities not listed in the Tariff Book.",
+      "columns": [
+        "Cargo Type",
+        "Imports",
+        "Exports"
+      ],
+      "row_categories": [
+        "Breakbulk per ton",
+        "Liquid bulk per kilolitre",
+        "Dry bulk per metric ton",
+        "Breakbulk empty returns per metric ton",
+        "Motor vehicles on own wheels per metre"
+      ],
+      "important_values": [
+        {
+          "category": "Breakbulk per ton",
+          "imports_rate": "30.56",
+          "exports_rate": "30.56",
+          "unit": "Rand per ton"
+        },
+        {
+          "category": "Liquid bulk per kilolitre",
+          "imports_rate": "22.83",
+          "exports_rate": "22.83",
+          "unit": "Rand per kilolitre"
+        },
+        {
+          "category": "Dry bulk per metric ton",
+          "imports_rate": "6.84",
+          "exports_rate": "6.84",
+          "unit": "Rand per metric ton"
+        },
+        {
+          "category": "Breakbulk empty returns per metric ton",
+          "imports_rate": "4.55",
+          "exports_rate": "4.55",
+          "unit": "Rand per metric ton"
+        },
+        {
+          "category": "Motor vehicles on own wheels per metre",
+          "imports_rate": "163.87",
+          "exports_rate": "64.65",
+          "unit": "Rand per metre"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "1",
+      "unit": "metric ton",
+      "context": "Standard unit of tonnage"
+    },
+    {
+      "value": "1000",
+      "unit": "kg",
+      "context": "Equivalent of 1 metric ton"
+    },
+    {
+      "value": "1",
+      "unit": "ton",
+      "context": "Minimum tonnage for general cargo"
+    },
+    {
+      "value": "1",
+      "unit": "kilolitre",
+      "context": "Unit for bulk liquids"
+    },
+    {
+      "value": "1",
+      "unit": "ton",
+      "context": "Minimum fee basis for cargo dues on breakbulk cargo"
+    },
+    {
+      "value": "1",
+      "unit": "TEU",
+      "context": "Minimum fee basis for cargo dues on containers"
+    },
+    {
+      "value": "30.56",
+      "unit": "Rand",
+      "context": "Breakbulk per ton (Imports/Exports)"
+    },
+    {
+      "value": "22.83",
+      "unit": "Rand",
+      "context": "Liquid bulk per kilolitre (Imports/Exports)"
+    },
+    {
+      "value": "6.84",
+      "unit": "Rand",
+      "context": "Dry bulk per metric ton (Imports/Exports)"
+    },
+    {
+      "value": "4.55",
+      "unit": "Rand",
+      "context": "Breakbulk empty returns per metric ton (Imports/Exports)"
+    },
+    {
+      "value": "163.87",
+      "unit": "Rand",
+      "context": "Motor vehicles on own wheels per metre (Imports)"
+    },
+    {
+      "value": "64.65",
+      "unit": "Rand",
+      "context": "Motor vehicles on own wheels per metre (Exports)"
+    }
+  ],
+  "parameters_mentioned": [
+    "metric ton",
+    "kilolitre",
+    "TEU",
+    "metre",
+    "cargo type (commodities, articles, things, containers, vehicles, bulk liquids, breakbulk, dry bulk, motor vehicles)",
+    "imports",
+    "exports",
+    "transhipments",
+    "coastwise"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "This page introduces a new main section (SECTION 7 CARGO DUES) and its definitions. The header 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' is repeated on this page.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page provides base rates for 'commodities not listed in the Tariff Book' and mentions that 'The commodity rate remains applicable for products linked to a commodity'. This implies that specific commodity rates and further details on cargo dues will be found on subsequent pages.",
+  "search_keywords": [
+    "Cargo dues",
+    "Imports",
+    "Exports",
+    "Transhipments",
+    "Coastwise",
+    "Tonnage unit",
+    "Metric ton",
+    "Kilolitre",
+    "Vehicle definition",
+    "Breakbulk",
+    "Liquid bulk",
+    "Dry bulk",
+    "Motor vehicles",
+    "Base rates",
+    "Unlisted commodities",
+    "Minimum fee",
+    "TEU",
+    "Packaging mass"
+  ],
+  "ambiguities_or_risks": [
+    "The term 'late order fee' is mentioned for incorrectly declared tonnage but its value or calculation method is not provided on this page.",
+    "The phrase 'The commodity rate remains applicable for products linked to a commodity' is mentioned without defining what 'linked' means or where to find these specific commodity rates."
+  ]
+}

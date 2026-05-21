@@ -1,0 +1,230 @@
+{
+  "page_number": "24",
+  "section_heading": "4.2 PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE VESSELS",
+  "plain_summary": "This page details the port dues for various categories of small vessels, hulks, and pleasure vessels. Rates are typically calculated per financial year or part thereof, per metre of length overall (LOA) or part thereof, or per day, depending on the vessel type. Specific rates are provided for non-mechanically propelled boats, self-propelled boats, different types of fishing vessels (including tiered rates based on length and hull material), hulks, rowing boats, and other pleasure vessels based on their LOA. Conditions for hulks, such as application requirements and additional cargo dues if broken up at a commercial wharf, are also mentioned.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": false,
+  "contains_examples": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Port dues for Small Vessels",
+      "columns": [
+        "Vessel Type",
+        "Rate (ZAR)",
+        "Unit of Calculation"
+      ],
+      "row_categories": [
+        "Non-mechanically propelled boats",
+        "Self-propelled boats",
+        "Fishing vessels (operating from Saldanha fishing harbour)",
+        "Fishing vessels (non-steel hulls) - For the first 10 metres",
+        "Fishing vessels (non-steel hulls) - Thereafter",
+        "Fishing vessels (steel hulls) - For the first 10 metres",
+        "Fishing vessels (steel hulls) - Thereafter"
+      ],
+      "important_values": [
+        {
+          "category": "Non-mechanically propelled boats",
+          "rate": "47.00",
+          "unit": "per financial year or part thereof, per metre of length overall, or part thereof"
+        },
+        {
+          "category": "Self-propelled boats",
+          "rate": "78.41",
+          "unit": "per financial year or part thereof, per metre of length overall, or part thereof"
+        },
+        {
+          "category": "Fishing vessels (operating from Saldanha fishing harbour)",
+          "rate": "137.66",
+          "unit": "per financial year or part thereof, per metre of length overall, or part thereof"
+        },
+        {
+          "category": "Fishing vessels (non-steel hulls) - For the first 10 metres",
+          "rate": "189.37",
+          "unit": "per financial year or part thereof, per metre of length overall, or part thereof"
+        },
+        {
+          "category": "Fishing vessels (non-steel hulls) - Thereafter",
+          "rate": "378.68",
+          "unit": "per financial year or part thereof, per metre of length overall, or part thereof"
+        },
+        {
+          "category": "Fishing vessels (steel hulls) - For the first 10 metres",
+          "rate": "382.31",
+          "unit": "per financial year or part thereof, per metre of length overall, or part thereof"
+        },
+        {
+          "category": "Fishing vessels (steel hulls) - Thereafter",
+          "rate": "764.52",
+          "unit": "per financial year or part thereof, per metre of length overall, or part thereof"
+        },
+        {
+          "threshold": "10 metres",
+          "context": "tier break for fishing vessels"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Port dues for Hulks",
+      "columns": [
+        "Category",
+        "Rate (ZAR)",
+        "Unit of Calculation"
+      ],
+      "row_categories": [
+        "Hulks"
+      ],
+      "important_values": [
+        {
+          "category": "Hulks",
+          "rate": "9.19",
+          "unit": "per metre, per day calculated on the length"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Port dues for Pleasure Vessels",
+      "columns": [
+        "Vessel Type",
+        "Rate (ZAR)",
+        "Unit of Calculation"
+      ],
+      "row_categories": [
+        "Rowing boats",
+        "Other vessels of up to and including 6 metres in length overall",
+        "Other vessels of over 6 metres in length overall"
+      ],
+      "important_values": [
+        {
+          "category": "Rowing boats",
+          "rate": "111.93",
+          "unit": "each per financial year or part thereof"
+        },
+        {
+          "category": "Other vessels of up to and including 6 metres in length overall",
+          "rate": "223.88",
+          "unit": "each per financial year or part thereof"
+        },
+        {
+          "category": "Other vessels of over 6 metres in length overall",
+          "rate": "447.71",
+          "unit": "each per financial year or part thereof"
+        },
+        {
+          "threshold": "6 metres",
+          "context": "tier break for other pleasure vessels"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "47.00",
+      "unit": "ZAR",
+      "context": "Rate for Non-mechanically propelled boats"
+    },
+    {
+      "value": "78.41",
+      "unit": "ZAR",
+      "context": "Rate for Self-propelled boats"
+    },
+    {
+      "value": "137.66",
+      "unit": "ZAR",
+      "context": "Rate for Fishing vessels (Saldanha)"
+    },
+    {
+      "value": "189.37",
+      "unit": "ZAR",
+      "context": "Rate for Fishing vessels (non-steel hulls) for the first 10 metres"
+    },
+    {
+      "value": "378.68",
+      "unit": "ZAR",
+      "context": "Rate for Fishing vessels (non-steel hulls) thereafter"
+    },
+    {
+      "value": "382.31",
+      "unit": "ZAR",
+      "context": "Rate for Fishing vessels (steel hulls) for the first 10 metres"
+    },
+    {
+      "value": "764.52",
+      "unit": "ZAR",
+      "context": "Rate for Fishing vessels (steel hulls) thereafter"
+    },
+    {
+      "value": "9.19",
+      "unit": "ZAR",
+      "context": "Rate for Hulks per metre, per day"
+    },
+    {
+      "value": "111.93",
+      "unit": "ZAR",
+      "context": "Rate for Rowing boats"
+    },
+    {
+      "value": "223.88",
+      "unit": "ZAR",
+      "context": "Rate for Other pleasure vessels up to and including 6 metres LOA"
+    },
+    {
+      "value": "447.71",
+      "unit": "ZAR",
+      "context": "Rate for Other pleasure vessels over 6 metres LOA"
+    },
+    {
+      "value": "10",
+      "unit": "metres",
+      "context": "Length threshold for tiered fishing vessel rates"
+    },
+    {
+      "value": "6",
+      "unit": "metres",
+      "context": "Length threshold for tiered other pleasure vessel rates"
+    },
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    }
+  ],
+  "parameters_mentioned": [
+    "length overall (LOA)",
+    "metre",
+    "financial year",
+    "day",
+    "vessel type",
+    "hull construction material (steel/non-steel)",
+    "port of operation (Saldanha)",
+    "gross tonnage (implied by 'small vessels' context, but not explicitly used for calculation on this page)"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The section 4.2 appears to be self-contained on this page, covering all listed categories of small vessels, hulks, and pleasure vessels.",
+  "search_keywords": [
+    "Port Dues",
+    "Small Vessels",
+    "Hulks",
+    "Pleasure Vessels",
+    "Non-mechanically propelled boats",
+    "Self-propelled boats",
+    "Fishing vessels",
+    "Saldanha",
+    "Length Overall",
+    "Financial Year",
+    "Tariff",
+    "VAT"
+  ],
+  "ambiguities_or_risks": [
+    "The phrase 'per metre of length overall, or part thereof' implies rounding up to the nearest whole metre for length calculations.",
+    "The phrase 'per financial year or part thereof' implies that even a partial period within a financial year incurs the full annual fee.",
+    "The tiered rates for fishing vessels ('For the first 10 metres' and 'Thereafter') require a cumulative calculation based on the vessel's total length.",
+    "The condition for hulks 'If broken up at a commercial wharf import cargo dues is also payable in addition to the hulk fee' introduces a dependency on other tariff sections for a complete calculation."
+  ]
+}

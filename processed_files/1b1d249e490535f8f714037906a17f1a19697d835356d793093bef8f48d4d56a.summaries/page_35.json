@@ -1,0 +1,172 @@
+{
+  "page_number": "35",
+  "section_heading": "6.2 BOOKING FEES (continued), 6.3 PENALTIES, 6.4 PREPARATION",
+  "plain_summary": "This page details booking deposits required for drydocks, floating docks, and slipways at the Ports of Durban, Mossel Bay, and Port Elizabeth. It outlines penalties for booking cancellations within 60 days or for vessels exceeding their allocated occupancy period, incurring a 40% penalty for every 12-hour overstay. Additionally, it specifies preparation fees for drydocks and floating docks at the Ports of Cape Town, East London, and Durban. For Cape Town and East London, these preparation fees are tiered based on the vessel's gross tonnage in cubic metres.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Preparation fees for drydocks at the Ports of Cape Town and East London, based on vessel tonnage.",
+      "columns": [
+        "Vessel Tonnage Range (gross tonnage in cubic metres)",
+        "Fee (ZAR)"
+      ],
+      "row_categories": [
+        "Vessels up to 1 000 tons",
+        "Vessels from 1 001 up to 10 000 tons",
+        "Vessels from 10 001 up to 20 000 tons",
+        "Vessels from 20 001 up to 50 000 tons",
+        "Vessels above 50 000 tons"
+      ],
+      "important_values": [
+        {
+          "Vessel Tonnage Range": "Up to 1 000 tons",
+          "Fee": "2 158.96 ZAR"
+        },
+        {
+          "Vessel Tonnage Range": "1 001 up to 10 000 tons",
+          "Fee": "4 317.91 ZAR"
+        },
+        {
+          "Vessel Tonnage Range": "10 001 up to 20 000 tons",
+          "Fee": "8 635.78 ZAR"
+        },
+        {
+          "Vessel Tonnage Range": "20 001 up to 50 000 tons",
+          "Fee": "12 953.72 ZAR"
+        },
+        {
+          "Vessel Tonnage Range": "Above 50 000 tons",
+          "Fee": "17 271.56 ZAR"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "56 222.56",
+      "unit": "ZAR",
+      "context": "Booking deposit for drydock or floating dock at Port of Durban"
+    },
+    {
+      "value": "1 686.68",
+      "unit": "ZAR",
+      "context": "Booking deposit for slipways at Port of Mossel Bay and Port Elizabeth"
+    },
+    {
+      "value": "60",
+      "unit": "days",
+      "context": "Cancellation period for booking forfeiture"
+    },
+    {
+      "value": "40",
+      "unit": "%",
+      "context": "Penalty rate on dry-dock, floating dock and syncrolift dues for overstay"
+    },
+    {
+      "value": "12",
+      "unit": "hour period",
+      "context": "Interval for overstay penalty calculation"
+    },
+    {
+      "value": "1 000",
+      "unit": "tons",
+      "context": "Upper tonnage threshold for preparation fees (Cape Town/East London)"
+    },
+    {
+      "value": "2 158.96",
+      "unit": "ZAR",
+      "context": "Preparation fee for vessels up to 1 000 tons (Cape Town/East London)"
+    },
+    {
+      "value": "1 001",
+      "unit": "tons",
+      "context": "Lower tonnage threshold for preparation fees (Cape Town/East London)"
+    },
+    {
+      "value": "10 000",
+      "unit": "tons",
+      "context": "Upper tonnage threshold for preparation fees (Cape Town/East London)"
+    },
+    {
+      "value": "4 317.91",
+      "unit": "ZAR",
+      "context": "Preparation fee for vessels from 1 001 up to 10 000 tons (Cape Town/East London)"
+    },
+    {
+      "value": "10 001",
+      "unit": "tons",
+      "context": "Lower tonnage threshold for preparation fees (Cape Town/East London)"
+    },
+    {
+      "value": "20 000",
+      "unit": "tons",
+      "context": "Upper tonnage threshold for preparation fees (Cape Town/East London)"
+    },
+    {
+      "value": "8 635.78",
+      "unit": "ZAR",
+      "context": "Preparation fee for vessels from 10 001 up to 20 000 tons (Cape Town/East London)"
+    },
+    {
+      "value": "20 001",
+      "unit": "tons",
+      "context": "Lower tonnage threshold for preparation fees (Cape Town/East London)"
+    },
+    {
+      "value": "50 000",
+      "unit": "tons",
+      "context": "Upper tonnage threshold for preparation fees (Cape Town/East London)"
+    },
+    {
+      "value": "12 953.72",
+      "unit": "ZAR",
+      "context": "Preparation fee for vessels from 20 001 up to 50 000 tons (Cape Town/East London)"
+    },
+    {
+      "value": "50 000",
+      "unit": "tons",
+      "context": "Lower tonnage threshold for preparation fees (Cape Town/East London)"
+    },
+    {
+      "value": "17 271.56",
+      "unit": "ZAR",
+      "context": "Preparation fee for vessels above 50 000 tons (Cape Town/East London)"
+    },
+    {
+      "value": "17 282.81",
+      "unit": "ZAR",
+      "context": "Preparation fee for drydock and floating dock per vessel at Port of Durban"
+    }
+  ],
+  "parameters_mentioned": [
+    "gross tonnage",
+    "tons",
+    "days",
+    "hour period",
+    "vessel type (drydock, floating dock, syncrolift, slipway)"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "Section 6.2 'BOOKING FEES' starts on the previous page. The general definition of 'Tonnage of vessels for tariff purposes' is on the previous page, which clarifies the 'gross tonnage in cubic metres' mentioned on the target page. The overall section heading 'SECTION 6 DRYDOCKS, FLOATING DOCKS, SYNCROLIFTS AND SLIPWAYS' is also on the previous page.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "Section 6.4 PREPARATION is the last section on this page, and it is likely that Section 6 continues on the next page with further sub-sections or details.",
+  "search_keywords": [
+    "Drydock booking deposit Durban",
+    "Slipway booking deposit Mossel Bay",
+    "Slipway booking deposit Port Elizabeth",
+    "Booking cancellation penalty",
+    "Overstay penalty drydock",
+    "Preparation fees Cape Town",
+    "Preparation fees East London",
+    "Preparation fees Durban",
+    "Gross tonnage cubic metres",
+    "Vessel tonnage preparation fees"
+  ],
+  "ambiguities_or_risks": [
+    "The general definition of 'Tonnage of vessels for tariff purposes' on the previous page includes both the vessel's gross tonnage in cubic metres and the mass of all cargo on board. However, for 'Preparation' fees on the target page, it specifies 'Tons shall mean gross tonnage in cubic metres'. This might imply that for preparation fees, only the vessel's gross tonnage is considered, excluding cargo mass, which could be a subtle but important distinction for calculation."
+  ]
+}

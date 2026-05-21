@@ -1,0 +1,82 @@
+{
+  "page_number": "9",
+  "section_heading": "SECTION 1 - 1.1 LIGHT DUES ON VESSELS",
+  "plain_summary": "This page details the \"Light Dues\" tariff under SECTION 1. It reiterates the definition of a vessel's gross tonnage for tariff purposes and defines South African territorial waters (12 nautical miles). It then specifies two main categories for light dues: self-propelled/licensed vessels pay R24.64 per metre of length overall per financial year. \"All other vessels\" are subject to conditions regarding staying within South African waters and a 60-day time limit. If a vessel exceeds 60 days, it's deemed coastal and liable for light dues on a per calendar month basis, with a rate of R117.08 per 100 tons or part thereof. Special provisions for \"Bonafide Coasters\" are also outlined, including monthly charges and full light dues if returning from a foreign port.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    },
+    {
+      "value": "12",
+      "unit": "nautical miles",
+      "context": "Distance defining territorial waters"
+    },
+    {
+      "value": "24.64",
+      "unit": "Rand",
+      "context": "Light dues rate per metre LOA for self-propelled/licensed vessels"
+    },
+    {
+      "value": "60",
+      "unit": "days",
+      "context": "Time limit for light dues validity in South African waters"
+    },
+    {
+      "value": "100",
+      "unit": "tons",
+      "context": "Unit for the light dues rate for 'all other vessels' and coastal vessels"
+    },
+    {
+      "value": "117.08",
+      "unit": "Rand",
+      "context": "Light dues rate per 100 tons for 'all other vessels' and coastal vessels"
+    }
+  ],
+  "parameters_mentioned": [
+    "vessel's tonnage (gross tonnage)",
+    "length overall (LOA)",
+    "nautical miles",
+    "days",
+    "calendar month",
+    "tons",
+    "financial year",
+    "vessel type (self-propelled, licensed, other, coastal, bonafide coasters)",
+    "port of call (first South African, last South African, foreign)"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The definition of 'vessel's tonnage' is reiterated on the target page but was initially and more fully defined on page 8. The general VAT rate of 15% is also stated in the header on both pages, indicating a continuous context.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page covers '1.1 LIGHT DUES'. As it is part of 'SECTION 1', it is likely that other sub-sections of SECTION 1 will follow on subsequent pages.",
+  "search_keywords": [
+    "Light Dues",
+    "Vessel Tonnage",
+    "Gross Tonnage",
+    "Tonnage Convention 1969",
+    "Lloyds Register",
+    "Territorial Waters",
+    "Nautical Miles",
+    "LOA",
+    "Self-propelled vessels",
+    "Licensed vessels",
+    "South African coastline",
+    "60 days",
+    "Coastal status",
+    "Bonafide Coasters",
+    "Port of Call",
+    "VAT"
+  ],
+  "ambiguities_or_risks": [
+    "The specific rate for 'After 60 days the vessel will be deemed coastal for Light Dues purposes only and will be liable for Light Dues raised on a per calendar month basis' is not explicitly stated, though it appears under the 'All other vessels' section which then lists 'Per 100 tons or part thereof............117.08'. It is implied this R117.08 rate applies monthly, but not explicitly linked.",
+    "The details of the 'special agreement' for coasters are not provided.",
+    "When 'bonafide coasters enter a South African port following a visit or call from a foreign port, full Light Dues is payable', it is not explicitly stated which rate (R24.64 or R117.08) or combination constitutes 'full Light Dues'."
+  ]
+}

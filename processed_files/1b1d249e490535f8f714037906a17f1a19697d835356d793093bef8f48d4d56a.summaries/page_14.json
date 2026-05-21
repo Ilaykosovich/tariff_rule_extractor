@@ -1,0 +1,117 @@
+{
+  "page_number": "14",
+  "section_heading": "3.3 PILOTAGE SERVICES (continuation), 3.4 SURVEY/EXAMINATION OF SMALL VESSELS AND LIFE SAVING APPLIANCES, 3.5 PILOTAGE EXEMPTION CERTIFICATE",
+  "plain_summary": "This page details specific pilotage surcharges for the Port of Durban related to service cancellation. It also lists a charge for PLO duties for pilots on board tanker vessels at the Port of Saldanha. General exemptions for pilotage services are provided for SAPS and SANDF vessels. The page then introduces fees for surveying small vessels and life-saving appliances. Finally, it outlines the fee structure for Pilotage Exemption Certificates, which varies based on the vessel's length overall (LOA), including minimum charges and per-metre rates for different LOA bands. Exemptions for SAPS and SANDF vessels also apply to these certificates, and rules for their validity and endorsement are mentioned.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "50%",
+      "unit": "percentage",
+      "context": "surcharge for pilotage service cancellation at Port of Durban"
+    },
+    {
+      "value": "60 minutes",
+      "unit": "minutes",
+      "context": "cancellation window for pilotage service at Port of Durban"
+    },
+    {
+      "value": "886.20",
+      "unit": "ZAR",
+      "context": "PLO duties for pilots on board tanker vessels during stay, per hour at Port of Saldanha"
+    },
+    {
+      "value": "1410.80",
+      "unit": "ZAR",
+      "context": "Fees for surveying/examination of small vessels, per service"
+    },
+    {
+      "value": "615.66",
+      "unit": "ZAR",
+      "context": "Fees for surveying/examination of life saving appliances, per service"
+    },
+    {
+      "value": "30",
+      "unit": "metres",
+      "context": "Vessel length overall (LOA) threshold for Pilotage Exemption Certificate"
+    },
+    {
+      "value": "138.77",
+      "unit": "ZAR",
+      "context": "Pilotage Exemption Certificate fee per metre or part thereof for vessels up to and including 30 metres LOA"
+    },
+    {
+      "value": "1387.74",
+      "unit": "ZAR",
+      "context": "Minimum Pilotage Exemption Certificate fee for vessels up to and including 30 metres LOA"
+    },
+    {
+      "value": "50",
+      "unit": "metres",
+      "context": "Vessel length overall (LOA) threshold for Pilotage Exemption Certificate"
+    },
+    {
+      "value": "4163.85",
+      "unit": "ZAR",
+      "context": "Base Pilotage Exemption Certificate fee for vessels over 30 metres up to 50 metres LOA"
+    },
+    {
+      "value": "208.23",
+      "unit": "ZAR",
+      "context": "Additional Pilotage Exemption Certificate fee per metre or part thereof over 30 metres for vessels over 30 metres up to 50 metres LOA"
+    },
+    {
+      "value": "70",
+      "unit": "metres",
+      "context": "Vessel length overall (LOA) threshold for Pilotage Exemption Certificate"
+    },
+    {
+      "value": "8327.68",
+      "unit": "ZAR",
+      "context": "Base Pilotage Exemption Certificate fee for vessels over 50 metres up to 70 metres LOA"
+    },
+    {
+      "value": "277.62",
+      "unit": "ZAR",
+      "context": "Additional Pilotage Exemption Certificate fee per metre or part thereof over 50 metres for vessels over 50 metres up to 70 metres LOA"
+    }
+  ],
+  "parameters_mentioned": [
+    "Port of Durban",
+    "Port of Saldanha",
+    "minutes",
+    "hours",
+    "tanker vessels",
+    "SAPS vessels",
+    "SANDF vessels",
+    "per service",
+    "metres in length overall (LOA)",
+    "financial year",
+    "company"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The page continues the '3.3 PILOTAGE SERVICES' section from the previous page, specifically regarding surcharges. The general 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' header also carries over.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This is a tariff book, and it is highly probable that further tariff items and sections will be detailed on subsequent pages, even if the current sections appear to conclude on this page.",
+  "search_keywords": [
+    "Pilotage Surcharge Durban",
+    "PLO duties Saldanha",
+    "Pilotage Exemptions",
+    "Small Vessel Survey Fees",
+    "Life Saving Appliances Survey Fees",
+    "Pilotage Exemption Certificate",
+    "LOA",
+    "Length Overall",
+    "SAPS",
+    "SANDF",
+    "Tariff 3.3",
+    "Tariff 3.4",
+    "Tariff 3.5"
+  ],
+  "ambiguities_or_risks": []
+}

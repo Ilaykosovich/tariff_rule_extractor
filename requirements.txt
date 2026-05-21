@@ -6,3 +6,4 @@ langgraph==1.0.4
 fastapi==0.125.0
 uvicorn==0.38.0
 python-multipart==0.0.21
+voyageai==0.3.7

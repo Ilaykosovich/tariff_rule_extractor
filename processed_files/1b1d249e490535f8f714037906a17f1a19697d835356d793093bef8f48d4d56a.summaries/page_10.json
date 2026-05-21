@@ -1,0 +1,59 @@
+{
+  "page_number": "10",
+  "section_heading": "1.1 Light Dues Exemptions and 1.2 SAMSA Levy",
+  "plain_summary": "This page details exemptions from Light Dues for specific vessel types and conditions, allowing a 100% reduction. It then introduces the SAMSA Levy, stating it is payable by the vessel's owner, charterer, operator, or agent as prescribed by SAMSA Levy Determination Regulations, and lists exemptions for this levy.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    },
+    {
+      "value": "100",
+      "unit": "%",
+      "context": "Reduction allowed for Light Dues exemptions"
+    }
+  ],
+  "parameters_mentioned": [
+    "vessel type: South African Police Services (SAPS) vessels",
+    "vessel type: South African National Defence Force (SANDF) vessels",
+    "vessel type: SAMSA vessels",
+    "vessel type: SA Medical & Research vessels",
+    "vessel type: Non-selfpropelled small and pleasure vessels (not used for gain)",
+    "vessel location: anchorage outside the port",
+    "vessel location: moored at a single buoy mooring or any similar facility",
+    "vessel type: Foreign naval / war vessels",
+    "vessel owner",
+    "vessel charterer",
+    "vessel operator",
+    "vessel agent"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The 'Exemptions' section on this page is a direct continuation of the '1.1 LIGHT DUES ON VESSELS' section from the previous page. The main section heading and the context for Light Dues are established on page 9.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "The actual rates and full conditions for the 'SAMSA Levy' are not provided on this page, as it refers to 'SAMSA Levy Determination Regulations in force'. To calculate the SAMSA Levy, these regulations would be required, which are not part of this document.",
+  "search_keywords": [
+    "Light Dues Exemptions",
+    "SAMSA Levy",
+    "SAPS vessels",
+    "SANDF vessels",
+    "SAMSA vessels",
+    "SA Medical & Research vessels",
+    "Non-selfpropelled vessels",
+    "Pleasure vessels",
+    "Anchorage exemption",
+    "Single buoy mooring",
+    "Foreign naval vessels",
+    "War vessels"
+  ],
+  "ambiguities_or_risks": [
+    "The actual SAMSA Levy rates are not provided on this page, only a reference to external 'SAMSA Levy Determination Regulations in force'. Calculation of the SAMSA Levy would require consulting these external regulations."
+  ]
+}

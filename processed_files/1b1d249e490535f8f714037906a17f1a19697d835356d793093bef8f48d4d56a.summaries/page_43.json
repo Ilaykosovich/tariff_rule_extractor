@@ -1,0 +1,774 @@
+{
+  "page_number": "43",
+  "section_heading": "7.2 DRY BULK",
+  "plain_summary": "This page presents a table of tariff rates for various dry bulk commodities, specifying different rates for imports and exports. The tariffs are subject to VAT at 15% and are denominated in South African Rand.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": false,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Tariff rates for specific dry bulk commodities for both imports and exports.",
+      "columns": [
+        "Commodity",
+        "Imports",
+        "Exports"
+      ],
+      "row_categories": [
+        "Agricultural products / seaweed",
+        "Alumina",
+        "Andalusite",
+        "Barley & products thereof",
+        "Cement & clinker",
+        "Chrome ore",
+        "Coal",
+        "Copper concentrates",
+        "Cotton seed & products thereof",
+        "Ferro alloys",
+        "Fertilizer & products thereof",
+        "Fluorspar & products thereof",
+        "Grain & products thereof",
+        "Gypsum & products thereof",
+        "Iron Ore",
+        "Iron Oxide (Hematite)",
+        "Lead & products thereof",
+        "Maize & products thereof",
+        "Malt & products thereof",
+        "Manganese ore",
+        "Ores & minerals: Magnetite",
+        "Ores & minerals: Silico Manganese",
+        "Petroleum Coke",
+        "Pig iron",
+        "Potash & products thereof",
+        "Rice & products thereof",
+        "Rockphosphate",
+        "Rutile",
+        "Salt",
+        "Soda ash",
+        "Steel: Steel pellets",
+        "Sugar",
+        "Sulphur",
+        "Timber products: Wood shavings, sawdust",
+        "Titanium slag",
+        "Vermiculite",
+        "Wheat & products thereof",
+        "Woodchips",
+        "Zinc & products thereof",
+        "Zircon"
+      ],
+      "important_values": [
+        {
+          "commodity": "Agricultural products / seaweed",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Alumina",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Andalusite",
+          "imports": "18.49",
+          "exports": "13.51",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Barley & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Cement & clinker",
+          "imports": "18.49",
+          "exports": "5.78",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Chrome ore",
+          "imports": "18.49",
+          "exports": "6.95",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Coal",
+          "imports": "11.70",
+          "exports": "5.96",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Copper concentrates",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Cotton seed & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Ferro alloys",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Fertilizer & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Fluorspar & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Grain & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Gypsum & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Iron Ore",
+          "imports": "18.49",
+          "exports": "10.65",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Iron Oxide (Hematite)",
+          "imports": "18.49",
+          "exports": "9.82",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Lead & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Maize & products thereof",
+          "imports": "18.49",
+          "exports": "15.41",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Malt & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Manganese ore",
+          "imports": "18.49",
+          "exports": "10.05",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Ores & minerals: Magnetite",
+          "imports": "18.49",
+          "exports": "5.22",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Ores & minerals: Silico Manganese",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Petroleum Coke",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Pig iron",
+          "imports": "18.49",
+          "exports": "15.41",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Potash & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Rice & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Rockphosphate",
+          "imports": "11.00",
+          "exports": "11.00",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Rutile",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Salt",
+          "imports": "6.76",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Soda ash",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Steel: Steel pellets",
+          "imports": "10.61",
+          "exports": "7.74",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Sugar",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Sulphur",
+          "imports": "7.34",
+          "exports": "7.34",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Timber products: Wood shavings, sawdust",
+          "imports": "18.49",
+          "exports": "8.09",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Titanium slag",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Vermiculite",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Wheat & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Woodchips",
+          "imports": "18.49",
+          "exports": "8.09",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Zinc & products thereof",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        },
+        {
+          "commodity": "Zircon",
+          "imports": "18.49",
+          "exports": "18.49",
+          "unit": "South African Rand"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Agricultural products / seaweed"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Agricultural products / seaweed"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Alumina"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Alumina"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Andalusite"
+    },
+    {
+      "value": "13.51",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Andalusite"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Barley & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Barley & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Cement & clinker"
+    },
+    {
+      "value": "5.78",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Cement & clinker"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Chrome ore"
+    },
+    {
+      "value": "6.95",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Chrome ore"
+    },
+    {
+      "value": "11.70",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Coal"
+    },
+    {
+      "value": "5.96",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Coal"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Copper concentrates"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Copper concentrates"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Cotton seed & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Cotton seed & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Ferro alloys"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Ferro alloys"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Fertilizer & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Fertilizer & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Fluorspar & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Fluorspar & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Grain & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Grain & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Gypsum & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Gypsum & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Iron Ore"
+    },
+    {
+      "value": "10.65",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Iron Ore"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Iron Oxide (Hematite)"
+    },
+    {
+      "value": "9.82",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Iron Oxide (Hematite)"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Lead & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Lead & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Maize & products thereof"
+    },
+    {
+      "value": "15.41",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Maize & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Malt & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Malt & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Manganese ore"
+    },
+    {
+      "value": "10.05",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Manganese ore"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Ores & minerals: Magnetite"
+    },
+    {
+      "value": "5.22",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Ores & minerals: Magnetite"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Ores & minerals: Silico Manganese"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Ores & minerals: Silico Manganese"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Petroleum Coke"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Petroleum Coke"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Pig iron"
+    },
+    {
+      "value": "15.41",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Pig iron"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Potash & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Potash & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Rice & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Rice & products thereof"
+    },
+    {
+      "value": "11.00",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Rockphosphate"
+    },
+    {
+      "value": "11.00",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Rockphosphate"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Rutile"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Rutile"
+    },
+    {
+      "value": "6.76",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Salt"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Salt"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Soda ash"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Soda ash"
+    },
+    {
+      "value": "10.61",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Steel: Steel pellets"
+    },
+    {
+      "value": "7.74",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Steel: Steel pellets"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Sugar"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Sugar"
+    },
+    {
+      "value": "7.34",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Sulphur"
+    },
+    {
+      "value": "7.34",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Sulphur"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Timber products: Wood shavings, sawdust"
+    },
+    {
+      "value": "8.09",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Timber products: Wood shavings, sawdust"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Titanium slag"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Titanium slag"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Vermiculite"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Vermiculite"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Wheat & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Wheat & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Woodchips"
+    },
+    {
+      "value": "8.09",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Woodchips"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Zinc & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Zinc & products thereof"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Import tariff rate for Zircon"
+    },
+    {
+      "value": "18.49",
+      "unit": "South African Rand",
+      "context": "Export tariff rate for Zircon"
+    }
+  ],
+  "parameters_mentioned": [
+    "cargo type (Commodity)",
+    "movement type (Imports)",
+    "movement type (Exports)"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The previous page establishes the general conditions for tariffs (VAT at 15%, currency in South African Rand) which apply to this page. It also introduces section '7.1 BREAKBULK', indicating that '7.2 DRY BULK' on the target page is a continuation of a broader tariff category.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The table for '7.2 DRY BULK' appears to be complete on this page, listing 40 distinct commodities. There is no indication of continuation.",
+  "search_keywords": [
+    "Dry Bulk",
+    "Tariffs",
+    "Imports",
+    "Exports",
+    "Commodity Rates",
+    "Agricultural products",
+    "Alumina",
+    "Andalusite",
+    "Barley",
+    "Cement",
+    "Chrome ore",
+    "Coal",
+    "Copper concentrates",
+    "Cotton seed",
+    "Ferro alloys",
+    "Fertilizer",
+    "Fluorspar",
+    "Grain",
+    "Gypsum",
+    "Iron Ore",
+    "Iron Oxide",
+    "Lead",
+    "Maize",
+    "Malt",
+    "Manganese ore",
+    "Magnetite",
+    "Silico Manganese",
+    "Petroleum Coke",
+    "Pig iron",
+    "Potash",
+    "Rice",
+    "Rockphosphate",
+    "Rutile",
+    "Salt",
+    "Soda ash",
+    "Steel pellets",
+    "Sugar",
+    "Sulphur",
+    "Wood shavings",
+    "Sawdust",
+    "Titanium slag",
+    "Vermiculite",
+    "Wheat",
+    "Woodchips",
+    "Zinc",
+    "Zircon",
+    "South African Rand",
+    "VAT"
+  ],
+  "ambiguities_or_risks": [
+    "The unit 'South African Rand' and the VAT rate '15%' are stated at the top of the page and are assumed to apply to all rates in the table, but are not explicitly repeated for each individual rate."
+  ]
+}

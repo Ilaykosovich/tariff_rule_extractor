@@ -68,6 +68,8 @@ def load_calculator(code_path: str):
 
 
 def calculator_matches(record: dict[str, Any], request: InferenceRequest) -> bool:
+    if record.get("status", "success") != "success":
+        return False
     record_tariffs = set(record.get("target_tariffs", []))
     requested_tariffs = set(request.target_tariffs)
     if not requested_tariffs <= record_tariffs:

@@ -1,0 +1,145 @@
+{
+  "page_number": "53",
+  "section_heading": "8.3 LATE ORDER FEES (continuation) and 8.4 AMENDING ORDERS",
+  "plain_summary": "This page details the incremental late order fees for non-submission of Cargo Dues Orders, based on the number of days late. It also specifies late order fees for late, incomplete, or non-submission of Manifests/Outturn reports. Furthermore, it outlines the conditions and fees for amending Cargo Dues Orders, including specific timeframes and exceptions where no amendment fee is charged.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Incremental late order fees based on the number of days a Cargo Dues Order is submitted late.",
+      "columns": [
+        "Number of days late",
+        "Penalty application"
+      ],
+      "row_categories": [
+        "31-60 days",
+        "61-90 days",
+        "91-120 days",
+        ">120 days"
+      ],
+      "important_values": [
+        {
+          "category": "31-60 days",
+          "penalty_rate": "10% Value of Cargo dues order"
+        },
+        {
+          "category": "61-90 days",
+          "penalty_rate": "30% Value of Cargo dues order"
+        },
+        {
+          "category": "91-120 days",
+          "penalty_rate": "50% Value of Cargo dues order"
+        },
+        {
+          "category": ">120 days",
+          "penalty_rate": "100% Value of Cargo dues order"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "31-60",
+      "unit": "days",
+      "context": "late order penalty threshold"
+    },
+    {
+      "value": "10",
+      "unit": "%",
+      "context": "penalty rate for 31-60 days late"
+    },
+    {
+      "value": "61-90",
+      "unit": "days",
+      "context": "late order penalty threshold"
+    },
+    {
+      "value": "30",
+      "unit": "%",
+      "context": "penalty rate for 61-90 days late"
+    },
+    {
+      "value": "91-120",
+      "unit": "days",
+      "context": "late order penalty threshold"
+    },
+    {
+      "value": "50",
+      "unit": "%",
+      "context": "penalty rate for 91-120 days late"
+    },
+    {
+      "value": ">120",
+      "unit": "days",
+      "context": "late order penalty threshold"
+    },
+    {
+      "value": "100",
+      "unit": "%",
+      "context": "penalty rate for >120 days late"
+    },
+    {
+      "value": "336.53",
+      "unit": "R",
+      "context": "amendment fee per order (also for under declared quantum)"
+    },
+    {
+      "value": "1682.72",
+      "unit": "R",
+      "context": "late order fee per manifest/outturn"
+    },
+    {
+      "value": "7",
+      "unit": "days",
+      "context": "timeframe for no amendment fee for certain changes"
+    },
+    {
+      "value": "90",
+      "unit": "days",
+      "context": "timeframe for transshipment to import order amendments without late order fees"
+    }
+  ],
+  "parameters_mentioned": [
+    "days",
+    "Value of Cargo dues order",
+    "manifests",
+    "outturn reports",
+    "order",
+    "container numbers",
+    "engine numbers",
+    "country of origin",
+    "country of destination",
+    "Bill of lading",
+    "Mates receipt",
+    "Port of loading",
+    "Port of discharge",
+    "Terminal",
+    "Container Operator",
+    "Shipping Agent",
+    "quantum"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The table on this page is a direct continuation of section 8.3.2 'Non-submission of Cargo Dues Orders' which started on page 52. The overall section 8.3 'LATE ORDER FEES' also begins on page 52. Additionally, section 8.3.4 refers to 'Responsible Party (Page 52)' for clarification.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "Section 8.4 'AMENDING ORDERS' appears to be self-contained on this page, concluding the topic of order amendments.",
+  "search_keywords": [
+    "Late order fees",
+    "Cargo Dues Orders",
+    "penalty",
+    "amendment fees",
+    "manifests",
+    "outturn reports",
+    "non-submission",
+    "incomplete",
+    "transshipment",
+    "under declared quantum"
+  ],
+  "ambiguities_or_risks": [
+    "The term 'under declared quantum' implies that the amendment fee and late order fee (if applicable) are levied on the difference in value, not the full value of the order, which should be confirmed for calculation accuracy.",
+    "The conditions for 'Transshipment to import orders' regarding the 90-day timeframe and applicability of late order fees based on 'change in value of the nature of the order' require careful interpretation to ensure correct calculation."
+  ]
+}

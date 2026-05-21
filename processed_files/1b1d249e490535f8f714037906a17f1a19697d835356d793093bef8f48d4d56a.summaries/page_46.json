@@ -1,0 +1,220 @@
+{
+  "page_number": "46",
+  "section_heading": "7.7 TRANSHIPPED CARGO",
+  "plain_summary": "This page defines various scenarios that qualify as 'Transshipped Cargo' for the purpose of applying specific fees. It then lists the fees for containerized cargo (by container size), empty containers, and other general cargo (per ton). It also specifies fees for bulk liquids, differentiating between the first 100,000 tons/kilolitres and subsequent amounts. The page includes conditions regarding transshipment deadlines for bulk liquids and perishable/in-bond cargo, after which they are considered imported and exported, and conditions for cargo not manifested for SA that is discharged due to damage/malfunction.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Fees for various categories of transshipped cargo, including containerized, empty containers, general cargo, and bulk liquids.",
+      "columns": [
+        "Cargo Category",
+        "Size/Unit",
+        "Rate (ZAR)",
+        "Conditions/Notes"
+      ],
+      "row_categories": [
+        "Containerised cargo (6m / 20' containers)",
+        "Containerised cargo (12m / 40', 13,7m / 45' containers)",
+        "Empty containers (all sizes)",
+        "Other cargo",
+        "Bulk liquids (First 100 000 tons/kilolitres)",
+        "Bulk liquids (Thereafter)"
+      ],
+      "important_values": [
+        {
+          "category": "Containerised cargo",
+          "size_unit": "6m / 20' containers",
+          "rate": "74.64",
+          "unit": "ZAR per container per leg inwards or outwards"
+        },
+        {
+          "category": "Containerised cargo",
+          "size_unit": "12m / 40', 13,7m / 45' containers",
+          "rate": "149.26",
+          "unit": "ZAR per container per leg inwards or outwards"
+        },
+        {
+          "category": "Empty containers",
+          "size_unit": "all sizes",
+          "rate": "73.16",
+          "unit": "ZAR per container per leg inwards or outwards"
+        },
+        {
+          "category": "Other cargo",
+          "size_unit": "per ton",
+          "rate": "4.31",
+          "unit": "ZAR per ton per leg inwards or outwards"
+        },
+        {
+          "category": "Bulk liquids",
+          "size_unit": "First 100 000 tons (kilolitres)",
+          "rate": "4.31",
+          "unit": "ZAR per ton (kilolitre), per consignment, per leg inwards or outwards"
+        },
+        {
+          "category": "Bulk liquids",
+          "size_unit": "Thereafter",
+          "rate": "2.15",
+          "unit": "ZAR per ton (kilolitre), per consignment, per leg inwards or outwards"
+        },
+        {
+          "condition": "Transshipping orders accepted prior to, or within 3 days of the discharging vessel having commenced discharge."
+        },
+        {
+          "condition": "Cargo not manifested for SA that is discharged due to damage/malfunction and then shipped/airfreighted to the country of final destination within 90 days of cargo being discharged. Unpack and repack must be done at a Customs bonded warehouse/Custom's supervision. Documentary proof must be available to the Authority."
+        },
+        {
+          "condition": "Bulk liquids not transshipped within 90 days of discharging vessel completes cargo working, shall for cargo dues purposes be regarded as cargo imported and exported."
+        },
+        {
+          "condition": "Perishable cargo and in bond cargo not transshipped within 30 days after the date that the discharging vessel commenced cargo working, shall for cargo dues purposes be regarded as cargo imported and exported."
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "3",
+      "unit": "days",
+      "context": "Deadline for transshipping orders acceptance"
+    },
+    {
+      "value": "74.64",
+      "unit": "ZAR",
+      "context": "Rate for 6m / 20' containers"
+    },
+    {
+      "value": "6",
+      "unit": "m",
+      "context": "Container length"
+    },
+    {
+      "value": "20",
+      "unit": "'",
+      "context": "Container length"
+    },
+    {
+      "value": "12",
+      "unit": "m",
+      "context": "Container length"
+    },
+    {
+      "value": "40",
+      "unit": "'",
+      "context": "Container length"
+    },
+    {
+      "value": "13,7",
+      "unit": "m",
+      "context": "Container length"
+    },
+    {
+      "value": "45",
+      "unit": "'",
+      "context": "Container length"
+    },
+    {
+      "value": "149.26",
+      "unit": "ZAR",
+      "context": "Rate for 12m / 40', 13,7m / 45' containers"
+    },
+    {
+      "value": "73.16",
+      "unit": "ZAR",
+      "context": "Rate for empty containers"
+    },
+    {
+      "value": "4.31",
+      "unit": "ZAR",
+      "context": "Rate for other cargo per ton"
+    },
+    {
+      "value": "100 000",
+      "unit": "tons (kilolitres)",
+      "context": "Threshold for bulk liquids"
+    },
+    {
+      "value": "4.31",
+      "unit": "ZAR",
+      "context": "Rate for first 100 000 tons (kilolitres) of bulk liquids"
+    },
+    {
+      "value": "2.15",
+      "unit": "ZAR",
+      "context": "Rate for bulk liquids thereafter"
+    },
+    {
+      "value": "90",
+      "unit": "days",
+      "context": "Transshipment deadline for bulk liquids"
+    },
+    {
+      "value": "30",
+      "unit": "days",
+      "context": "Transshipment deadline for perishable cargo and in bond cargo"
+    },
+    {
+      "value": "90",
+      "unit": "days",
+      "context": "Deadline for shipping/airfreighting cargo not manifested for SA due to damage/malfunction"
+    }
+  ],
+  "parameters_mentioned": [
+    "cargo type (Containerised cargo, Empty containers, Other cargo, Bulk liquids, Perishable cargo, In bond cargo, Bunker fuel oil)",
+    "container size (6m / 20', 12m / 40', 13,7m / 45', all sizes for empty)",
+    "tons / kilolitres (for other cargo and bulk liquids)",
+    "days (3 days, 30 days, 90 days)",
+    "leg (inwards or outwards)",
+    "consignment (for bulk liquids)",
+    "vessel (discharging vessel, on carrying vessel, tankers, bunker barges)",
+    "port of discharge",
+    "another port",
+    "South African port",
+    "country of final destination",
+    "wharf or jetty",
+    "Customs bonded warehouse / Custom's supervision"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "The section '7.7 TRANSHIPPED CARGO' is a new, distinct topic. While the previous page establishes general tariff context (VAT, currency), the specific rules and rates for transshipped cargo are self-contained on this page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The page concludes with specific conditions for different cargo types and deadlines, and the section heading '7.7 TRANSHIPPED CARGO' appears to be fully covered on this page without an explicit continuation.",
+  "search_keywords": [
+    "Transshipped cargo",
+    "transshipment fees",
+    "container fees",
+    "bulk liquid fees",
+    "empty container fees",
+    "cargo dues",
+    "6m container",
+    "20ft container",
+    "12m container",
+    "40ft container",
+    "45ft container",
+    "perishable cargo",
+    "in bond cargo",
+    "bulk liquids",
+    "cargo not manifested",
+    "cargo damage",
+    "cargo malfunction",
+    "90 days",
+    "30 days",
+    "3 days",
+    "per leg"
+  ],
+  "ambiguities_or_risks": [
+    "The term 'per leg inwards or outwards' implies the fee is charged twice for a full transshipment (once for inward movement, once for outward movement).",
+    "The interchangeability of 'tons' and 'kilolitres' for bulk liquids should be noted, implying a density close to 1.",
+    "The specific conditions for 'Cargo not manifested for SA that is discharged due to damage/malfunction' (90 days, Customs bonded warehouse/supervision, documentary proof) are critical for eligibility.",
+    "The 'per consignment' condition for bulk liquids is important for calculation."
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "page_number": "44",
+  "section_heading": "7.3 LIQUID BULK",
+  "plain_summary": "This page details tariff rates for various liquid bulk commodities (imports and exports) under section 7.3. It then outlines fees for containers (imports, exports, and empty) based on size, including specific conditions for empty containers and how different container sizes are charged, under section 7.4. Finally, section 7.5 specifies tariffs for coastwise cargo, differentiating between breakbulk/bulk cargo (charged per ton) and containerized cargo (charged per container size).",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Import and export tariffs for various liquid bulk commodities.",
+      "columns": [
+        "Commodity",
+        "Imports",
+        "Exports"
+      ],
+      "row_categories": [
+        "Ammonium & products thereof",
+        "Anhydrous ammonia",
+        "Animal / vegetable oils / fats & products thereof",
+        "Caustic soda",
+        "Crude & petroleum products",
+        "Molasses & products thereof",
+        "Phosphoric acid",
+        "Pitch pencil",
+        "Sunflower seed oil"
+      ],
+      "important_values": [
+        {
+          "commodity": "Ammonium & products thereof",
+          "imports": "27.98",
+          "exports": "27.98",
+          "unit": "ZAR (per ton, implied)"
+        },
+        {
+          "commodity": "Anhydrous ammonia",
+          "imports": "27.98",
+          "exports": "27.98",
+          "unit": "ZAR (per ton, implied)"
+        },
+        {
+          "commodity": "Animal / vegetable oils / fats & products thereof",
+          "imports": "35.89",
+          "exports": "35.89",
+          "unit": "ZAR (per ton, implied)"
+        },
+        {
+          "commodity": "Caustic soda",
+          "imports": "35.89",
+          "exports": "35.89",
+          "unit": "ZAR (per ton, implied)"
+        },
+        {
+          "commodity": "Crude & petroleum products",
+          "imports": "31.47",
+          "exports": "17.49",
+          "unit": "ZAR (per ton, implied)"
+        },
+        {
+          "commodity": "Molasses & products thereof",
+          "imports": "6.85",
+          "exports": "3.49",
+          "unit": "ZAR (per ton, implied)"
+        },
+        {
+          "commodity": "Phosphoric acid",
+          "imports": "35.89",
+          "exports": "35.89",
+          "unit": "ZAR (per ton, implied)"
+        },
+        {
+          "commodity": "Pitch pencil",
+          "imports": "14.69",
+          "exports": "35.89",
+          "unit": "ZAR (per ton, implied)"
+        },
+        {
+          "commodity": "Sunflower seed oil",
+          "imports": "35.89",
+          "exports": "35.89",
+          "unit": "ZAR (per ton, implied)"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Fees per container for imports and exports.",
+      "columns": [
+        "Imports",
+        "Exports"
+      ],
+      "row_categories": [
+        "6m / 20' containers",
+        "12m / 40', 13,7m / 45' containers",
+        "Empty containers, all sizes"
+      ],
+      "important_values": [
+        {
+          "container_type": "6m / 20' containers",
+          "imports": "1 817.91",
+          "exports": "399.79",
+          "unit": "ZAR per container"
+        },
+        {
+          "container_type": "12m / 40', 13,7m / 45' containers",
+          "imports": "3 635.80",
+          "exports": "799.57",
+          "unit": "ZAR per container"
+        },
+        {
+          "container_type": "Empty containers, all sizes",
+          "imports": "73.17",
+          "exports": "73.17",
+          "unit": "ZAR per container"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Tariffs for coastwise breakbulk/bulk cargo.",
+      "columns": [
+        "Cargo Type",
+        "Rate"
+      ],
+      "row_categories": [
+        "All cargo per leg inwards or outwards",
+        "Breakbulk empty returns"
+      ],
+      "important_values": [
+        {
+          "cargo_type": "All cargo per leg inwards or outwards",
+          "rate": "16.79",
+          "unit": "ZAR per ton"
+        },
+        {
+          "cargo_type": "Breakbulk empty returns",
+          "rate": "4.55",
+          "unit": "ZAR per ton"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Tariffs for coastwise containerized cargo.",
+      "columns": [
+        "Container Type",
+        "Rate"
+      ],
+      "row_categories": [
+        "6m / 20' containers",
+        "12m / 40', 13,7m / 45' containers",
+        "Empty containers, all sizes"
+      ],
+      "important_values": [
+        {
+          "container_type": "6m / 20' containers",
+          "rate": "74.64",
+          "unit": "ZAR per container"
+        },
+        {
+          "container_type": "12m / 40', 13,7m / 45' containers",
+          "rate": "149.26",
+          "unit": "ZAR per container"
+        },
+        {
+          "container_type": "Empty containers, all sizes",
+          "rate": "74.64",
+          "unit": "ZAR per container"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "27.98",
+      "unit": "ZAR",
+      "context": "Liquid Bulk (Ammonium, Anhydrous ammonia) Import/Export rate"
+    },
+    {
+      "value": "35.89",
+      "unit": "ZAR",
+      "context": "Liquid Bulk (Animal/vegetable oils/fats, Caustic soda, Phosphoric acid, Sunflower seed oil) Import/Export rate; Pitch pencil Export rate"
+    },
+    {
+      "value": "31.47",
+      "unit": "ZAR",
+      "context": "Crude & petroleum products Import rate"
+    },
+    {
+      "value": "17.49",
+      "unit": "ZAR",
+      "context": "Crude & petroleum products Export rate"
+    },
+    {
+      "value": "6.85",
+      "unit": "ZAR",
+      "context": "Molasses & products thereof Import rate"
+    },
+    {
+      "value": "3.49",
+      "unit": "ZAR",
+      "context": "Molasses & products thereof Export rate"
+    },
+    {
+      "value": "14.69",
+      "unit": "ZAR",
+      "context": "Pitch pencil Import rate"
+    },
+    {
+      "value": "1817.91",
+      "unit": "ZAR",
+      "context": "6m / 20' containers Import rate"
+    },
+    {
+      "value": "399.79",
+      "unit": "ZAR",
+      "context": "6m / 20' containers Export rate"
+    },
+    {
+      "value": "3635.80",
+      "unit": "ZAR",
+      "context": "12m / 40', 13,7m / 45' containers Import rate"
+    },
+    {
+      "value": "799.57",
+      "unit": "ZAR",
+      "context": "12m / 40', 13,7m / 45' containers Export rate"
+    },
+    {
+      "value": "73.17",
+      "unit": "ZAR",
+      "context": "Empty containers, all sizes Import/Export rate (Section 7.4)"
+    },
+    {
+      "value": "6m / 20'",
+      "unit": "container size",
+      "context": "Container dimension"
+    },
+    {
+      "value": "12m / 40'",
+      "unit": "container size",
+      "context": "Container dimension"
+    },
+    {
+      "value": "13,7m / 45'",
+      "unit": "container size",
+      "context": "Container dimension"
+    },
+    {
+      "value": "16.79",
+      "unit": "ZAR",
+      "context": "Coastwise Breakbulk/Bulk all cargo rate per ton"
+    },
+    {
+      "value": "4.55",
+      "unit": "ZAR",
+      "context": "Coastwise Breakbulk empty returns rate per ton"
+    },
+    {
+      "value": "74.64",
+      "unit": "ZAR",
+      "context": "Coastwise Containerised 6m / 20' and Empty containers rate per container"
+    },
+    {
+      "value": "149.26",
+      "unit": "ZAR",
+      "context": "Coastwise Containerised 12m / 40', 13,7m / 45' containers rate per container"
+    }
+  ],
+  "parameters_mentioned": [
+    "commodity type (liquid bulk)",
+    "cargo type (breakbulk, bulk, containerised)",
+    "container size (6m / 20', 12m / 40', 13,7m / 45')",
+    "cargo tonnes (implied for bulk/breakbulk)",
+    "movements (imports, exports, inwards, outwards, per leg)",
+    "VAT rate (15%)"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The header 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' is a continuous header from the previous page, indicating the general conditions for the tariffs. The unit 'per ton' for bulk cargo is implied from the previous page's dry bulk table and is not explicitly stated for liquid bulk on this page.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "The page ends with section '7.5 COASTWISE CARGO', suggesting that there may be further tariff sections (e.g., 7.6, 7.7) on subsequent pages that are part of the overall tariff schedule.",
+  "search_keywords": [
+    "Liquid Bulk Tariffs",
+    "Container Fees",
+    "Coastwise Cargo",
+    "Import Export Rates",
+    "20ft container",
+    "40ft container",
+    "Empty container",
+    "Breakbulk",
+    "Bulk",
+    "VAT",
+    "Ammonium",
+    "Crude petroleum",
+    "Molasses",
+    "Phosphoric acid",
+    "Sunflower seed oil"
+  ],
+  "ambiguities_or_risks": [
+    "The unit for liquid bulk tariffs (Section 7.3) is not explicitly stated on this page but is implied to be 'per ton' based on the context of the previous page's dry bulk tariffs."
+  ]
+}

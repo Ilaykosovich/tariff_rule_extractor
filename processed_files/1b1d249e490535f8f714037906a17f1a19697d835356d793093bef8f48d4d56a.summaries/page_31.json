@@ -1,0 +1,85 @@
+{
+  "page_number": "31",
+  "section_heading": "4.9 PASSENGER BAGGAGE: ALL PORTS, 4.10 PASSENGERS' LEVY: ALL PORTS, 4.11 ADMINISTRATIVE FEES",
+  "plain_summary": "This page details various fees related to passenger services and administrative tasks. Section 4.9 outlines fees for handling passenger baggage (excluding manifested baggage) for passenger-carrying vessels, charged per passenger upon embarkation or disembarkation. Section 4.10 introduces an additional passenger levy, applicable to all passengers embarking, disembarking, or visiting in transit, charged per passenger on a per-call basis. Section 4.11 covers administrative fees, including 4.11.1 Amending Fees for changes to marine orders post-invoicing due to customer requests, charged per request, and 4.11.2 Split Account Fees, charged per party, with the fee being levied once if processed PRIOR to vessel sailing and twice if processed AFTER vessel sailing.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "90.19",
+      "unit": "ZAR",
+      "context": "Passenger Baggage fee per passenger"
+    },
+    {
+      "value": "95.07",
+      "unit": "ZAR",
+      "context": "Passenger Levy per passenger (embarkation)"
+    },
+    {
+      "value": "95.07",
+      "unit": "ZAR",
+      "context": "Passenger Levy per passenger (disembarkation)"
+    },
+    {
+      "value": "95.07",
+      "unit": "ZAR",
+      "context": "Passenger Levy per visiting passenger in transit per call"
+    },
+    {
+      "value": "459.37",
+      "unit": "ZAR",
+      "context": "Amending Fee per request"
+    },
+    {
+      "value": "470.98",
+      "unit": "ZAR",
+      "context": "Split Account Fee per party (PRIOR to vessel sailing)"
+    },
+    {
+      "value": "twice",
+      "unit": "multiplier",
+      "context": "Split Account Fee levied AFTER vessel sailing"
+    }
+  ],
+  "parameters_mentioned": [
+    "passenger",
+    "vessel (passenger-carrying vessels)",
+    "baggage (passenger's baggage, manifested baggage)",
+    "embarkation",
+    "disembarkation",
+    "call (per call basis)",
+    "in transit",
+    "marine order",
+    "invoicing (post invoicing)",
+    "customer initiated requests",
+    "request (per request)",
+    "party (per party)",
+    "vessel sailing (PRIOR/AFTER)"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The sections on this page appear to be self-contained and complete.",
+  "search_keywords": [
+    "Passenger Baggage",
+    "Passenger Levy",
+    "Administrative Fees",
+    "Amending Fees",
+    "Split Account Fees",
+    "Embarkation",
+    "Disembarkation",
+    "In Transit",
+    "Marine Order",
+    "Invoicing"
+  ],
+  "ambiguities_or_risks": [
+    "The term 'manifested baggage' is not defined, which could affect the applicability of the 4.9 fee.",
+    "The phrase 'levied twice per party' for split account fees AFTER vessel sailing implies a calculation rule (2 * 470.98 ZAR) but is not presented as a formal formula.",
+    "The definition of 'party' in 'Split Account Fees' is not explicitly provided."
+  ]
+}

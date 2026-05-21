@@ -1,0 +1,233 @@
+{
+  "page_number": "38",
+  "section_heading": "6.6.3 Syncrolift at the Port of Cape Town; 6.6.4 Minimum fees",
+  "plain_summary": "This page details the tariff fees for using the Syncrolift at the Port of Cape Town, broken down by vessel gross tonnage and duration of use (first 24 hours or subsequent 12-hour periods). It also specifies minimum fees for various drydocks (Sturrock, Prince Edward, Princess Elizabeth, Robinson, Floating docks) and the Syncrolift, again based on duration. The page includes notes regarding additional charges for shifting docking blocks, recovery of damage caused by bar/box keel vessels, and potential special conditions for Medical/Research vessels or companies drydocking multiple vessels within a 12-month period.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Tariff fees for Syncrolift at the Port of Cape Town.",
+      "columns": [
+        "Syncrolift",
+        "First 24 hour period or part thereof:",
+        "Each subsequent 12 hour period or part thereof"
+      ],
+      "row_categories": [
+        "Vessels up to 2 000 tons",
+        "Plus per ton",
+        "Vessel above 2 000 tons",
+        "Plus per ton"
+      ],
+      "important_values": [
+        {
+          "category": "Vessels up to 2 000 tons",
+          "first_24_hours_base": "1 602.33",
+          "subsequent_12_hours_base": "801.19",
+          "unit": "ZAR"
+        },
+        {
+          "category": "Plus per ton (up to 2 000 tons)",
+          "first_24_hours_per_ton": "3.53",
+          "subsequent_12_hours_per_ton": "1.46",
+          "unit": "ZAR per ton"
+        },
+        {
+          "category": "Vessel above 2 000 tons",
+          "first_24_hours_base": "2 108.35",
+          "subsequent_12_hours_base": "1 054.16",
+          "unit": "ZAR"
+        },
+        {
+          "category": "Plus per ton (above 2 000 tons)",
+          "first_24_hours_per_ton": "3.53",
+          "subsequent_12_hours_per_ton": "1.46",
+          "unit": "ZAR per ton"
+        },
+        {
+          "threshold": "2 000",
+          "unit": "tons"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Minimum fees for various drydocks and Syncrolift facilities.",
+      "columns": [
+        "Minimum fees",
+        "First 24 hour period or part thereof:",
+        "Each subsequent 12 hour period or part thereof"
+      ],
+      "row_categories": [
+        "Sturrock and Prince Edward drydocks",
+        "Princess Elizabeth and Robinson drydocks",
+        "Floating docks",
+        "Syncrolift"
+      ],
+      "important_values": [
+        {
+          "facility": "Sturrock and Prince Edward drydocks",
+          "first_24_hours": "48 570.64",
+          "subsequent_12_hours": "20 389.12",
+          "unit": "ZAR"
+        },
+        {
+          "facility": "Princess Elizabeth and Robinson drydocks",
+          "first_24_hours": "18 634.97",
+          "subsequent_12_hours": "8 329.37",
+          "unit": "ZAR"
+        },
+        {
+          "facility": "Floating docks",
+          "first_24_hours": "20 408.81",
+          "subsequent_12_hours": "10 204.40",
+          "unit": "ZAR"
+        },
+        {
+          "facility": "Syncrolift",
+          "first_24_hours": "6 625.83",
+          "subsequent_12_hours": "2 206.74",
+          "unit": "ZAR"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "24",
+      "unit": "hours",
+      "context": "First period duration"
+    },
+    {
+      "value": "12",
+      "unit": "hours",
+      "context": "Subsequent period duration"
+    },
+    {
+      "value": "2 000",
+      "unit": "tons",
+      "context": "Syncrolift vessel size threshold"
+    },
+    {
+      "value": "1 602.33",
+      "unit": "ZAR",
+      "context": "Syncrolift base fee for vessels up to 2 000 tons, first 24 hours"
+    },
+    {
+      "value": "801.19",
+      "unit": "ZAR",
+      "context": "Syncrolift base fee for vessels up to 2 000 tons, each subsequent 12 hours"
+    },
+    {
+      "value": "3.53",
+      "unit": "ZAR per ton",
+      "context": "Syncrolift per ton fee for vessels up to 2 000 tons, first 24 hours"
+    },
+    {
+      "value": "1.46",
+      "unit": "ZAR per ton",
+      "context": "Syncrolift per ton fee for vessels up to 2 000 tons, each subsequent 12 hours"
+    },
+    {
+      "value": "2 108.35",
+      "unit": "ZAR",
+      "context": "Syncrolift base fee for vessels above 2 000 tons, first 24 hours"
+    },
+    {
+      "value": "1 054.16",
+      "unit": "ZAR",
+      "context": "Syncrolift base fee for vessels above 2 000 tons, each subsequent 12 hours"
+    },
+    {
+      "value": "3.53",
+      "unit": "ZAR per ton",
+      "context": "Syncrolift per ton fee for vessels above 2 000 tons, first 24 hours"
+    },
+    {
+      "value": "1.46",
+      "unit": "ZAR per ton",
+      "context": "Syncrolift per ton fee for vessels above 2 000 tons, each subsequent 12 hours"
+    },
+    {
+      "value": "48 570.64",
+      "unit": "ZAR",
+      "context": "Minimum fee for Sturrock and Prince Edward drydocks, first 24 hours"
+    },
+    {
+      "value": "20 389.12",
+      "unit": "ZAR",
+      "context": "Minimum fee for Sturrock and Prince Edward drydocks, each subsequent 12 hours"
+    },
+    {
+      "value": "18 634.97",
+      "unit": "ZAR",
+      "context": "Minimum fee for Princess Elizabeth and Robinson drydocks, first 24 hours"
+    },
+    {
+      "value": "8 329.37",
+      "unit": "ZAR",
+      "context": "Minimum fee for Princess Elizabeth and Robinson drydocks, each subsequent 12 hours"
+    },
+    {
+      "value": "20 408.81",
+      "unit": "ZAR",
+      "context": "Minimum fee for Floating docks, first 24 hours"
+    },
+    {
+      "value": "10 204.40",
+      "unit": "ZAR",
+      "context": "Minimum fee for Floating docks, each subsequent 12 hours"
+    },
+    {
+      "value": "6 625.83",
+      "unit": "ZAR",
+      "context": "Minimum fee for Syncrolift, first 24 hours"
+    },
+    {
+      "value": "2 206.74",
+      "unit": "ZAR",
+      "context": "Minimum fee for Syncrolift, each subsequent 12 hours"
+    },
+    {
+      "value": "12",
+      "unit": "month",
+      "context": "Period for special conditions for multiple vessels"
+    }
+  ],
+  "parameters_mentioned": [
+    "tons (gross tonnage)",
+    "hours (24, 12)",
+    "vessel type (bar/box keel vessels, Medical vessels, Research vessels)",
+    "company (four and more vessels of a company)",
+    "period (12 month period)"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The general header 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' applies to this page. Crucially, the definition 'Tons shall mean gross tonnage in cubic metres' from section 6.6.2 on page 37 is essential for correctly interpreting the 'tons' parameter used in the tables on this page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This page concludes the '6.6 Drydock and Repair Facilities' section with minimum fees and general notes. The next page is likely to start a new, unrelated section.",
+  "search_keywords": [
+    "Syncrolift",
+    "Cape Town",
+    "Minimum fees",
+    "Drydock",
+    "Repair facility",
+    "Sturrock",
+    "Prince Edward",
+    "Princess Elizabeth",
+    "Robinson",
+    "Floating docks",
+    "VAT",
+    "Gross tonnage",
+    "Bar/box keel vessels",
+    "Medical vessels",
+    "Research vessels"
+  ],
+  "ambiguities_or_risks": []
+}

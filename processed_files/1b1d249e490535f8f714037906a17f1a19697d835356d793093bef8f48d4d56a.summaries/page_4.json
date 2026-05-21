@@ -1,0 +1,189 @@
+{
+  "page_number": "4",
+  "section_heading": "CONTENTS",
+  "plain_summary": "This page continues the Table of Contents for the Tariff Book, listing Sections 6, 7, and 8 along with their respective sub-sections and the page numbers where they can be found. Section 6 covers Drydocks, Floating Docks, Syncrolifts, and Slipways. Section 7 details Cargo Dues on Imports, Exports, Transhipments, and Coastwise cargo. Section 8 outlines Business Processes and Documentation.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": true,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": false,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Table of Contents for Sections 6, 7, and 8 of the Tariff Book.",
+      "columns": [
+        "Section/Subsection Title",
+        "Page Number"
+      ],
+      "row_categories": [
+        "SECTION 6: DRYDOCKS, FLOATING DOCKS, SYNCROLIFTS AND SLIPWAYS",
+        "6.1 General terms and conditions",
+        "6.2 Booking fees",
+        "6.3 Penalties",
+        "6.4 Preparation",
+        "6.5 Docking and undocking of vessels",
+        "6.6 Drydock, floating dock and syncrolift dues",
+        "6.7 Slipway",
+        "6.8 Wharf cranes",
+        "6.9 Miscellaneous",
+        "SECTION 7: CARGO DUES ON IMPORTS, EXPORTS, TRANSHIPMENTS AND COASTWISE",
+        "7.1 Breakbulk",
+        "7.2 Dry Bulk",
+        "7.3 Liquid Bulk",
+        "7.4 Containers",
+        "7.5 Coastwise cargo",
+        "7.6 Exemptions",
+        "7.7 Transhipped cargo",
+        "7.8 Late order and related fees",
+        "7.9 Cargo conveyed by vessels permitted to service vessels within and outside the port",
+        "SECTION 8: BUSINESS PROCESSES AND DOCUMENTATION",
+        "8.1 Cargo Dues Order",
+        "8.1.1 Types of documentation",
+        "8.1.2 Timing of documentation",
+        "8.2 Responsible party",
+        "8.3 Late order fees",
+        "8.4 Amending orders",
+        "8.5 Terminal Outturn report",
+        "8.6 Port Revenue Offices"
+      ],
+      "important_values": [
+        "Page 34 (6.1, 6.2)",
+        "Page 35 (6.3, 6.4)",
+        "Page 36 (6.5, 6.6)",
+        "Page 39 (6.7)",
+        "Page 40 (6.8, 6.9)",
+        "Page 42 (7.1)",
+        "Page 43 (7.2)",
+        "Page 44 (7.3, 7.4, 7.5)",
+        "Page 45 (7.6)",
+        "Page 46 (7.7)",
+        "Page 47 (7.8, 7.9)",
+        "Page 48 (8.1)",
+        "Page 49 (8.1.1)",
+        "Page 50 (8.1.2)",
+        "Page 52 (8.2, 8.3)",
+        "Page 53 (8.4)",
+        "Page 54 (8.5, 8.6)"
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "34",
+      "unit": "page",
+      "context": "Page number for Section 6.1 and 6.2"
+    },
+    {
+      "value": "35",
+      "unit": "page",
+      "context": "Page number for Section 6.3 and 6.4"
+    },
+    {
+      "value": "36",
+      "unit": "page",
+      "context": "Page number for Section 6.5 and 6.6"
+    },
+    {
+      "value": "39",
+      "unit": "page",
+      "context": "Page number for Section 6.7"
+    },
+    {
+      "value": "40",
+      "unit": "page",
+      "context": "Page number for Section 6.8 and 6.9"
+    },
+    {
+      "value": "42",
+      "unit": "page",
+      "context": "Page number for Section 7.1"
+    },
+    {
+      "value": "43",
+      "unit": "page",
+      "context": "Page number for Section 7.2"
+    },
+    {
+      "value": "44",
+      "unit": "page",
+      "context": "Page number for Section 7.3, 7.4, and 7.5"
+    },
+    {
+      "value": "45",
+      "unit": "page",
+      "context": "Page number for Section 7.6"
+    },
+    {
+      "value": "46",
+      "unit": "page",
+      "context": "Page number for Section 7.7"
+    },
+    {
+      "value": "47",
+      "unit": "page",
+      "context": "Page number for Section 7.8 and 7.9"
+    },
+    {
+      "value": "48",
+      "unit": "page",
+      "context": "Page number for Section 8.1"
+    },
+    {
+      "value": "49",
+      "unit": "page",
+      "context": "Page number for Section 8.1.1"
+    },
+    {
+      "value": "50",
+      "unit": "page",
+      "context": "Page number for Section 8.1.2"
+    },
+    {
+      "value": "52",
+      "unit": "page",
+      "context": "Page number for Section 8.2 and 8.3"
+    },
+    {
+      "value": "53",
+      "unit": "page",
+      "context": "Page number for Section 8.4"
+    },
+    {
+      "value": "54",
+      "unit": "page",
+      "context": "Page number for Section 8.5 and 8.6"
+    }
+  ],
+  "parameters_mentioned": [
+    "vessels",
+    "cargo",
+    "imports",
+    "exports",
+    "transhipments",
+    "coastwise",
+    "breakbulk",
+    "dry bulk",
+    "liquid bulk",
+    "containers"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The target page is a continuation of the 'CONTENTS' section that started on the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This page completes the Table of Contents. The next page will likely be the start of the first detailed section listed on page 3 (Section 4.1 on page 21, or Section 6.1 on page 34, depending on the actual document flow, but the table of contents itself is complete).",
+  "search_keywords": [
+    "Contents",
+    "Table of Contents",
+    "Drydocks",
+    "Floating Docks",
+    "Syncrolifts",
+    "Slipways",
+    "Cargo Dues",
+    "Imports",
+    "Exports",
+    "Transhipments",
+    "Coastwise",
+    "Business Processes",
+    "Documentation"
+  ],
+  "ambiguities_or_risks": []
+}

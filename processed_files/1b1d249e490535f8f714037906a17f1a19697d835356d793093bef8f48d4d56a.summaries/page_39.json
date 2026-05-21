@@ -1,0 +1,153 @@
+{
+  "page_number": "39",
+  "section_heading": "6.7 SLIPWAY",
+  "plain_summary": "This page outlines the tariffs for slipway services, including a preparation cost for vessels up to 1,000 tons, a per-service fee for the acts of docking and undocking (which are considered separate services), and a detailed table of daily and subsequent hourly rates for vessels occupying the slipway, categorized by tonnage, along with associated per-ton charges and minimum fees. It also includes a note regarding cancellation fees for preparatory work.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Docking and Undocking of vessels at a slipway, detailing charges per period based on vessel tonnage.",
+      "columns": [
+        "First 24 hour period or part thereof:",
+        "Each subsequent 12 hour period or part thereof"
+      ],
+      "row_categories": [
+        "Vessels up to 2 000 tons",
+        "Plus per ton",
+        "Vessels above 2 000 tons",
+        "Plus per ton",
+        "Minimum fees"
+      ],
+      "important_values": [
+        {
+          "category": "Vessels up to 2 000 tons",
+          "first_24_hours_rate": "1 602.33",
+          "subsequent_12_hours_rate": "801.19",
+          "unit": "ZAR"
+        },
+        {
+          "category": "Plus per ton (for vessels up to 2 000 tons)",
+          "first_24_hours_rate": "3.53",
+          "subsequent_12_hours_rate": "1.46",
+          "unit": "ZAR per ton"
+        },
+        {
+          "category": "Vessels above 2 000 tons",
+          "first_24_hours_rate": "2 108.35",
+          "subsequent_12_hours_rate": "878.49",
+          "unit": "ZAR"
+        },
+        {
+          "category": "Plus per ton (for vessels above 2 000 tons)",
+          "first_24_hours_rate": "3.53",
+          "subsequent_12_hours_rate": "1.46",
+          "unit": "ZAR per ton"
+        },
+        {
+          "category": "Minimum fees",
+          "first_24_hours_rate": "4 329.12",
+          "subsequent_12_hours_rate": "1 588.29",
+          "unit": "ZAR"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    },
+    {
+      "value": "1 000",
+      "unit": "tons",
+      "context": "Tonnage threshold for slipway preparation costs"
+    },
+    {
+      "value": "2 156.13",
+      "unit": "ZAR",
+      "context": "Slipway preparation cost for vessels up to 1 000 tons"
+    },
+    {
+      "value": "1 130.09",
+      "unit": "ZAR",
+      "context": "Fee per service for docking or undocking vessels at a slipway"
+    },
+    {
+      "value": "2 000",
+      "unit": "tons",
+      "context": "Tonnage threshold for daily/hourly slipway rates"
+    },
+    {
+      "value": "1 602.33",
+      "unit": "ZAR",
+      "context": "Base rate for vessels up to 2 000 tons for the first 24-hour period"
+    },
+    {
+      "value": "801.19",
+      "unit": "ZAR",
+      "context": "Base rate for vessels up to 2 000 tons for each subsequent 12-hour period"
+    },
+    {
+      "value": "3.53",
+      "unit": "ZAR per ton",
+      "context": "Per ton rate for the first 24-hour period (applies to all vessels)"
+    },
+    {
+      "value": "1.46",
+      "unit": "ZAR per ton",
+      "context": "Per ton rate for each subsequent 12-hour period (applies to all vessels)"
+    },
+    {
+      "value": "2 108.35",
+      "unit": "ZAR",
+      "context": "Base rate for vessels above 2 000 tons for the first 24-hour period"
+    },
+    {
+      "value": "878.49",
+      "unit": "ZAR",
+      "context": "Base rate for vessels above 2 000 tons for each subsequent 12-hour period"
+    },
+    {
+      "value": "4 329.12",
+      "unit": "ZAR",
+      "context": "Minimum fee for the first 24-hour period on a slipway"
+    },
+    {
+      "value": "1 588.29",
+      "unit": "ZAR",
+      "context": "Minimum fee for each subsequent 12-hour period on a slipway"
+    }
+  ],
+  "parameters_mentioned": [
+    "tons",
+    "24 hour period",
+    "12 hour period",
+    "service"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The general header 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' applies to this page and is a continuation from the previous page. The structure of the tables, particularly the column headers 'First 24 hour period or part thereof:' and 'Each subsequent 12 hour period or part thereof', is consistent with the previous page's drydock and syncrolift tariffs, providing contextual understanding of how these periods are charged.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The section 6.7 SLIPWAY appears to be self-contained and concludes on this page.",
+  "search_keywords": [
+    "Slipway",
+    "tariffs",
+    "docking",
+    "undocking",
+    "preparation costs",
+    "vessel tonnage",
+    "daily rates",
+    "hourly rates",
+    "minimum fees",
+    "cancellation fees"
+  ],
+  "ambiguities_or_risks": [
+    "The page lists a 'Docking and Undocking of vessels at a slipway' fee of 1,130.09 ZAR 'per service' and explicitly states that 'docking and undocking are regarded as separate services'. This implies the 1,130.09 ZAR fee is charged twice for a complete cycle (once for docking and once for undocking).",
+    "The table titled 'Docking and Undocking of vessels at a slipway' appears to detail the *occupancy* charges (daily/hourly) for the slipway, which are distinct from the 'per service' fee for the *act* of docking/undocking. This distinction should be carefully considered during calculation.",
+    "The 'Plus per ton' rates (3.53 ZAR for the first 24-hour period and 1.46 ZAR for each subsequent 12-hour period) are identical for both vessel categories (up to 2,000 tons and above 2,000 tons) in the main table. This is an observation, not an ambiguity, but important for accurate calculation."
+  ]
+}

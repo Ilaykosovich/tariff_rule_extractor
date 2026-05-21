@@ -1,0 +1,91 @@
+{
+  "page_number": "26",
+  "section_heading": "4.3 MISCELLANEOUS SERVICES",
+  "plain_summary": "This page details the fees for various emergency services provided by Fire and Emergency Services. It lists turn-out fees for heavy and light duty fire tenders and Hazmat vehicles, as well as fees for the use of fire tenders, Hazmat vehicles, equipment, and crew, charged per half hour. It also specifies fees for additional fire fighting staff, standby duty, use of portable equipment like pumps and generators, and additional breathing apparatus sets. The page defines conditions A, B, and C which refer to whether a fire, Hazmat incident, or rescue/salvage operation has been resolved upon the arrival of emergency services.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "7 000",
+      "unit": "kg",
+      "context": "Heavy duty vehicle weight threshold"
+    },
+    {
+      "value": "3 762.19",
+      "unit": "South African Rand",
+      "context": "Fire tender turn-out fee — Heavy duty; Hazmat vehicle turn-out — Heavy duty"
+    },
+    {
+      "value": "2 664.16",
+      "unit": "South African Rand",
+      "context": "Fire tender turn-out fee — Light duty; Hazmat vehicle turn-out — Light duty"
+    },
+    {
+      "value": "1 881.06",
+      "unit": "South African Rand",
+      "context": "Use of fire tender, equipment and crew per half hour; Use of Hazmat vehicle, equipment and crew per half hour"
+    },
+    {
+      "value": "1",
+      "unit": "x",
+      "context": "Fire officer in crew"
+    },
+    {
+      "value": "4",
+      "unit": "x",
+      "context": "Fire fighters in crew"
+    },
+    {
+      "value": "314.98",
+      "unit": "South African Rand",
+      "context": "Additional fire fighting staff fee per half hour; Fire fighter on standby duty per half hour"
+    },
+    {
+      "value": "500.44",
+      "unit": "South African Rand",
+      "context": "Use of portable fire pump, chemical transfer pump, generator, 'veld fire' pump, bobcat including fire fighter per half hour"
+    },
+    {
+      "value": "470.98",
+      "unit": "South African Rand",
+      "context": "Use of additional breathing apparatus per set"
+    }
+  ],
+  "parameters_mentioned": [
+    "kg",
+    "half hour",
+    "set",
+    "fire officer",
+    "fire fighter",
+    "incident (A, B, C)"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page covers '4.3.1 FIRE AND EMERGENCY SERVICES' which is a sub-section of '4.3 MISCELLANEOUS SERVICES'. It is possible that other miscellaneous services (e.g., 4.3.2, 4.3.3, etc.) are detailed on subsequent pages.",
+  "search_keywords": [
+    "Miscellaneous Services",
+    "Fire and Emergency Services",
+    "Hazmat",
+    "Fire tender",
+    "Turn-out fee",
+    "Equipment use",
+    "Crew",
+    "Standby duty",
+    "Portable pump",
+    "Generator",
+    "Breathing apparatus",
+    "VAT"
+  ],
+  "ambiguities_or_risks": []
+}

@@ -1,6 +1,7 @@
 import os
 import hashlib
 import json
+import math
 import re
 import fitz  # PyMuPDF
 from google import genai
@@ -14,6 +15,10 @@ CACHE_DIR = os.path.join(BASE_DIR, "processed_files")
 CHUNK_SIZE = 15
 CACHE_VERSION = "two_page_spread_v1"
 SUMMARY_CACHE_VERSION = "page_summary_v1"
+PAGE_EMBEDDING_CACHE_VERSION = "voyage_page_embeddings_v1"
+DEFAULT_VOYAGE_EMBEDDING_MODEL = "voyage-3.5-lite"
+DEFAULT_HYBRID_DENSE_WEIGHT = 0.65
+DEFAULT_VOYAGE_EMBED_BATCH_SIZE = 4
 
 SUMMARY_SYSTEM_PROMPT = """You are preparing page-level summaries of a tariff PDF for a later calculation agent.
 
@@ -179,6 +184,88 @@ def get_summary_hash(pdf_path, pages):
     cache_key = f"{file_hash}:{pages_hash}:{MODEL_ID}:{SUMMARY_CACHE_VERSION}:{SUMMARY_SYSTEM_PROMPT}"
     return hashlib.sha256(cache_key.encode("utf-8")).hexdigest()
 
+def get_voyage_embedding_model():
+    return os.getenv("VOYAGE_EMBEDDING_MODEL", DEFAULT_VOYAGE_EMBEDDING_MODEL)
+
+def get_page_embedding_hash(pdf_path, pages, embedding_model=None):
+    embedding_model = embedding_model or get_voyage_embedding_model()
+    file_hash = get_file_hash(pdf_path)
+    pages_hash = get_pages_hash(pages)
+    cache_key = f"{file_hash}:{pages_hash}:{embedding_model}:{PAGE_EMBEDDING_CACHE_VERSION}"
+    return hashlib.sha256(cache_key.encode("utf-8")).hexdigest()
+
+def cosine_similarity(left, right):
+    dot = sum(a * b for a, b in zip(left, right))
+    left_norm = math.sqrt(sum(a * a for a in left))
+    right_norm = math.sqrt(sum(b * b for b in right))
+    if not left_norm or not right_norm:
+        return 0.0
+    return dot / (left_norm * right_norm)
+
+def page_text_for_embedding(page_number, page_content):
+    content = page_content.strip() or "[empty page]"
+    return f"Page {page_number}\n\n{content}"
+
+def get_voyage_embed_batch_size():
+    return max(1, int(os.getenv("VOYAGE_EMBED_BATCH_SIZE", DEFAULT_VOYAGE_EMBED_BATCH_SIZE)))
+
+def tokenize_for_search(text):
+    return re.findall(r"[A-Za-zА-Яа-я0-9]+", text.lower())
+
+def min_max_normalize(scores_by_page):
+    if not scores_by_page:
+        return {}
+    values = list(scores_by_page.values())
+    min_score = min(values)
+    max_score = max(values)
+    if max_score == min_score:
+        return {page_number: 1.0 if score else 0.0 for page_number, score in scores_by_page.items()}
+    return {
+        page_number: (score - min_score) / (max_score - min_score)
+        for page_number, score in scores_by_page.items()
+    }
+
+def bm25_scores(query, pages, k1=1.5, b=0.75):
+    query_terms = tokenize_for_search(query)
+    if not query_terms:
+        return {page_number: 0.0 for page_number in pages}
+
+    page_tokens = {
+        page_number: tokenize_for_search(page_text)
+        for page_number, page_text in pages.items()
+    }
+    doc_count = len(page_tokens)
+    avg_doc_len = (
+        sum(len(tokens) for tokens in page_tokens.values()) / doc_count
+        if doc_count
+        else 0.0
+    )
+    doc_freq = {}
+    for tokens in page_tokens.values():
+        for term in set(tokens):
+            doc_freq[term] = doc_freq.get(term, 0) + 1
+
+    scores = {}
+    for page_number, tokens in page_tokens.items():
+        if not tokens or not avg_doc_len:
+            scores[page_number] = 0.0
+            continue
+        term_freq = {}
+        for term in tokens:
+            term_freq[term] = term_freq.get(term, 0) + 1
+
+        score = 0.0
+        doc_len = len(tokens)
+        for term in query_terms:
+            freq = term_freq.get(term, 0)
+            if not freq:
+                continue
+            idf = math.log(1 + (doc_count - doc_freq.get(term, 0) + 0.5) / (doc_freq.get(term, 0) + 0.5))
+            denominator = freq + k1 * (1 - b + b * doc_len / avg_doc_len)
+            score += idf * (freq * (k1 + 1)) / denominator
+        scores[page_number] = score
+    return scores
+
 def build_ocr_prompt(start, end):
     first_page = start + 1
     last_page = end + 1
@@ -329,6 +416,176 @@ def summarize_pages(pdf_path, pages):
 
     print(f"[summaries] Сохранено: {cache_path}")
     return result
+
+def embed_page_documents(pdf_path, pages, embedding_model=None):
+    """Build or load Voyage embeddings for OCR page texts."""
+    import voyageai
+
+    if not os.path.exists(CACHE_DIR):
+        os.makedirs(CACHE_DIR)
+
+    embedding_model = embedding_model or get_voyage_embedding_model()
+    h = get_page_embedding_hash(pdf_path, pages, embedding_model)
+    cache_path = os.path.join(CACHE_DIR, f"{h}.voyage_page_embeddings.json")
+    page_numbers = sorted(pages)
+
+    result = None
+    if os.path.exists(cache_path):
+        with open(cache_path, "r", encoding="utf-8") as f:
+            cached_result = json.load(f)
+        if (
+            cached_result.get("model") == embedding_model
+            and cached_result.get("embeddings")
+            and len(cached_result.get("embeddings", [])) == len(page_numbers)
+        ):
+            print(f"[embeddings] Loaded from cache (hash: {h[:8]}...)")
+            return cached_result
+        if cached_result.get("model") == embedding_model:
+            result = cached_result
+            print(f"[embeddings] Resuming partial cache (hash: {h[:8]}...)")
+
+    if result is None:
+        result = {
+            "pdf_path": pdf_path,
+            "pdf_hash": get_file_hash(pdf_path),
+            "pages_hash": get_pages_hash(pages),
+            "model": embedding_model,
+            "cache_version": PAGE_EMBEDDING_CACHE_VERSION,
+            "cache_path": cache_path,
+            "page_numbers": [],
+            "embeddings": [],
+        }
+
+    existing = {
+        int(page_number): embedding
+        for page_number, embedding in zip(result.get("page_numbers", []), result.get("embeddings", []))
+    }
+    missing_page_numbers = [page_number for page_number in page_numbers if page_number not in existing]
+    if not missing_page_numbers:
+        result["page_numbers"] = page_numbers
+        result["embeddings"] = [existing[page_number] for page_number in page_numbers]
+        result["complete"] = True
+        return result
+
+    completed_page_numbers = [page_number for page_number in page_numbers if page_number in existing]
+    result["page_numbers"] = completed_page_numbers
+    result["embeddings"] = [existing[page_number] for page_number in completed_page_numbers]
+    result["complete"] = False
+    with open(cache_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False)
+
+    batch_size = get_voyage_embed_batch_size()
+    print(
+        f"[embeddings] Building Voyage embeddings: missing={len(missing_page_numbers)} "
+        f"batch_size={batch_size} model={embedding_model}"
+    )
+
+    vo = voyageai.Client()
+    for start in range(0, len(missing_page_numbers), batch_size):
+        batch_page_numbers = missing_page_numbers[start:start + batch_size]
+        docs = [
+            page_text_for_embedding(page_number, pages.get(page_number, ""))
+            for page_number in batch_page_numbers
+        ]
+        response = vo.embed(
+            docs,
+            model=embedding_model,
+            input_type="document",
+        )
+        for page_number, embedding in zip(batch_page_numbers, response.embeddings):
+            existing[page_number] = embedding
+
+        completed_page_numbers = [page_number for page_number in page_numbers if page_number in existing]
+        result["page_numbers"] = completed_page_numbers
+        result["embeddings"] = [existing[page_number] for page_number in completed_page_numbers]
+        result["complete"] = len(completed_page_numbers) == len(page_numbers)
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False)
+        print(f"[embeddings] Saved progress: {len(completed_page_numbers)}/{len(page_numbers)} pages")
+
+    result["page_numbers"] = page_numbers
+    result["embeddings"] = [existing[page_number] for page_number in page_numbers]
+    result["complete"] = True
+    with open(cache_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False)
+
+    print(f"[embeddings] Saved: {cache_path}")
+    return result
+
+def search_rag_pages(
+    pdf_path,
+    query,
+    top_k=5,
+    embedding_model=None,
+    pages=None,
+    include_text=True,
+    dense_weight=None,
+):
+    """
+    Run OCR if needed, then use hybrid Voyage embeddings + BM25 to rank pages.
+
+    Returns a list of:
+    {"page_number": int, "score": float, "text": str}
+    """
+    import voyageai
+
+    if pages is None:
+        pages = run_ocr_pipeline(pdf_path)
+
+    embedding_model = embedding_model or get_voyage_embedding_model()
+    index = embed_page_documents(pdf_path, pages, embedding_model=embedding_model)
+
+    vo = voyageai.Client()
+    query_vector = vo.embed(
+        [query],
+        model=embedding_model,
+        input_type="query",
+    ).embeddings[0]
+
+    dense_scores = {}
+    for page_number, page_vector in zip(index["page_numbers"], index["embeddings"]):
+        dense_scores[int(page_number)] = cosine_similarity(query_vector, page_vector)
+
+    bm25_by_page = bm25_scores(query, pages)
+    normalized_dense = min_max_normalize(dense_scores)
+    normalized_bm25 = min_max_normalize(bm25_by_page)
+    dense_weight = (
+        float(os.getenv("TARIFF_RAG_DENSE_WEIGHT", DEFAULT_HYBRID_DENSE_WEIGHT))
+        if dense_weight is None
+        else dense_weight
+    )
+    dense_weight = max(0.0, min(1.0, dense_weight))
+    bm25_weight = 1.0 - dense_weight
+
+    scored_pages = []
+    for page_number in sorted(pages):
+        dense_score = normalized_dense.get(page_number, 0.0)
+        bm25_score = normalized_bm25.get(page_number, 0.0)
+        hybrid_score = dense_score * dense_weight + bm25_score * bm25_weight
+        scored_pages.append(
+            {
+                "page_number": int(page_number),
+                "score": hybrid_score,
+                "dense_score": dense_scores.get(page_number, 0.0),
+                "bm25_score": bm25_by_page.get(page_number, 0.0),
+                "text": pages.get(page_number, "") if include_text else "",
+            }
+        )
+
+    scored_pages.sort(key=lambda item: item["score"], reverse=True)
+    return scored_pages[:top_k]
+
+def get_relevant_page_numbers(pdf_path, query, top_k=5, embedding_model=None, pages=None):
+    """Convenience wrapper for RAG retrieval when only page numbers are needed."""
+    results = search_rag_pages(
+        pdf_path=pdf_path,
+        query=query,
+        top_k=top_k,
+        embedding_model=embedding_model,
+        pages=pages,
+        include_text=False,
+    )
+    return [item["page_number"] for item in results]
 
 def run_ocr_pipeline(pdf_path):
     if not os.path.exists(CACHE_DIR):

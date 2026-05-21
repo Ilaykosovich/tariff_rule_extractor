@@ -1,0 +1,92 @@
+{
+  "page_number": "50",
+  "section_heading": "8.1.1 TYPES OF DOCUMENTATION (continuation), 8.1.1.1 Order-to-Cash, 8.1.2 TIMING OF DOCUMENTATION",
+  "plain_summary": "This page continues the list of required supporting documentation for vehicles, including Post load/Delivery Report, Certificate and list of Measurement and Weight, Export Certificate, Packing Specification, Suppliers Invoice, and Affidavit. It specifies average lengths for various vehicle types to be used for tariffing purposes if actual documentation is not provided. The page also introduces the 'Order-to-Cash' process for registered customers, requiring electronic submission of cargo dues and manifests via EDI or Hybris. Finally, it details the timing requirements for submitting import documentation, including Cargo Dues Orders and Manifests, with specific deadlines relative to vessel arrival or departure, and notes exceptions for fresh fish imports and manifests for empties.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "5.00",
+      "unit": "metres",
+      "context": "average length for Passenger vehicle for tariffing"
+    },
+    {
+      "value": "8.00",
+      "unit": "metres",
+      "context": "average length for Light commercial vehicles/tractors for tariffing"
+    },
+    {
+      "value": "10.00",
+      "unit": "metres",
+      "context": "average length for Heavy commercial vehicles (trucks, tractors, etc.) for tariffing"
+    },
+    {
+      "value": "12.00",
+      "unit": "metres",
+      "context": "average length for Cranes/excavators/bulldozers, etc. for tariffing"
+    },
+    {
+      "value": "14.00",
+      "unit": "metres",
+      "context": "average length for Trailers for tariffing"
+    },
+    {
+      "value": "five (5)",
+      "unit": "days",
+      "context": "deadline for Cargo Dues Orders after vessel departure for bulk (dry and liquid) cargo"
+    },
+    {
+      "value": "three (3)",
+      "unit": "days",
+      "context": "deadline for Cargo Dues Orders after vessel departure for all other cargo types (except fresh fish)"
+    },
+    {
+      "value": "seven (7)",
+      "unit": "days",
+      "context": "deadline for Cargo Dues Orders after vessel arrival for fresh fish imports"
+    },
+    {
+      "value": "one (1)",
+      "unit": "day",
+      "context": "deadline for Manifests before vessel arrival"
+    },
+    {
+      "value": "three (3)",
+      "unit": "days",
+      "context": "deadline for Manifests in respect of empties after vessel departure"
+    }
+  ],
+  "parameters_mentioned": [
+    "vessel departure",
+    "vessel arrival",
+    "cargo type (bulk dry, bulk liquid, fresh fish, other cargo types, empties, breakbulk)",
+    "vehicle type (passenger, light commercial, heavy commercial, cranes/excavators/bulldozers, trailers)",
+    "length (metres)",
+    "days"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The list of supporting documentation for vehicles, which continues on the target page, started on the previous page under section 8.1.1 TYPES OF DOCUMENTATION.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The sections 8.1.1.1 Order-to-Cash and 8.1.2 TIMING OF DOCUMENTATION appear to be self-contained on this page, with no explicit indication of continuation.",
+  "search_keywords": [
+    "Documentation",
+    "Cargo Dues Orders",
+    "Manifests",
+    "Timing",
+    "Vehicle Lengths",
+    "Order-to-Cash",
+    "EDI",
+    "Import Documentation",
+    "Vessel Departure",
+    "Vessel Arrival",
+    "Bulk Cargo",
+    "Fresh Fish",
+    "Supporting Documents"
+  ],
+  "ambiguities_or_risks": []
+}

@@ -1,0 +1,91 @@
+{
+  "page_number": "25",
+  "section_heading": "Visiting Vessels (not engaged in trade) Foreign/Local yachts (port dues)",
+  "plain_summary": "This page outlines the port dues for visiting vessels, specifically foreign/local yachts, that are not engaged in trade. It details a free stay period of 30 days, followed by escalating daily rates per metre of length overall, depending on the total duration the vessel remains in port. Rates are provided for the next 90 days, the subsequent 90 days, and then for the remaining period up to 12 months, with a higher rate for stays exceeding 12 months.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "30",
+      "unit": "days",
+      "context": "Free stay period"
+    },
+    {
+      "value": "90",
+      "unit": "days",
+      "context": "Duration for the first escalating rate period"
+    },
+    {
+      "value": "2.82",
+      "unit": "ZAR",
+      "context": "Rate per metre per day for the first 90 days after free period"
+    },
+    {
+      "value": "90",
+      "unit": "days",
+      "context": "Duration for the second escalating rate period"
+    },
+    {
+      "value": "5.56",
+      "unit": "ZAR",
+      "context": "Rate per metre per day for the subsequent 90 days"
+    },
+    {
+      "value": "12",
+      "unit": "months",
+      "context": "Maximum total duration for the third rate period"
+    },
+    {
+      "value": "11.14",
+      "unit": "ZAR",
+      "context": "Rate per metre per day for the remaining period up to 12 months"
+    },
+    {
+      "value": "12",
+      "unit": "months",
+      "context": "Threshold for the highest rate"
+    },
+    {
+      "value": "33.45",
+      "unit": "ZAR",
+      "context": "Rate per metre per day for periods exceeding 12 months"
+    }
+  ],
+  "parameters_mentioned": [
+    "length overall",
+    "day",
+    "days",
+    "months",
+    "vessel type: Visiting Vessels",
+    "vessel type: Foreign/Local yachts",
+    "vessel type: pleasure vessels"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The previous page establishes the general context of 'PORT DUES FOR SMALL VESSELS, HULKS AND PLEASURE VESSELS' and the 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' header is a continuation from the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The section on 'Visiting Vessels' appears to be self-contained on this page, with all rates and conditions fully described.",
+  "search_keywords": [
+    "Visiting Vessels",
+    "yachts",
+    "port dues",
+    "free stay",
+    "length overall",
+    "daily rates",
+    "pleasure vessels",
+    "non-trade vessels"
+  ],
+  "ambiguities_or_risks": [
+    "The cumulative nature of the 'days' for rate application (e.g., 'For the next 90 days', 'The following 90 days', 'Thereafter, for the remaining period up to 12 months') requires careful tracking of the total duration in port.",
+    "The phrase 'per metre or part thereof' and 'per day or part thereof' implies specific rounding rules for length and time that should be applied in calculations."
+  ]
+}

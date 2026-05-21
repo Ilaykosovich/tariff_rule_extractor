@@ -1,0 +1,63 @@
+{
+  "page_number": "54",
+  "section_heading": "8.5 TERMINAL OUTTURN REPORT and 8.6. PORT REVENUE OFFICES",
+  "plain_summary": "This page outlines the requirements for submitting Terminal Outturn Reports, specifying that they must be submitted per vessel, container operator, sales office, and sales group within 5 days after vessel departure via electronic platforms. It also provides a table listing the physical addresses of the Authority's Port Revenue Offices at various ports.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": false,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Locations and addresses of the Authority's Port Revenue Offices.",
+      "columns": [
+        "Port of Ngqura",
+        "Port of Durban",
+        "Port of Richards Bay",
+        "Port of Port Elizabeth",
+        "Port of Cape Town",
+        "Port of East London",
+        "Port of Saldanha",
+        "Port of Mossel Bay"
+      ],
+      "row_categories": [
+        "Floor/Level",
+        "Building/Centre Name",
+        "Street/Road/Area",
+        "Port Name (as part of address)"
+      ],
+      "important_values": []
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "5",
+      "unit": "days",
+      "context": "deadline for submitting Terminal Outturn Reports after vessel departure"
+    }
+  ],
+  "parameters_mentioned": [
+    "vessel",
+    "days"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": false,
+  "next_page_reason": "",
+  "search_keywords": [
+    "Terminal Outturn Report",
+    "Outturn reports deadline",
+    "Port Revenue Offices",
+    "Port locations",
+    "Ngqura",
+    "Durban",
+    "Richards Bay",
+    "Port Elizabeth",
+    "Cape Town",
+    "East London",
+    "Saldanha",
+    "Mossel Bay"
+  ],
+  "ambiguities_or_risks": []
+}

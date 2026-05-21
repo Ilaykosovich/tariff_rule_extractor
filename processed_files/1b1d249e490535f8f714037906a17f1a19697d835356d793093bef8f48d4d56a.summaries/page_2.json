@@ -1,0 +1,47 @@
+{
+  "page_number": "2",
+  "section_heading": "PORT TARIFFS",
+  "plain_summary": "This page serves as the title page for the Transnet National Ports Authority Port Tariffs book. It specifies that it is the Twenty Third Edition, effective from 1 April 2024. It lists the issuer's name and address, the ISBN, and the website where the tariff book is available. The page also includes a disclaimer stating that Transnet National Ports Authority cannot assure the book is error-free and will not be liable for losses arising from such errors.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_examples": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "Twenty Third",
+      "unit": "Edition",
+      "context": "Edition number of the tariff book"
+    },
+    {
+      "value": "1 April 2024",
+      "unit": "Date",
+      "context": "Effective date of the tariff book"
+    },
+    {
+      "value": "978-0-620-56322-2",
+      "unit": "ISBN",
+      "context": "International Standard Book Number"
+    }
+  ],
+  "parameters_mentioned": [],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page is an introductory page; the actual tariff information, rates, and rules are expected to be on subsequent pages.",
+  "search_keywords": [
+    "Transnet National Ports Authority",
+    "Port Tariffs",
+    "Tariff Book",
+    "Twenty Third Edition",
+    "1 April 2024",
+    "ISBN",
+    "Disclaimer"
+  ],
+  "ambiguities_or_risks": [
+    "The disclaimer on this page indicates that the tariff book may contain errors, which could impact calculations if not verified."
+  ]
+}

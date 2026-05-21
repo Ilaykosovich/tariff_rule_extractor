@@ -1,0 +1,48 @@
+{
+  "page_number": "8",
+  "section_heading": "Definitions",
+  "plain_summary": "This page continues the list of definitions for key terms used in the tariff book. It defines 'vessel', 'vessel agent', 'vessel in need of assistance', 'vessel's tonnage', 'VTS', 'Importer', and 'Exporter'. Specifically, it details how 'vessel's tonnage' is determined for port tariff purposes, primarily based on gross tonnage from the Tonnage Convention 1969 certificate, with an alternative if not available.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    },
+    {
+      "value": "1969",
+      "unit": "year",
+      "context": "Tonnage Convention year for vessel's tonnage certificate"
+    },
+    {
+      "value": "6",
+      "unit": "Section",
+      "context": "Exclusion for vessel's tonnage definition"
+    }
+  ],
+  "parameters_mentioned": [
+    "gross tonnage",
+    "cubic metres"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The page continues the list of definitions that started on the previous page. The general header 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' is also a continuation from the previous page.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "The page ends with definitions, suggesting that either more definitions or the start of the actual tariff sections will be on the next page.",
+  "search_keywords": [
+    "definitions",
+    "vessel",
+    "vessel's tonnage",
+    "gross tonnage",
+    "Tonnage Convention 1969",
+    "VTS",
+    "Importer",
+    "Exporter"
+  ],
+  "ambiguities_or_risks": []
+}

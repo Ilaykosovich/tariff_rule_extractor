@@ -1,0 +1,61 @@
+{
+  "page_number": "48",
+  "section_heading": "8.1 CARGO DUES ORDER",
+  "plain_summary": "This page details the business processes and documentation related to Cargo Dues Orders. It explains where and when Cargo Dues Orders must be presented, their validity upon invoicing, and the application of late cargo dues order fees if an order is in a pending status. It clarifies who is responsible for paying cargo dues (importer/exporter) and how charges are billed in cases where orders are not received (container operator for container traffic, vessel agent for bulk/breakbulk). The page also defines how empty ISO containers and new empty ISO containers are treated for cargo dues purposes, with an exception for transhipments. Finally, it describes how Cargo Dues Orders can be grouped and submitted as lists, specifying separation criteria for containers, breakbulk, and bulk cargo based on vessel, operator/agent, and movement type (deepsea, coastwise, transshipment). It also states that cancellations and amendments are applicable per cargo dues order.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    }
+  ],
+  "parameters_mentioned": [
+    "consignment",
+    "vessel",
+    "container operator",
+    "vessel agent",
+    "container traffic",
+    "bulk and breakbulk traffic",
+    "ISO containers",
+    "MT returns",
+    "deepsea movements",
+    "coastwise movements",
+    "transshipment movements",
+    "multiple containers",
+    "import orders",
+    "export orders"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The header 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' is a continuation from the previous page. The concept of 'late cargo dues order fees' is mentioned on this page, and the specific rates for 'Late order fee' and 'Cargo dues order amendment fee' are listed on the previous page (7.8).",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page introduces 'SECTION 8 BUSINESS PROCESSES AND DOCUMENTATION' and covers '8.1 CARGO DUES ORDER'. It is likely that subsequent pages will continue with other subsections (8.2, 8.3, etc.) related to business processes and documentation, or provide further details on cargo dues orders.",
+  "search_keywords": [
+    "Cargo Dues Order",
+    "Business Processes",
+    "Documentation",
+    "Validity",
+    "Invoicing",
+    "Late Fees",
+    "Payment Responsibility",
+    "Empty Containers",
+    "ISO Containers",
+    "Transhipments",
+    "Submission Methods",
+    "Cancellations",
+    "Amendments",
+    "Deepsea",
+    "Coastwise",
+    "Container Operator",
+    "Vessel Agent"
+  ],
+  "ambiguities_or_risks": [
+    "The page mentions 'late cargo dues order fees' but does not specify the actual tariff rates for these fees; it refers to their applicability. The specific rates are found on the previous page (7.8)."
+  ]
+}

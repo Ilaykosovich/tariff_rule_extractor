@@ -18,7 +18,7 @@ from google import genai
 from google.genai import types
 from langgraph.graph import END, START, StateGraph
 
-from pdf_pipeline import run_ocr_pipeline, summarize_pages
+from pdf_pipeline import run_ocr_pipeline, search_rag_pages, summarize_pages
 from solver import evalute_results_tool, normalize_candidate_code
 
 load_dotenv()
@@ -43,6 +43,9 @@ LAST_CODE_PREFIX = "last_tariff_calculator"
 CALCULATOR_REGISTRY_PATH = "calculators_registry.json"
 MAX_CODE_ATTEMPTS = 2
 MAX_RETRIEVAL_ROUNDS = 3
+RETRIEVAL_MODE = os.getenv("TARIFF_RETRIEVAL_MODE", "summaries").strip().lower()
+RAG_TOP_K = int(os.getenv("TARIFF_RAG_TOP_K", "12"))
+RAG_DENSE_WEIGHT = float(os.getenv("TARIFF_RAG_DENSE_WEIGHT", "0.65"))
 VERBOSE_LOGS = os.getenv("TARIFF_GRAPH_VERBOSE", "1").lower() not in {"0", "false", "no"}
 LOG_PROMPTS = os.getenv("TARIFF_GRAPH_LOG_PROMPTS", "0").lower() in {"1", "true", "yes"}
 LOG_FILE: str | None = None
@@ -50,6 +53,10 @@ ACTIVE_LLM_PROVIDER: Literal["gemini", "anthropic"] = "gemini"
 _LLM_CALL_COUNT = 0
 LLM_MAX_RETRIES = 5
 LLM_RETRY_BASE_SECONDS = 10
+
+
+def use_rag_retrieval() -> bool:
+    return RETRIEVAL_MODE in {"rag", "hybrid_rag", "hybrid-rag", "embeddings"}
 
 anthropic_client = Anthropic()
 gemini_client = genai.Client(
@@ -237,7 +244,14 @@ def read_registry() -> list[dict[str, Any]]:
     return raw if isinstance(raw, list) else []
 
 
-def register_successful_calculator(state: GraphState, code_path: str, rules_hash: str) -> None:
+def register_calculator(
+    state: GraphState,
+    code_path: str,
+    rules_hash: str,
+    *,
+    status: str,
+    accepted: bool,
+) -> None:
     registry = read_registry()
     document_hash = file_sha256(state["pdf_file"]) if state.get("pdf_file") else ""
     record = {
@@ -248,6 +262,10 @@ def register_successful_calculator(state: GraphState, code_path: str, rules_hash
         "pdf_file": state.get("pdf_file", ""),
         "target_tariffs": state.get("target_tariffs", []),
         "evidence_pages": state.get("evidence_pages", {}),
+        "status": status,
+        "accepted": accepted,
+        "results": state.get("results", {}),
+        "submit_feedback": state.get("submit_feedback", {}),
     }
 
     registry = [
@@ -256,6 +274,7 @@ def register_successful_calculator(state: GraphState, code_path: str, rules_hash
         if not (
             item.get("rules_hash") == rules_hash
             and item.get("target_tariffs") == state.get("target_tariffs", [])
+            and item.get("status", "success") == status
         )
     ]
     registry.append(record)
@@ -263,9 +282,31 @@ def register_successful_calculator(state: GraphState, code_path: str, rules_hash
         json.dump(registry, f, ensure_ascii=False, indent=2)
 
 
+def register_successful_calculator(state: GraphState, code_path: str, rules_hash: str) -> None:
+    register_calculator(
+        state,
+        code_path,
+        rules_hash,
+        status="success",
+        accepted=True,
+    )
+
+
+def register_last_calculator(state: GraphState, code_path: str, rules_hash: str) -> None:
+    register_calculator(
+        state,
+        code_path,
+        rules_hash,
+        status="last_attempt",
+        accepted=False,
+    )
+
+
 def find_existing_calculator(document_hash: str, target_tariffs: list[str]) -> dict[str, Any] | None:
     requested = set(target_tariffs)
     for record in read_registry():
+        if record.get("status", "success") != "success":
+            continue
         if record.get("document_hash") != document_hash:
             continue
         if requested <= set(record.get("target_tariffs", [])):
@@ -455,15 +496,20 @@ def get_default_pdf() -> str:
 def load_inputs(state: GraphState) -> GraphState:
     pdf_file = state.get("pdf_file") or get_default_pdf()
     log(f"[LoadInputs] pdf_file={pdf_file}")
+    log(f"[LoadInputs] retrieval_mode={RETRIEVAL_MODE}")
     document_hash = file_sha256(pdf_file)
     pages = run_ocr_pipeline(pdf_file)
     log(f"[LoadInputs] OCR pages loaded: {len(pages)}")
-    summary_result = summarize_pages(pdf_file, pages)
-    page_summaries = {
-        int(summary["page_number"]): summary.get("plain_summary", "")
-        for summary in summary_result.get("summaries", [])
-    }
-    log(f"[LoadInputs] page summaries loaded: {len(page_summaries)}")
+    if use_rag_retrieval():
+        page_summaries = {}
+        log("[LoadInputs] page summaries skipped for RAG retrieval")
+    else:
+        summary_result = summarize_pages(pdf_file, pages)
+        page_summaries = {
+            int(summary["page_number"]): summary.get("plain_summary", "")
+            for summary in summary_result.get("summaries", [])
+        }
+        log(f"[LoadInputs] page summaries loaded: {len(page_summaries)}")
 
     vessel_data = state.get("vessel_data") or read_json_file("input_param.json", {})
     expected = read_json_file("input.json", {})
@@ -573,6 +619,20 @@ def lexical_candidate_pages(queries: list[str], page_summaries: dict[int, str], 
     return [page for _, page in sorted(scored, reverse=True)[:limit]]
 
 
+def lexical_page_text_candidate_pages(queries: list[str], pages: dict[int, str], limit: int = 12) -> list[int]:
+    terms = set()
+    for query in queries:
+        terms.update(re.findall(r"[A-Za-z0-9]+", query.lower()))
+    terms = {t for t in terms if len(t) > 2}
+    scored = []
+    for page_number, page_text in pages.items():
+        text = page_text.lower()
+        score = sum(1 for term in terms if term in text)
+        if score:
+            scored.append((score, page_number))
+    return [page for _, page in sorted(scored, reverse=True)[:limit]]
+
+
 def retrieve_candidate_pages(state: GraphState) -> GraphState:
     prompt = f"""
 You select candidate pages from page summaries for tariff calculation.
@@ -605,6 +665,47 @@ Page summaries:
         log(f"[RetrieveCandidatePages] {tariff}: pages={normalized[tariff]}")
 
     log(f"[RetrieveCandidatePages] pages_to_inspect={sorted(all_pages)}")
+    return {
+        **state,
+        "candidate_pages": normalized,
+        "pages_to_inspect": sorted(all_pages),
+    }
+
+
+def retrieve_candidate_pages_rag(state: GraphState) -> GraphState:
+    normalized: dict[str, list[int]] = {}
+    all_pages: set[int] = set()
+
+    for tariff, queries in state["tariff_queries"].items():
+        query = "\n".join(queries)
+        try:
+            results = search_rag_pages(
+                pdf_path=state["pdf_file"],
+                query=query,
+                top_k=RAG_TOP_K,
+                pages=state["pages"],
+                include_text=False,
+                dense_weight=RAG_DENSE_WEIGHT,
+            )
+            pages = [int(item["page_number"]) for item in results]
+            scores = {
+                int(item["page_number"]): {
+                    "hybrid": round(float(item["score"]), 4),
+                    "dense": round(float(item["dense_score"]), 4),
+                    "bm25": round(float(item["bm25_score"]), 4),
+                }
+                for item in results
+            }
+            log(f"[RetrieveCandidatePagesRag] {tariff}: pages={pages} scores={scores}")
+        except Exception as exc:
+            pages = lexical_page_text_candidate_pages(queries, state.get("pages", {}))
+            state.setdefault("errors_or_ambiguities", []).append(f"RetrieveCandidatePagesRag fallback: {exc}")
+            log(f"[RetrieveCandidatePagesRag] {tariff}: fallback pages={pages} error={exc}")
+
+        normalized[tariff] = sorted(set(pages))
+        all_pages.update(normalized[tariff])
+
+    log(f"[RetrieveCandidatePagesRag] pages_to_inspect={sorted(all_pages)}")
     return {
         **state,
         "candidate_pages": normalized,
@@ -1102,10 +1203,12 @@ def repair_or_finish(state: GraphState) -> GraphState:
             rules_hash = source_rules_hash(state)
             path = output_last_code_path(state.get("target_tariffs", []), rules_hash)
             write_text(path, state["code"])
+            register_last_calculator(state, path, rules_hash)
             log(
                 f"[RepairOrFinish] max attempts exhausted without accepted range; "
                 f"saved last generated code to {path}"
             )
+            log(f"[RepairOrFinish] registered last attempt rules_hash={rules_hash[:15]}")
             return {
                 **state,
                 "retrieval_rounds": retrieval_rounds,
@@ -1116,7 +1219,7 @@ def repair_or_finish(state: GraphState) -> GraphState:
         expanded_pages = set(state.get("pages_to_inspect", []))
         for page in list(expanded_pages):
             expanded_pages.update([page - 1, page + 1])
-        existing_pages = set(state.get("page_summaries", {}).keys())
+        existing_pages = set(state.get("page_summaries", {}).keys()) or set(state.get("pages", {}).keys())
         expanded_pages = {page for page in expanded_pages if page in existing_pages}
         log(
             f"[RepairOrFinish] max code attempts reached; "
@@ -1155,11 +1258,20 @@ def route_after_load_inputs(state: GraphState) -> Literal["finish", "expand_tari
     return "expand_tariff_queries"
 
 
+def route_after_expand_queries(state: GraphState) -> Literal["retrieve_candidate_pages", "retrieve_candidate_pages_rag"]:
+    if use_rag_retrieval():
+        log("[Route] ExpandTariffQueries -> RetrieveCandidatePagesRag")
+        return "retrieve_candidate_pages_rag"
+    log("[Route] ExpandTariffQueries -> RetrieveCandidatePages")
+    return "retrieve_candidate_pages"
+
+
 def build_graph():
     graph = StateGraph(GraphState)
     graph.add_node("LoadInputs", trace_node("LoadInputs", load_inputs))
     graph.add_node("ExpandTariffQueries", trace_node("ExpandTariffQueries", expand_tariff_queries))
     graph.add_node("RetrieveCandidatePages", trace_node("RetrieveCandidatePages", retrieve_candidate_pages))
+    graph.add_node("RetrieveCandidatePagesRag", trace_node("RetrieveCandidatePagesRag", retrieve_candidate_pages_rag))
     graph.add_node("InspectPages", trace_node("InspectPages", inspect_pages))
     graph.add_node("EnrichInputData", trace_node("EnrichInputData", enrich_input_data))
     graph.add_node("SelectCalculationParameters", trace_node("SelectCalculationParameters", select_calculation_parameters))
@@ -1177,8 +1289,16 @@ def build_graph():
             "expand_tariff_queries": "ExpandTariffQueries",
         },
     )
-    graph.add_edge("ExpandTariffQueries", "RetrieveCandidatePages")
+    graph.add_conditional_edges(
+        "ExpandTariffQueries",
+        route_after_expand_queries,
+        {
+            "retrieve_candidate_pages": "RetrieveCandidatePages",
+            "retrieve_candidate_pages_rag": "RetrieveCandidatePagesRag",
+        },
+    )
     graph.add_edge("RetrieveCandidatePages", "InspectPages")
+    graph.add_edge("RetrieveCandidatePagesRag", "InspectPages")
     graph.add_edge("InspectPages", "EnrichInputData")
     graph.add_edge("EnrichInputData", "SelectCalculationParameters")
     graph.add_edge("SelectCalculationParameters", "ExtractRules")

@@ -1,0 +1,92 @@
+{
+  "page_number": "34",
+  "section_heading": "SECTION 6 DRYDOCKS, FLOATING DOCKS, SYNCROLIFTS AND SLIPWAYS",
+  "plain_summary": "This page introduces Section 6, which covers drydocks, floating docks, syncrolifts, and slipways. It defines 'Ordinary working hours' for the Ports of Cape Town, East London, and Durban, and outlines conditions for 'Week-ends and Public Holidays' work. Crucially, it details how the 'Tonnage of vessels for tariff purposes' is calculated, including a conversion factor and an alternative method if a tonnage certificate is unavailable. Finally, it lists the booking fees (deposits) required for drydocks and syncrolifts at the Ports of Cape Town and East London.",
+  "contains_formula": true,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [
+    {
+      "formula_as_written": "The gross tonnage of a vessel in cubic metres (conversion factor 2,83) of a vessel as per the tonnage certificate issued in terms of the Tonnage Convention 1969, Plus The tonnage is mass, of all cargo on board. Where the vessel's tonnage certificate is not available the highest tonnage as reflected in Lloyds Register of Shipping converted (x2,83) to cubic metres is accepted.",
+      "what_it_calculates": "Tonnage of vessels for tariff purposes",
+      "parameters_used": [
+        "gross tonnage of a vessel",
+        "cubic metres",
+        "tonnage certificate",
+        "mass of all cargo on board",
+        "Lloyds Register of Shipping"
+      ],
+      "units": "cubic metres, mass",
+      "rounding_or_conditions": "Conversion factor 2,83. If tonnage certificate is not available, use highest tonnage from Lloyds Register of Shipping converted (x2,83) to cubic metres."
+    }
+  ],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "07h00",
+      "unit": "hours",
+      "context": "Start of ordinary working hours in Port of Durban"
+    },
+    {
+      "value": "17h00",
+      "unit": "hours",
+      "context": "End of ordinary working hours in Port of Durban"
+    },
+    {
+      "value": "2,83",
+      "unit": "factor",
+      "context": "Conversion factor for gross tonnage to cubic metres"
+    },
+    {
+      "value": "56 222.56",
+      "unit": "ZAR",
+      "context": "Drydock booking fee (deposit) at Ports of Cape Town and East London"
+    },
+    {
+      "value": "14 055.64",
+      "unit": "ZAR",
+      "context": "Syncrolift booking fee (deposit) at Ports of Cape Town and East London"
+    }
+  ],
+  "parameters_mentioned": [
+    "GT / gross tonnage",
+    "cargo tonnes / mass of cargo",
+    "hours",
+    "Weekdays",
+    "Week-ends",
+    "Public Holidays",
+    "vessel type (implied by drydock, floating dock, syncrolift)"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page introduces Section 6.2 'BOOKING FEES' and only covers '6.2.1 Bookings at the Ports of Cape Town and East London'. Further booking fees for other ports or additional details for Section 6 are likely on subsequent pages.",
+  "search_keywords": [
+    "Drydocks",
+    "Floating Docks",
+    "Syncrolifts",
+    "Slipways",
+    "Booking Fees",
+    "Tonnage Calculation",
+    "Gross Tonnage",
+    "Ordinary Working Hours",
+    "Week-ends",
+    "Public Holidays",
+    "Cape Town",
+    "East London",
+    "Durban",
+    "Tonnage Convention 1969",
+    "Lloyds Register of Shipping"
+  ],
+  "ambiguities_or_risks": [
+    "The definition of 'Ordinary working hours' for Ports of Cape Town and East London as 'According to the custom of the facility' is vague and requires external knowledge.",
+    "The calculation for 'Tonnage of vessels for tariff purposes' states 'Plus The tonnage is mass, of all cargo on board.' which implies addition to the gross tonnage, but the exact method of combining these two components (GT in cubic metres and cargo mass) could be interpreted differently without further clarification on units or conversion."
+  ]
+}

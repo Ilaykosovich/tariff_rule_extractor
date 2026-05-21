@@ -1,0 +1,86 @@
+{
+  "page_number": "23",
+  "section_heading": "4.1.2 BERTH DUES",
+  "plain_summary": "This page details the calculation methodology for berth dues, specifying the source documents required from Terminal Operators for different vessel types (bulk/break bulk, container, other). It outlines how to calculate the chargeable period for berth dues by deducting cargo working hours (including free periods) from the total time a vessel is in port. The page also lists several exemptions from berth dues, such as for SAPS/SANDF vessels, vessels taking stores/fuel (for 48 hours), and medical/research vessels. Additionally, it introduces specific berth dues for vessels shipping ore at the Saldanha ore loading jetty, charged per hour based on summer dead-mass tonnage under certain conditions (e.g., delays exceeding two hours). Finally, it mandates the submission of a Statement of Facts within 24 hours of departure and specifies a fee for non-submission.",
+  "contains_formula": true,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_examples": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [
+    {
+      "formula_as_written": "Chargeable Period (hours) = Period vessel is in port (hours) - (Number of hours worked as per source document (hours) + Free periods before cargo working (hours) + Free periods after cargo working (hours))",
+      "what_it_calculates": "The chargeable period for berth dues, which is then multiplied by the rates defined on page 22.",
+      "parameters_used": [
+        "Period vessel is in port (hours)",
+        "Number of hours worked as per source document (hours)",
+        "Free periods before cargo working (hours)",
+        "Free periods after cargo working (hours)"
+      ],
+      "units": "hours",
+      "rounding_or_conditions": "The resulting chargeable period is then applied to the rates per 100 tons (from page 22) for each 24-hour period or part thereof. Free periods are 6 cargo working hours before and 6 after for non-container berths, 2 cargo working hours for container berths (from page 22)."
+    }
+  ],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    },
+    {
+      "value": "48",
+      "unit": "hours",
+      "context": "Exemption period for vessels taking in stores and/or coal and liquid fuel for own consumption"
+    },
+    {
+      "value": "two",
+      "unit": "hours",
+      "context": "Threshold for delays at ore loading jetty before specific berth dues apply (unable to commence loading, unable to continue loading, or occupying berth after completion)"
+    },
+    {
+      "value": "1.15",
+      "unit": "ZAR",
+      "context": "Berth dues per hour or part thereof for vessels shipping ore at Saldanha ore loading jetty, based on summer dead-mass tonnage"
+    },
+    {
+      "value": "24",
+      "unit": "hours",
+      "context": "Deadline for submitting Statement of Facts after vessel departs"
+    },
+    {
+      "value": "1 926.96",
+      "unit": "ZAR",
+      "context": "Fee for non-submission of Statement of Facts"
+    }
+  ],
+  "parameters_mentioned": [
+    "tonnage (unspecified type for general berth dues, summer dead-mass tonnage (metric tons) for ore loading jetty)",
+    "hours (worked, in port, free periods, exemption, delay threshold, submission deadline)",
+    "vessel type (Bulk and break bulk vessels, Container vessels, Other vessels, SAPS/SANDF, SA Medical & Research vessels, Passenger vessels, vessels shipping ore)",
+    "cargo type (cargo, vessel's stores, coal, liquid fuel, ore)",
+    "voyage"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The main section heading '4.1.2 BERTH DUES' is on the previous page. The general tiered rates for berth dues are defined on the previous page. This page provides calculation methods, specific conditions, and additional rates that build upon the general berth dues framework established on the previous page. Free periods for cargo working hours are also defined on the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This page appears to conclude the specific rules and rates for 'Berth Dues' (Section 4.1.2).",
+  "search_keywords": [
+    "Berth Dues",
+    "Calculation",
+    "Exemptions",
+    "Ore Loading Jetty",
+    "Saldanha",
+    "Statement of Facts",
+    "Summer Dead-Mass Tonnage",
+    "Free Periods",
+    "Cargo Working Hours",
+    "VAT"
+  ],
+  "ambiguities_or_risks": [
+    "The 'formula' for general berth dues is a procedural description for calculating chargeable time rather than a precise mathematical equation for the final fee. The final fee requires applying rates from the previous page.",
+    "The term 'tons' for general berth dues on the previous page is not explicitly defined (e.g., GT, NT, DWT), while 'summer dead-mass tonnage (metric tons)' is specified for the ore loading jetty fee on this page. This difference in tonnage definition could lead to misapplication.",
+    "The '1.15' rate is specific to the ore loading jetty under certain conditions and should not be confused with the general berth dues rates defined on the previous page."
+  ]
+}

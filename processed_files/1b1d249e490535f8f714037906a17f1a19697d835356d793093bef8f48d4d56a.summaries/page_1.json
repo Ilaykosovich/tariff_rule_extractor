@@ -1,0 +1,38 @@
+{
+  "page_number": "1",
+  "section_heading": "Tariff Book April 2024 to March 2025",
+  "plain_summary": "This page is the cover page of the Transnet National Ports Authority Tariff Book, indicating its validity period from April 2024 to March 2025.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": false,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "2024",
+      "unit": "year",
+      "context": "start of tariff book validity period"
+    },
+    {
+      "value": "2025",
+      "unit": "year",
+      "context": "end of tariff book validity period"
+    }
+  ],
+  "parameters_mentioned": [],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This is a cover page; the actual tariff information, contents, and details will be on subsequent pages.",
+  "search_keywords": [
+    "Tariff Book",
+    "Transnet",
+    "National Ports Authority",
+    "April 2024",
+    "March 2025",
+    "Cover Page"
+  ],
+  "ambiguities_or_risks": []
+}

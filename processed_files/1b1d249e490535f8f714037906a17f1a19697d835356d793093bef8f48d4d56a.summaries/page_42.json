@@ -1,0 +1,449 @@
+{
+  "page_number": "42",
+  "section_heading": "7.1 BREAKBULK",
+  "plain_summary": "This page lists specific breakbulk commodities and their corresponding cargo dues rates for imports and exports. The rates are presented in a table format.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Cargo dues rates for specific breakbulk commodities.",
+      "columns": [
+        "Commodity",
+        "Imports",
+        "Exports"
+      ],
+      "row_categories": [
+        "Alumina",
+        "Articles of cement / sand / stone",
+        "Bait",
+        "Bricks",
+        "Cement & clinker",
+        "Chrome ore",
+        "Citrus fruit",
+        "Clay",
+        "Coal",
+        "Fertilizers",
+        "Fish meal & products thereof",
+        "Fluorspar",
+        "Glass & glassware",
+        "Granite & products thereof",
+        "Gypsum & products thereof",
+        "Iron ore",
+        "Lead & products thereof",
+        "Lime & products thereof",
+        "Logs",
+        "Maize & products thereof",
+        "Manganese ore",
+        "Ores & minerals: Olivine",
+        "Ores & minerals: Other",
+        "Pig iron",
+        "Pitch pencil",
+        "Potash & products thereof",
+        "Salt",
+        "Scrap steel",
+        "Stainless steel (excluding pipes & tubes)",
+        "Steel pellets",
+        "Steel rebars / sheets / plates / angles",
+        "Steel: Cold rolled coils, galvanised, aluzinc coils",
+        "Steel: Hot rolled coils, slabs, billets",
+        "Timber & products thereof (excluding furniture)",
+        "Zinc & products thereof",
+        "Zircon"
+      ],
+      "important_values": [
+        {
+          "commodity": "Alumina",
+          "imports_rate": "30.56",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Articles of cement / sand / stone",
+          "imports_rate": "27.33",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Bait",
+          "imports_rate": "30.56",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Bricks",
+          "imports_rate": "30.56",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Cement & clinker",
+          "imports_rate": "27.33",
+          "exports_rate": "5.46",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Chrome ore",
+          "imports_rate": "18.85",
+          "exports_rate": "15.47",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Citrus fruit",
+          "imports_rate": "25.14",
+          "exports_rate": "25.14",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Clay",
+          "imports_rate": "27.33",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Coal",
+          "imports_rate": "10.55",
+          "exports_rate": "4.53",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Fertilizers",
+          "imports_rate": "26.76",
+          "exports_rate": "19.13",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Fish meal & products thereof",
+          "imports_rate": "30.56",
+          "exports_rate": "30.56",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Fluorspar",
+          "imports_rate": "27.33",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Glass & glassware",
+          "imports_rate": "30.56",
+          "exports_rate": "17.17",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Granite & products thereof",
+          "imports_rate": "30.56",
+          "exports_rate": "10.56",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Gypsum & products thereof",
+          "imports_rate": "27.33",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Iron ore",
+          "imports_rate": "27.33",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Lead & products thereof",
+          "imports_rate": "27.33",
+          "exports_rate": "21.84",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Lime & products thereof",
+          "imports_rate": "27.33",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Logs",
+          "imports_rate": "30.56",
+          "exports_rate": "7.31",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Maize & products thereof",
+          "imports_rate": "30.08",
+          "exports_rate": "30.08",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Manganese ore",
+          "imports_rate": "19.13",
+          "exports_rate": "19.13",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Ores & minerals: Olivine",
+          "imports_rate": "27.33",
+          "exports_rate": "30.56",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Ores & minerals: Other",
+          "imports_rate": "27.33",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Pig iron",
+          "imports_rate": "27.33",
+          "exports_rate": "14.55",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Pitch pencil",
+          "imports_rate": "27.33",
+          "exports_rate": "25.53",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Potash & products thereof",
+          "imports_rate": "26.76",
+          "exports_rate": "19.13",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Salt",
+          "imports_rate": "27.33",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Scrap steel",
+          "imports_rate": "9.08",
+          "exports_rate": "9.08",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Stainless steel (excluding pipes & tubes)",
+          "imports_rate": "30.56",
+          "exports_rate": "27.82",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Steel pellets",
+          "imports_rate": "10.02",
+          "exports_rate": "10.02",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Steel rebars / sheets / plates / angles",
+          "imports_rate": "27.82",
+          "exports_rate": "27.82",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Steel: Cold rolled coils, galvanised, aluzinc coils",
+          "imports_rate": "27.82",
+          "exports_rate": "27.82",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Steel: Hot rolled coils, slabs, billets",
+          "imports_rate": "27.82",
+          "exports_rate": "27.82",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Timber & products thereof (excluding furniture)",
+          "imports_rate": "30.56",
+          "exports_rate": "20.01",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Zinc & products thereof",
+          "imports_rate": "27.33",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        },
+        {
+          "commodity": "Zircon",
+          "imports_rate": "30.56",
+          "exports_rate": "27.33",
+          "unit": "ZAR per metric ton"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "30.56",
+      "unit": "ZAR",
+      "context": "Import rate for Alumina, Bait, Bricks, Fish meal & products thereof, Glass & glassware, Granite & products thereof, Logs, Stainless steel (excluding pipes & tubes), Timber & products thereof (excluding furniture), Zircon"
+    },
+    {
+      "value": "27.33",
+      "unit": "ZAR",
+      "context": "Export rate for Alumina, Bait, Bricks, Articles of cement / sand / stone, Clay, Fluorspar, Gypsum & products thereof, Iron ore, Lime & products thereof, Ores & minerals: Other, Potash & products thereof, Salt, Zinc & products thereof, Zircon; Import rate for Articles of cement / sand / stone, Cement & clinker, Clay, Fluorspar, Gypsum & products thereof, Iron ore, Lead & products thereof, Lime & products thereof, Ores & minerals: Olivine, Ores & minerals: Other, Pig iron, Pitch pencil, Salt, Zinc & products thereof"
+    },
+    {
+      "value": "5.46",
+      "unit": "ZAR",
+      "context": "Export rate for Cement & clinker"
+    },
+    {
+      "value": "18.85",
+      "unit": "ZAR",
+      "context": "Import rate for Chrome ore"
+    },
+    {
+      "value": "15.47",
+      "unit": "ZAR",
+      "context": "Export rate for Chrome ore"
+    },
+    {
+      "value": "25.14",
+      "unit": "ZAR",
+      "context": "Import and Export rate for Citrus fruit"
+    },
+    {
+      "value": "10.55",
+      "unit": "ZAR",
+      "context": "Import rate for Coal"
+    },
+    {
+      "value": "4.53",
+      "unit": "ZAR",
+      "context": "Export rate for Coal"
+    },
+    {
+      "value": "26.76",
+      "unit": "ZAR",
+      "context": "Import rate for Fertilizers, Potash & products thereof"
+    },
+    {
+      "value": "19.13",
+      "unit": "ZAR",
+      "context": "Export rate for Fertilizers, Potash & products thereof; Import and Export rate for Manganese ore"
+    },
+    {
+      "value": "17.17",
+      "unit": "ZAR",
+      "context": "Export rate for Glass & glassware"
+    },
+    {
+      "value": "10.56",
+      "unit": "ZAR",
+      "context": "Export rate for Granite & products thereof"
+    },
+    {
+      "value": "21.84",
+      "unit": "ZAR",
+      "context": "Export rate for Lead & products thereof"
+    },
+    {
+      "value": "7.31",
+      "unit": "ZAR",
+      "context": "Export rate for Logs"
+    },
+    {
+      "value": "30.08",
+      "unit": "ZAR",
+      "context": "Import and Export rate for Maize & products thereof"
+    },
+    {
+      "value": "14.55",
+      "unit": "ZAR",
+      "context": "Export rate for Pig iron"
+    },
+    {
+      "value": "25.53",
+      "unit": "ZAR",
+      "context": "Export rate for Pitch pencil"
+    },
+    {
+      "value": "9.08",
+      "unit": "ZAR",
+      "context": "Import and Export rate for Scrap steel"
+    },
+    {
+      "value": "27.82",
+      "unit": "ZAR",
+      "context": "Export rate for Stainless steel (excluding pipes & tubes); Import and Export rate for Steel rebars / sheets / plates / angles, Steel: Cold rolled coils, galvanised, aluzinc coils, Steel: Hot rolled coils, slabs, billets"
+    },
+    {
+      "value": "10.02",
+      "unit": "ZAR",
+      "context": "Import and Export rate for Steel pellets"
+    },
+    {
+      "value": "20.01",
+      "unit": "ZAR",
+      "context": "Export rate for Timber & products thereof (excluding furniture)"
+    }
+  ],
+  "parameters_mentioned": [
+    "cargo type: Breakbulk",
+    "cargo type: Alumina",
+    "cargo type: Articles of cement / sand / stone",
+    "cargo type: Bait",
+    "cargo type: Bricks",
+    "cargo type: Cement & clinker",
+    "cargo type: Chrome ore",
+    "cargo type: Citrus fruit",
+    "cargo type: Clay",
+    "cargo type: Coal",
+    "cargo type: Fertilizers",
+    "cargo type: Fish meal & products thereof",
+    "cargo type: Fluorspar",
+    "cargo type: Glass & glassware",
+    "cargo type: Granite & products thereof",
+    "cargo type: Gypsum & products thereof",
+    "cargo type: Iron ore",
+    "cargo type: Lead & products thereof",
+    "cargo type: Lime & products thereof",
+    "cargo type: Logs",
+    "cargo type: Maize & products thereof",
+    "cargo type: Manganese ore",
+    "cargo type: Ores & minerals: Olivine",
+    "cargo type: Ores & minerals: Other",
+    "cargo type: Pig iron",
+    "cargo type: Pitch pencil",
+    "cargo type: Potash & products thereof",
+    "cargo type: Salt",
+    "cargo type: Scrap steel",
+    "cargo type: Stainless steel (excluding pipes & tubes)",
+    "cargo type: Steel pellets",
+    "cargo type: Steel rebars / sheets / plates / angles",
+    "cargo type: Steel: Cold rolled coils, galvanised, aluzinc coils",
+    "cargo type: Steel: Hot rolled coils, slabs, billets",
+    "cargo type: Timber & products thereof (excluding furniture)",
+    "cargo type: Zinc & products thereof",
+    "cargo type: Zircon",
+    "movement type: Imports",
+    "movement type: Exports",
+    "unit: metric ton"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The section heading '7.1 BREAKBULK' is a sub-section of 'SECTION 7 CARGO DUES ON IMPORTS, EXPORTS, TRANSHIPMENTS AND COASTWISE' which started on page 41. Crucially, the unit for 'Breakbulk' cargo dues (per metric ton) and the currency (South African Rand) are defined on page 41. The general context of cargo dues and VAT is also established on page 41.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The table of breakbulk commodities and their rates appears to be complete on this page, ending with 'Zircon' (item 36). There is no indication that the list continues on the next page.",
+  "search_keywords": [
+    "Cargo Dues",
+    "Breakbulk",
+    "Commodity Rates",
+    "Imports",
+    "Exports",
+    "Alumina",
+    "Cement",
+    "Coal",
+    "Fertilizers",
+    "Steel",
+    "Zircon",
+    "Tariff Rates"
+  ],
+  "ambiguities_or_risks": [
+    "The unit 'per metric ton' for the rates is implied from the 'Breakbulk per ton' definition on the previous page. Without the previous page, the unit would be ambiguous.",
+    "The commodity 'Ores & minerals: Other' is a catch-all category, which might require further definition or clarification from other parts of the tariff book or specific rules.",
+    "Exclusions for 'Stainless steel (excluding pipes & tubes)' and 'Timber & products thereof (excluding furniture)' are important and must be noted for accurate application of rates."
+  ]
+}

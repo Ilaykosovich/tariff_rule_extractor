@@ -1,0 +1,539 @@
+{
+  "page_number": "15",
+  "section_heading": "3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE",
+  "plain_summary": "This page outlines the allocation of tugs/vessel assistance based on vessel tonnage and provides the corresponding fees per service for various ports. It includes a table detailing the maximum number of craft allocated per vessel tonnage range and a comprehensive tariff table listing fees for tug/vessel assistance across different ports and tonnage brackets, including incremental charges.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Maximum number of craft allocated for vessel assistance based on vessel tonnage ranges.",
+      "columns": [
+        "VESSEL TONNAGE",
+        "MAXIMUM NUMBER OF CRAFT"
+      ],
+      "row_categories": [
+        "Up to 2 000",
+        "2000-10 000",
+        "10 001-50 000",
+        "50 001-100 000",
+        "100 000 plus"
+      ],
+      "important_values": [
+        {
+          "category": "Up to 2 000",
+          "craft": "0.50"
+        },
+        {
+          "category": "2000-10 000",
+          "craft": "1"
+        },
+        {
+          "category": "10 001-50 000",
+          "craft": "2"
+        },
+        {
+          "category": "50 001-100 000",
+          "craft": "3"
+        },
+        {
+          "category": "100 000 plus",
+          "craft": "4"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Fees payable per service for tugs/vessels assisting and/or attending vessels within port confines, based on vessel's tonnage, for various ports.",
+      "columns": [
+        "Tonnage Category",
+        "Richards Bay",
+        "Durban",
+        "East London",
+        "Port Elizabeth / Ngqura",
+        "Mossel Bay",
+        "Cape Town",
+        "Saldanha"
+      ],
+      "row_categories": [
+        "Up to 2 000",
+        "2 001 to 10 000",
+        "Plus Per 100 tons or part thereof above 2000",
+        "10 000 to 50 000",
+        "Plus Per 100 tons or part thereof above 10 000",
+        "50 001 to 100 000",
+        "Plus Per 100 tons or part thereof above 50 000",
+        "Above 100 000",
+        "Plus Per 100 tons or part thereof above 100 000"
+      ],
+      "important_values": [
+        {
+          "category": "Up to 2 000",
+          "Richards Bay": "7 001.67",
+          "Durban": "8 140.00",
+          "East London": "5 622.16",
+          "Port Elizabeth / Ngqura": "7 206.98",
+          "Mossel Bay": "6 316.53",
+          "Cape Town": "5 411.47",
+          "Saldanha": "9 038.42"
+        },
+        {
+          "category": "2 001 to 10 000",
+          "Richards Bay": "13 020.67",
+          "Durban": "12 633.99",
+          "East London": "8 152.14",
+          "Port Elizabeth / Ngqura": "11 168.45",
+          "Mossel Bay": "8 152.14",
+          "Cape Town": "7 898.57",
+          "Saldanha": "15 378.78"
+        },
+        {
+          "category": "Plus Per 100 tons or part thereof above 2000",
+          "Richards Bay": "275.32",
+          "Durban": "268.99",
+          "East London": "200.97",
+          "Port Elizabeth / Ngqura": "237.53",
+          "Mossel Bay": "173.37",
+          "Cape Town": "194.63",
+          "Saldanha": "327.43"
+        },
+        {
+          "category": "10 000 to 50 000",
+          "Richards Bay": "39 999.88",
+          "Durban": "38 494.51",
+          "East London": "27 956.91",
+          "Port Elizabeth / Ngqura": "32 257.98",
+          "Mossel Bay": "25 806.37",
+          "Cape Town": "27 741.85",
+          "Saldanha": "47 311.70"
+        },
+        {
+          "category": "Plus Per 100 tons or part thereof above 10 000",
+          "Richards Bay": "101.08",
+          "Durban": "84.95",
+          "East London": "66.67",
+          "Port Elizabeth / Ngqura": "73.10",
+          "Mossel Bay": "60.21",
+          "Cape Town": "64.52",
+          "Saldanha": "103.23"
+        },
+        {
+          "category": "50 001 to 100 000",
+          "Richards Bay": "79 999.76",
+          "Durban": "73 118.07",
+          "East London": "55 913.82",
+          "Port Elizabeth / Ngqura": "64 515.95",
+          "Mossel Bay": "n/a",
+          "Cape Town": "53 978.33",
+          "Saldanha": "90 322.33"
+        },
+        {
+          "category": "Plus Per 100 tons or part thereof above 50 000",
+          "Richards Bay": "30.11",
+          "Durban": "32.24",
+          "East London": "25.80",
+          "Port Elizabeth / Ngqura": "21.50",
+          "Mossel Bay": "n/a",
+          "Cape Town": "47.32",
+          "Saldanha": "27.97"
+        },
+        {
+          "category": "Above 100 000",
+          "Richards Bay": "103 999.70",
+          "Durban": "93 548.13",
+          "East London": "n/a",
+          "Port Elizabeth / Ngqura": "82 542.46",
+          "Mossel Bay": "n/a",
+          "Cape Town": "79 569.67",
+          "Saldanha": "111 827.63"
+        },
+        {
+          "category": "Plus Per 100 tons or part thereof above 100 000",
+          "Richards Bay": "21.50",
+          "Durban": "23.65",
+          "East London": "n/a",
+          "Port Elizabeth / Ngqura": "21.50",
+          "Mossel Bay": "n/a",
+          "Cape Town": "38.71",
+          "Saldanha": "47.32"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "2 000",
+      "unit": "tonnage",
+      "context": "Vessel tonnage threshold for craft allocation and tariff calculation"
+    },
+    {
+      "value": "0.50",
+      "unit": "craft",
+      "context": "Maximum number of craft for vessels up to 2 000 tonnage"
+    },
+    {
+      "value": "1",
+      "unit": "craft",
+      "context": "Maximum number of craft for vessels 2000-10 000 tonnage"
+    },
+    {
+      "value": "10 000",
+      "unit": "tonnage",
+      "context": "Vessel tonnage threshold for craft allocation and tariff calculation"
+    },
+    {
+      "value": "2",
+      "unit": "craft",
+      "context": "Maximum number of craft for vessels 10 001-50 000 tonnage"
+    },
+    {
+      "value": "50 000",
+      "unit": "tonnage",
+      "context": "Vessel tonnage threshold for craft allocation and tariff calculation"
+    },
+    {
+      "value": "3",
+      "unit": "craft",
+      "context": "Maximum number of craft for vessels 50 001-100 000 tonnage"
+    },
+    {
+      "value": "100 000",
+      "unit": "tonnage",
+      "context": "Vessel tonnage threshold for craft allocation and tariff calculation"
+    },
+    {
+      "value": "4",
+      "unit": "craft",
+      "context": "Maximum number of craft for vessels 100 000 plus tonnage"
+    },
+    {
+      "value": "7 001.67",
+      "unit": "ZAR",
+      "context": "Tariff for Richards Bay, Up to 2 000 tonnage"
+    },
+    {
+      "value": "8 140.00",
+      "unit": "ZAR",
+      "context": "Tariff for Durban, Up to 2 000 tonnage"
+    },
+    {
+      "value": "5 622.16",
+      "unit": "ZAR",
+      "context": "Tariff for East London, Up to 2 000 tonnage"
+    },
+    {
+      "value": "7 206.98",
+      "unit": "ZAR",
+      "context": "Tariff for Port Elizabeth / Ngqura, Up to 2 000 tonnage"
+    },
+    {
+      "value": "6 316.53",
+      "unit": "ZAR",
+      "context": "Tariff for Mossel Bay, Up to 2 000 tonnage"
+    },
+    {
+      "value": "5 411.47",
+      "unit": "ZAR",
+      "context": "Tariff for Cape Town, Up to 2 000 tonnage"
+    },
+    {
+      "value": "9 038.42",
+      "unit": "ZAR",
+      "context": "Tariff for Saldanha, Up to 2 000 tonnage"
+    },
+    {
+      "value": "13 020.67",
+      "unit": "ZAR",
+      "context": "Tariff for Richards Bay, 2 001 to 10 000 tonnage"
+    },
+    {
+      "value": "12 633.99",
+      "unit": "ZAR",
+      "context": "Tariff for Durban, 2 001 to 10 000 tonnage"
+    },
+    {
+      "value": "8 152.14",
+      "unit": "ZAR",
+      "context": "Tariff for East London, 2 001 to 10 000 tonnage"
+    },
+    {
+      "value": "11 168.45",
+      "unit": "ZAR",
+      "context": "Tariff for Port Elizabeth / Ngqura, 2 001 to 10 000 tonnage"
+    },
+    {
+      "value": "8 152.14",
+      "unit": "ZAR",
+      "context": "Tariff for Mossel Bay, 2 001 to 10 000 tonnage"
+    },
+    {
+      "value": "7 898.57",
+      "unit": "ZAR",
+      "context": "Tariff for Cape Town, 2 001 to 10 000 tonnage"
+    },
+    {
+      "value": "15 378.78",
+      "unit": "ZAR",
+      "context": "Tariff for Saldanha, 2 001 to 10 000 tonnage"
+    },
+    {
+      "value": "100",
+      "unit": "tons",
+      "context": "Incremental charge unit for 'Plus Per 100 tons or part thereof'"
+    },
+    {
+      "value": "275.32",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Richards Bay, Per 100 tons or part thereof above 2000"
+    },
+    {
+      "value": "268.99",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Durban, Per 100 tons or part thereof above 2000"
+    },
+    {
+      "value": "200.97",
+      "unit": "ZAR",
+      "context": "Incremental tariff for East London, Per 100 tons or part thereof above 2000"
+    },
+    {
+      "value": "237.53",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Port Elizabeth / Ngqura, Per 100 tons or part thereof above 2000"
+    },
+    {
+      "value": "173.37",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Mossel Bay, Per 100 tons or part thereof above 2000"
+    },
+    {
+      "value": "194.63",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Cape Town, Per 100 tons or part thereof above 2000"
+    },
+    {
+      "value": "327.43",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Saldanha, Per 100 tons or part thereof above 2000"
+    },
+    {
+      "value": "39 999.88",
+      "unit": "ZAR",
+      "context": "Tariff for Richards Bay, 10 000 to 50 000 tonnage"
+    },
+    {
+      "value": "38 494.51",
+      "unit": "ZAR",
+      "context": "Tariff for Durban, 10 000 to 50 000 tonnage"
+    },
+    {
+      "value": "27 956.91",
+      "unit": "ZAR",
+      "context": "Tariff for East London, 10 000 to 50 000 tonnage"
+    },
+    {
+      "value": "32 257.98",
+      "unit": "ZAR",
+      "context": "Tariff for Port Elizabeth / Ngqura, 10 000 to 50 000 tonnage"
+    },
+    {
+      "value": "25 806.37",
+      "unit": "ZAR",
+      "context": "Tariff for Mossel Bay, 10 000 to 50 000 tonnage"
+    },
+    {
+      "value": "27 741.85",
+      "unit": "ZAR",
+      "context": "Tariff for Cape Town, 10 000 to 50 000 tonnage"
+    },
+    {
+      "value": "47 311.70",
+      "unit": "ZAR",
+      "context": "Tariff for Saldanha, 10 000 to 50 000 tonnage"
+    },
+    {
+      "value": "101.08",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Richards Bay, Per 100 tons or part thereof above 10 000"
+    },
+    {
+      "value": "84.95",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Durban, Per 100 tons or part thereof above 10 000"
+    },
+    {
+      "value": "66.67",
+      "unit": "ZAR",
+      "context": "Incremental tariff for East London, Per 100 tons or part thereof above 10 000"
+    },
+    {
+      "value": "73.10",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Port Elizabeth / Ngqura, Per 100 tons or part thereof above 10 000"
+    },
+    {
+      "value": "60.21",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Mossel Bay, Per 100 tons or part thereof above 10 000"
+    },
+    {
+      "value": "64.52",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Cape Town, Per 100 tons or part thereof above 10 000"
+    },
+    {
+      "value": "103.23",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Saldanha, Per 100 tons or part thereof above 10 000"
+    },
+    {
+      "value": "79 999.76",
+      "unit": "ZAR",
+      "context": "Tariff for Richards Bay, 50 001 to 100 000 tonnage"
+    },
+    {
+      "value": "73 118.07",
+      "unit": "ZAR",
+      "context": "Tariff for Durban, 50 001 to 100 000 tonnage"
+    },
+    {
+      "value": "55 913.82",
+      "unit": "ZAR",
+      "context": "Tariff for East London, 50 001 to 100 000 tonnage"
+    },
+    {
+      "value": "64 515.95",
+      "unit": "ZAR",
+      "context": "Tariff for Port Elizabeth / Ngqura, 50 001 to 100 000 tonnage"
+    },
+    {
+      "value": "53 978.33",
+      "unit": "ZAR",
+      "context": "Tariff for Cape Town, 50 001 to 100 000 tonnage"
+    },
+    {
+      "value": "90 322.33",
+      "unit": "ZAR",
+      "context": "Tariff for Saldanha, 50 001 to 100 000 tonnage"
+    },
+    {
+      "value": "30.11",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Richards Bay, Per 100 tons or part thereof above 50 000"
+    },
+    {
+      "value": "32.24",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Durban, Per 100 tons or part thereof above 50 000"
+    },
+    {
+      "value": "25.80",
+      "unit": "ZAR",
+      "context": "Incremental tariff for East London, Per 100 tons or part thereof above 50 000"
+    },
+    {
+      "value": "21.50",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Port Elizabeth / Ngqura, Per 100 tons or part thereof above 50 000"
+    },
+    {
+      "value": "47.32",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Cape Town, Per 100 tons or part thereof above 50 000"
+    },
+    {
+      "value": "27.97",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Saldanha, Per 100 tons or part thereof above 50 000"
+    },
+    {
+      "value": "103 999.70",
+      "unit": "ZAR",
+      "context": "Tariff for Richards Bay, Above 100 000 tonnage"
+    },
+    {
+      "value": "93 548.13",
+      "unit": "ZAR",
+      "context": "Tariff for Durban, Above 100 000 tonnage"
+    },
+    {
+      "value": "82 542.46",
+      "unit": "ZAR",
+      "context": "Tariff for Port Elizabeth / Ngqura, Above 100 000 tonnage"
+    },
+    {
+      "value": "79 569.67",
+      "unit": "ZAR",
+      "context": "Tariff for Cape Town, Above 100 000 tonnage"
+    },
+    {
+      "value": "111 827.63",
+      "unit": "ZAR",
+      "context": "Tariff for Saldanha, Above 100 000 tonnage"
+    },
+    {
+      "value": "21.50",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Richards Bay, Per 100 tons or part thereof above 100 000"
+    },
+    {
+      "value": "23.65",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Durban, Per 100 tons or part thereof above 100 000"
+    },
+    {
+      "value": "21.50",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Port Elizabeth / Ngqura, Per 100 tons or part thereof above 100 000"
+    },
+    {
+      "value": "38.71",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Cape Town, Per 100 tons or part thereof above 100 000"
+    },
+    {
+      "value": "47.32",
+      "unit": "ZAR",
+      "context": "Incremental tariff for Saldanha, Per 100 tons or part thereof above 100 000"
+    }
+  ],
+  "parameters_mentioned": [
+    "VESSEL TONNAGE",
+    "100 tons"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The header 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' applies to this page and is a continuation from the previous page. The section heading '3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE' is part of a numbered tariff structure that began on previous pages.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The section 3.6 appears to be fully contained and concluded on this page, with all relevant tables and conditions presented.",
+  "search_keywords": [
+    "Tugs",
+    "Vessel Assistance",
+    "Attendance",
+    "Craft Allocation",
+    "Vessel Tonnage",
+    "Tariff",
+    "Richards Bay",
+    "Durban",
+    "East London",
+    "Port Elizabeth",
+    "Ngqura",
+    "Mossel Bay",
+    "Cape Town",
+    "Saldanha",
+    "Per service",
+    "100 tons",
+    "Workboat"
+  ],
+  "ambiguities_or_risks": [
+    "The term 'VESSEL TONNAGE' is used without specifying if it refers to Gross Tonnage (GT), Net Tonnage (NT), or Deadweight Tonnage (DWT), which could impact calculation accuracy.",
+    "The phrase 'The craft type and number thereof to be allocated for a service will be decided by the port' indicates that the 'MAXIMUM NUMBER OF CRAFT' table is a guideline, and the actual allocation is subject to port discretion, which introduces variability.",
+    "The 'n/a' entries in the tariff table for Mossel Bay and East London for higher tonnage categories imply that services might not be available or are handled differently for those ranges in those specific ports, which needs clarification if such vessels are encountered."
+  ]
+}

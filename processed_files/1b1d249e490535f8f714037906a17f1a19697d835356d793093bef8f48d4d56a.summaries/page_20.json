@@ -1,0 +1,81 @@
+{
+  "page_number": "20",
+  "section_heading": "3.10 HIRE OF MARINE EQUIPMENT/MARINE SERVICES",
+  "plain_summary": "This page details the tariffs for hiring various marine equipment and services. It lists rates for items like passenger gangways and mooring ropes on a 'per day of 24 hours or part thereof' basis, and rates for punt hire and forklifts (3 ton and 4 ton) on a 'per hour or part thereof' basis. For other services like Electric Power, Compressed Air, Any other equipment, and Divers Services, fees are quoted on application. A note clarifies that the owner of the vessel is responsible for damaged or destroyed ropes, mooring springs, or straps, and other equipment damaged beyond normal wear and tear may be repaired/replaced at the hirer's expense.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "320.10",
+      "unit": "South African Rand",
+      "context": "Passenger gangways, per day"
+    },
+    {
+      "value": "1511.85",
+      "unit": "South African Rand",
+      "context": "Mooring ropes at the Port of Saldanha, per day"
+    },
+    {
+      "value": "146.27",
+      "unit": "South African Rand",
+      "context": "Punt hire, per hour"
+    },
+    {
+      "value": "534.39",
+      "unit": "South African Rand",
+      "context": "3 ton Forklift at the Port of Mossel Bay, per hour"
+    },
+    {
+      "value": "595.25",
+      "unit": "South African Rand",
+      "context": "4 ton Forklift at the Port of Mossel Bay, per hour"
+    },
+    {
+      "value": "3",
+      "unit": "ton",
+      "context": "Forklift capacity"
+    },
+    {
+      "value": "4",
+      "unit": "ton",
+      "context": "Forklift capacity"
+    },
+    {
+      "value": "24",
+      "unit": "hours",
+      "context": "Definition of a day for hire"
+    }
+  ],
+  "parameters_mentioned": [
+    "day",
+    "hours",
+    "ton"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The section 3.10 appears to be complete on this page.",
+  "search_keywords": [
+    "Marine equipment hire",
+    "Marine services",
+    "Passenger gangways",
+    "Mooring ropes",
+    "Punt hire",
+    "Forklifts",
+    "Electric Power",
+    "Compressed Air",
+    "Divers Services",
+    "Equipment damage",
+    "Saldanha",
+    "Mossel Bay"
+  ],
+  "ambiguities_or_risks": [
+    "Several services are 'Fees quoted on application', meaning no fixed tariff is provided.",
+    "The 'Note' indicates potential additional costs for damaged equipment, which are not quantified."
+  ]
+}

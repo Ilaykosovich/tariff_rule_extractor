@@ -1,0 +1,150 @@
+{
+  "page_number": "22",
+  "section_heading": "4.1.1 Port Dues (continued) and 4.1.2 Berth Dues",
+  "plain_summary": "This page continues the discussion on Port Dues, detailing additional reductions and a list of exemptions. It then introduces Berth Dues, specifying the rates payable by vessels occupying a repair quay or other non-cargo handling berth, based on a tiered tonnage structure. Conditions for free periods at berths for cargo handling vessels are also provided.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Berth Dues rates per 100 tons or part thereof, based on vessel tonnage tiers.",
+      "columns": [
+        "Tonnage Tier",
+        "Rate per 100 tons or part thereof (ZAR)"
+      ],
+      "row_categories": [
+        "Up to 17 700 tons",
+        "The following 17 600 tons (up to 35 300 tons)",
+        "The following 17 700 tons (up to 53 000 tons)",
+        "Over 53 000 tons"
+      ],
+      "important_values": [
+        {
+          "category": "Up to 17 700 tons",
+          "rate": "50.56",
+          "unit": "ZAR per 100 tons or part thereof"
+        },
+        {
+          "category": "The following 17 600 tons (up to 35 300 tons)",
+          "rate": "33.45",
+          "unit": "ZAR per 100 tons or part thereof"
+        },
+        {
+          "category": "The following 17 700 tons (up to 53 000 tons)",
+          "rate": "16.82",
+          "unit": "ZAR per 100 tons or part thereof"
+        },
+        {
+          "category": "Over 53 000 tons",
+          "rate": "No additional fee",
+          "unit": ""
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "10",
+      "unit": "%",
+      "context": "Reduction for certified double hulled liquid bulk tankers, etc., with a maximum of 10% for any combination of certifications."
+    },
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "Reduction for vessels remaining in port for less than 12 hours, in addition to other reductions."
+    },
+    {
+      "value": "12",
+      "unit": "hours",
+      "context": "Threshold for 15% reduction for vessels in port."
+    },
+    {
+      "value": "17 700",
+      "unit": "tons",
+      "context": "Berth Dues tonnage tier upper limit."
+    },
+    {
+      "value": "50.56",
+      "unit": "ZAR",
+      "context": "Berth Dues rate per 100 tons for up to 17 700 tons."
+    },
+    {
+      "value": "17 600",
+      "unit": "tons",
+      "context": "Berth Dues tonnage tier increment (from 17 700 to 35 300 tons)."
+    },
+    {
+      "value": "35 300",
+      "unit": "tons",
+      "context": "Berth Dues tonnage tier upper limit."
+    },
+    {
+      "value": "33.45",
+      "unit": "ZAR",
+      "context": "Berth Dues rate per 100 tons for the following 17 600 tons."
+    },
+    {
+      "value": "17 700",
+      "unit": "tons",
+      "context": "Berth Dues tonnage tier increment (from 35 300 to 53 000 tons)."
+    },
+    {
+      "value": "53 000",
+      "unit": "tons",
+      "context": "Berth Dues tonnage tier upper limit."
+    },
+    {
+      "value": "16.82",
+      "unit": "ZAR",
+      "context": "Berth Dues rate per 100 tons for the following 17 700 tons."
+    },
+    {
+      "value": "6",
+      "unit": "cargo working hours",
+      "context": "Free period before and after cargo working for landing/shipping/transhipping cargo at general berths."
+    },
+    {
+      "value": "2",
+      "unit": "cargo working hours",
+      "context": "Free period before and after cargo working at container handling berths."
+    }
+  ],
+  "parameters_mentioned": [
+    "GT / gross tonnage (implied by 'tons')",
+    "hours (12 hours, 24 hour period, six cargo working hours, two cargo working hours)",
+    "vessel type (double hulled liquid bulk tankers, liquid bulk tankers equipped with segregated ballast tanks, liquid bulk tankers in possession of a 'Green Award', coastal vessel, fishing vessels, container handling berths, SAPS, SANDF, SAMSA, SA Medical & Research vessels)",
+    "cargo type (cargo working, landing/shipping/transhipping cargo)",
+    "port of call (foreign port, first South African port of call, registered port)",
+    "facility type (drydock, floating dock, syncrolift, slipway, repair quay, berth, designated anchorage, offshore moorings)"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The section '4.1.1 PORT DUES' continues from the previous page, including the context of reductions and the definition of 'tons' as gross tonnage. The overall section heading 'SECTION 4 PORT FEES ON VESSELS, MISCELLANEOUS FEES AND SERVICES' is also on the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The 'Berth Dues' section appears to be complete on this page, and there are no indications of continuation for the current topics.",
+  "search_keywords": [
+    "Port Dues reductions",
+    "Port Dues exemptions",
+    "Berth Dues",
+    "Double Hulled Tankers",
+    "Green Award",
+    "SAPS",
+    "SANDF",
+    "SAMSA",
+    "Medical Research vessels",
+    "Fishing vessels",
+    "Drydock",
+    "Floating Dock",
+    "Syncrolift",
+    "Slipway",
+    "Coastal vessel",
+    "Cargo working hours",
+    "Tonnage tiers"
+  ],
+  "ambiguities_or_risks": [
+    "The interaction of multiple Port Dues reductions needs careful interpretation, especially the 'in addition to other reductions' clause for the 15% reduction and the 'maximum of 10%' for tanker certifications.",
+    "The 'Berth Dues' structure is presented as text but functions as a tiered table, requiring careful parsing for calculation."
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "page_number": "16",
+  "section_heading": "3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE (continued) and 3.7 MISCELLANEOUS TUG/VESSEL SERVICES",
+  "plain_summary": "This page details various surcharges and conditions applicable to tug/vessel assistance services, including fees for services outside ordinary working hours, additional tugs, vessels without their own power, and cancellations. It also specifies fees for delays in vessel arrival or departure. Additionally, the page introduces miscellaneous tug/vessel services such as tanker fire watch, fire fighting, and general standby services, outlining hourly rates and maximum charges for different time periods.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "25%",
+      "unit": "percentage",
+      "context": "surcharge for service commencing or terminating outside ordinary working hours on weekdays and Saturdays or on Sundays and public holidays"
+    },
+    {
+      "value": "50%",
+      "unit": "percentage",
+      "context": "surcharge per tug when an additional tug/vessel is provided on request or deemed necessary by Harbour Master"
+    },
+    {
+      "value": "50%",
+      "unit": "percentage",
+      "context": "surcharge where a vessel without its own power is serviced"
+    },
+    {
+      "value": "100%",
+      "unit": "percentage",
+      "context": "surcharge if an additional tug/vessel is provided on request of the master to service a vessel without its own power"
+    },
+    {
+      "value": "30",
+      "unit": "minutes",
+      "context": "threshold for delay in vessel arrival or departure"
+    },
+    {
+      "value": "8 050.76",
+      "unit": "ZAR",
+      "context": "fee per tug per half hour or part thereof for delays (all ports excluding Saldanha)"
+    },
+    {
+      "value": "10 152.19",
+      "unit": "ZAR",
+      "context": "fee per tug per half hour or part thereof for delays (Port of Saldanha)"
+    },
+    {
+      "value": "12",
+      "unit": "hours",
+      "context": "first period for miscellaneous tug services (per tug per hour)"
+    },
+    {
+      "value": "16 098.29",
+      "unit": "ZAR",
+      "context": "rate per tug per hour or part thereof for the first 12 hours of miscellaneous services"
+    },
+    {
+      "value": "128 786.47",
+      "unit": "ZAR",
+      "context": "maximum fee for the first 12 hours of miscellaneous services"
+    },
+    {
+      "value": "12",
+      "unit": "hours",
+      "context": "following period for miscellaneous tug services (up to 24 hours)"
+    },
+    {
+      "value": "24",
+      "unit": "hours",
+      "context": "total period for miscellaneous tug services (maximum)"
+    },
+    {
+      "value": "10 735.34",
+      "unit": "ZAR",
+      "context": "rate per tug per hour or part thereof for the following 12 hours (up to 24 hours) of miscellaneous services"
+    },
+    {
+      "value": "225 442.89",
+      "unit": "ZAR",
+      "context": "maximum fee for 24 hours of miscellaneous services"
+    },
+    {
+      "value": "8 050.76",
+      "unit": "ZAR",
+      "context": "rate per tug per hour or part thereof for miscellaneous services thereafter (beyond 24 hours)"
+    }
+  ],
+  "parameters_mentioned": [
+    "weekdays",
+    "Saturdays",
+    "Sundays",
+    "public holidays",
+    "master of the vessel",
+    "Harbour Master",
+    "vessel without its own power",
+    "standby",
+    "notified time",
+    "half hour",
+    "tug",
+    "Port of Saldanha",
+    "tanker",
+    "fire watch",
+    "fire fighting",
+    "bad weather",
+    "hours",
+    "oil spills"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The section heading '3.6 TUGS/VESSEL ASSISTANCE AND/OR ATTENDANCE' begins on the previous page, and the bullet points on this page are a continuation of the conditions and fees for that section. The 'craft allocation table' referenced for additional tugs is also on the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "Section 3.7 appears to conclude on this page, with no indication of continuation.",
+  "search_keywords": [
+    "Tug assistance surcharges",
+    "Vessel assistance surcharges",
+    "Out-of-hours fees",
+    "Additional tug fees",
+    "Vessel without power surcharge",
+    "Cancellation fees tug",
+    "Delay fees tug",
+    "Miscellaneous tug services",
+    "Tanker fire watch",
+    "Fire fighting services",
+    "Standby services tug",
+    "Hourly tug rates",
+    "Maximum tug fees"
+  ],
+  "ambiguities_or_risks": [
+    "The phrase 'Fees available on application' for foam usage in fire fighting means these costs are not explicitly defined in the tariff and would require external inquiry.",
+    "The 'normal fees' referenced for cancellation are defined in the tables on the previous page, requiring cross-referencing for calculation."
+  ]
+}

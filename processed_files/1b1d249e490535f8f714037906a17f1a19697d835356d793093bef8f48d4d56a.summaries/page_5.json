@@ -1,0 +1,67 @@
+{
+  "page_number": "5",
+  "section_heading": "LIST OF TRANSNET NATIONAL PORTS AUTHORITY FEES AT THE SOUTH AFRICAN PORTS OF TRANSNET SOC (Ltd) / Definitions",
+  "plain_summary": "This page introduces the tariff book, stating that tariffs are subject to 15% VAT and are in South African Rand. It then provides a list of definitions for key terms used throughout the document, including 'Act', 'Agent', 'Authority', 'Cargo', 'Coaster', 'Coastwise cargo', 'Container operator', 'Entering port', 'passenger vessel', and 'pleasure vessel'. It also outlines the policy for claims related to port fees, referencing the Prescription Act.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "12",
+      "unit": "of 2005",
+      "context": "National Ports Act No."
+    },
+    {
+      "value": "68",
+      "unit": "of 1969",
+      "context": "Prescription Act No."
+    },
+    {
+      "value": "91",
+      "unit": "of 1964",
+      "context": "Customs and Excise Act"
+    },
+    {
+      "value": "12",
+      "unit": "passengers",
+      "context": "threshold for passenger/pleasure vessel definition"
+    }
+  ],
+  "parameters_mentioned": [
+    "vessel",
+    "cargo",
+    "passengers"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page contains a list of definitions, which is likely to continue on the subsequent page.",
+  "search_keywords": [
+    "Definitions",
+    "VAT",
+    "South African Rand",
+    "Act",
+    "Agent",
+    "Authority",
+    "Cargo",
+    "Coaster",
+    "Coastwise cargo",
+    "Container operator",
+    "Entering port",
+    "passenger vessel",
+    "pleasure vessel",
+    "Claims",
+    "Refund",
+    "Prescription Act"
+  ],
+  "ambiguities_or_risks": []
+}

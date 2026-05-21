@@ -1,0 +1,176 @@
+{
+  "page_number": "12",
+  "section_heading": "SECTION 3 MARINE SERVICES",
+  "plain_summary": "This page defines 'Ordinary Working Hours' for various ports, specifying different schedules for weekdays and Saturdays, and noting that surcharges may apply outside these hours. It also defines 'Special Services' as those quoted on application and reiterates the definition of 'Tonnage of Vessels for Port Tariff Purposes' based on gross tonnage. The page then introduces a 'MARINE SERVICES INCENTIVE' table, outlining discounts applicable to pilotage, craft assistance, and berthing services based on vessel/cargo type, number of vessel calls, and a tiered discount structure.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Marine Services Incentive discounts applicable to pilotage, craft assistance, and berthing services.",
+      "columns": [
+        "Vessel/Cargo Type",
+        "Threshold No. of Vessel Calls",
+        "Discount Applicable",
+        "Maximum No. of Vessel Calls for Discount"
+      ],
+      "row_categories": [
+        "CONTAINER",
+        "AUTO CARRIERS",
+        "BREAK BULK",
+        "DRY BULK",
+        "LIQUID BULK"
+      ],
+      "important_values": [
+        {
+          "category": "CONTAINER",
+          "threshold_calls": "500",
+          "discount_rule": "1% (or proportionate) for every 50 calls above Threshold",
+          "maximum_calls_for_discount": "1500"
+        },
+        {
+          "category": "AUTO CARRIERS",
+          "threshold_calls": "100",
+          "discount_rule": "1% (or proportionate) for every 10 calls above Threshold",
+          "maximum_calls_for_discount": "300"
+        },
+        {
+          "category": "BREAK BULK",
+          "threshold_calls": "100",
+          "discount_rule": "1% (or proportionate) for every 10 calls above Threshold",
+          "maximum_calls_for_discount": "300"
+        },
+        {
+          "category": "DRY BULK",
+          "threshold_calls": "100",
+          "discount_rule": "1% (or proportionate) for every 10 calls above Threshold",
+          "maximum_calls_for_discount": "300"
+        },
+        {
+          "category": "LIQUID BULK",
+          "threshold_calls": "100",
+          "discount_rule": "1% (or proportionate) for every 10 calls above Threshold",
+          "maximum_calls_for_discount": "300"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate (from header)"
+    },
+    {
+      "value": "06:00",
+      "unit": "time",
+      "context": "Start of ordinary working hours for Mossel Bay, East London"
+    },
+    {
+      "value": "18:00",
+      "unit": "time",
+      "context": "End of ordinary working hours for Mossel Bay"
+    },
+    {
+      "value": "22:00",
+      "unit": "time",
+      "context": "End of ordinary working hours for East London (weekdays)"
+    },
+    {
+      "value": "12:00",
+      "unit": "time",
+      "context": "End of ordinary working hours for East London (Saturdays)"
+    },
+    {
+      "value": "00:01",
+      "unit": "time",
+      "context": "Start of 24-hour service for Richards Bay, Durban, Ngqura, Port Elizabeth, Cape Town and Saldanha"
+    },
+    {
+      "value": "24:00",
+      "unit": "time",
+      "context": "End of 24-hour service for Richards Bay, Durban, Ngqura, Port Elizabeth, Cape Town and Saldanha"
+    },
+    {
+      "value": "500",
+      "unit": "calls",
+      "context": "CONTAINER Threshold No. of Vessel Calls"
+    },
+    {
+      "value": "1",
+      "unit": "%",
+      "context": "Discount Applicable for CONTAINER, AUTO CARRIERS, BREAK BULK, DRY BULK, LIQUID BULK"
+    },
+    {
+      "value": "50",
+      "unit": "calls",
+      "context": "Calls above Threshold for 1% discount for CONTAINER"
+    },
+    {
+      "value": "1500",
+      "unit": "calls",
+      "context": "Maximum No. of Vessel Calls for Discount for CONTAINER"
+    },
+    {
+      "value": "100",
+      "unit": "calls",
+      "context": "Threshold No. of Vessel Calls for AUTO CARRIERS, BREAK BULK, DRY BULK, LIQUID BULK"
+    },
+    {
+      "value": "10",
+      "unit": "calls",
+      "context": "Calls above Threshold for 1% discount for AUTO CARRIERS, BREAK BULK, DRY BULK, LIQUID BULK"
+    },
+    {
+      "value": "300",
+      "unit": "calls",
+      "context": "Maximum No. of Vessel Calls for Discount for AUTO CARRIERS, BREAK BULK, DRY BULK, LIQUID BULK"
+    }
+  ],
+  "parameters_mentioned": [
+    "GT / gross tonnage",
+    "vessel calls",
+    "vessel type (CONTAINER, AUTO CARRIERS, BREAK BULK, DRY BULK, LIQUID BULK)",
+    "cargo type (CONTAINER, AUTO CARRIERS, BREAK BULK, DRY BULK, LIQUID BULK)",
+    "days (Mondays to Fridays, Saturdays, public holidays)",
+    "hours (06:00, 18:00, 22:00, 12:00, 00:01, 24:00)",
+    "shipping line",
+    "port calls",
+    "cargo working vessels"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The definition of 'Tonnage of Vessels for Port Tariff Purposes' is a direct repetition from Section 2.1 on page 11. The general VAT and currency information in the header is also a continuation from the previous page.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page introduces the 'MARINE SERVICES INCENTIVE' for pilotage, craft assistance, and berthing services but does not list the actual charges for these services. The specific tariff rates for these marine services are likely detailed on subsequent pages.",
+  "search_keywords": [
+    "Marine Services",
+    "Ordinary Working Hours",
+    "Special Services",
+    "Tonnage of Vessels",
+    "Marine Services Incentive",
+    "Pilotage",
+    "Craft Assistance",
+    "Berthing Services",
+    "Discount",
+    "Vessel Calls",
+    "Container",
+    "Auto Carriers",
+    "Break Bulk",
+    "Dry Bulk",
+    "Liquid Bulk",
+    "Mossel Bay",
+    "East London",
+    "Richards Bay",
+    "Durban",
+    "Ngqura",
+    "Port Elizabeth",
+    "Cape Town",
+    "Saldanha"
+  ],
+  "ambiguities_or_risks": [
+    "The 'Discount Applicable' rule states '1% (or proportionate) for every X calls above Threshold'. The term 'proportionate' implies a need for clear guidance on how to calculate the discount if the number of calls is not an exact multiple of X (e.g., linear interpolation or pro-rata calculation)."
+  ]
+}

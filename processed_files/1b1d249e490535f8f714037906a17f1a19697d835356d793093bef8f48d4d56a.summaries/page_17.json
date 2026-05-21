@@ -1,0 +1,218 @@
+{
+  "page_number": "17",
+  "section_heading": "3.7 MISCELLANEOUS TUG/VESSEL SERVICES (continuation); Tanker fire watch, fire fighting and standby services (Port of Saldanha); Mobilisation and demobilisation charge for floating cranes; Floating cranes; Other vessel services",
+  "plain_summary": "This page details specific tariffs for miscellaneous tug and vessel services. It continues the 'Tanker fire watch, fire fighting and standby services' section by providing hourly and maximum rates for the Port of Saldanha across different time blocks (first 12 hours, following 12 hours up to 24 hours, thereafter). It then introduces charges for the mobilisation and demobilisation of floating cranes at the Port of Durban, followed by hourly rates for floating crane handling loads, also at the Port of Durban, with a minimum hire period. Finally, it lists hourly fees for 'Other vessel services' using Large Tugs and Small Tugs/Workboats, specifying rates for various ports and port groups.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Hourly and maximum fees for tanker fire watch, fire fighting, and standby services at the Port of Saldanha.",
+      "columns": [
+        "Time Block",
+        "Rate per tug per hour or part thereof",
+        "Maximum Fee"
+      ],
+      "row_categories": [
+        "First 12 hours",
+        "Following 12 hours up to 24 hours",
+        "Thereafter"
+      ],
+      "important_values": [
+        {
+          "category": "First 12 hours",
+          "rate_per_hour": "20 304.33",
+          "maximum": "162 444.27",
+          "unit": "ZAR"
+        },
+        {
+          "category": "Following 12 hours up to 24 hours",
+          "rate_per_hour": "13 537.32",
+          "maximum": "284 308.38",
+          "unit": "ZAR"
+        },
+        {
+          "category": "Thereafter",
+          "rate_per_hour": "10 152.19",
+          "unit": "ZAR"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Hourly fees for Large Tug services across various ports.",
+      "columns": [
+        "Port/Port Group",
+        "Fee per hour or part thereof"
+      ],
+      "row_categories": [
+        "All Ports, except the Port of Ngqura, Port Elizabeth and Saldanha",
+        "Port of Ngqura/Port Elizabeth",
+        "At the Port of Saldanha for services of a special nature"
+      ],
+      "important_values": [
+        {
+          "port_group": "All Ports, except the Port of Ngqura, Port Elizabeth and Saldanha",
+          "rate": "16 095.12",
+          "unit": "ZAR"
+        },
+        {
+          "port_group": "Port of Ngqura/Port Elizabeth",
+          "rate": "22 050.30",
+          "unit": "ZAR"
+        },
+        {
+          "port_group": "At the Port of Saldanha for services of a special nature",
+          "rate": "20 301.18",
+          "unit": "ZAR"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Hourly fees for Small Tug/Workboat services across various ports.",
+      "columns": [
+        "Port/Port Group",
+        "Fee per hour or part thereof"
+      ],
+      "row_categories": [
+        "All Ports, except the Port of East London, Ngqura and Port Elizabeth",
+        "Port of East London",
+        "Port of Ngqura/Port Elizabeth"
+      ],
+      "important_values": [
+        {
+          "port_group": "All Ports, except the Port of East London, Ngqura and Port Elizabeth",
+          "rate": "5 955.53",
+          "unit": "ZAR"
+        },
+        {
+          "port_group": "Port of East London",
+          "rate": "9 851.06",
+          "unit": "ZAR"
+        },
+        {
+          "port_group": "Port of Ngqura/Port Elizabeth",
+          "rate": "8 159.07",
+          "unit": "ZAR"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate applicable to tariffs"
+    },
+    {
+      "value": "20 304.33",
+      "unit": "ZAR",
+      "context": "Tanker fire watch, Port of Saldanha, First 12 hours, per tug per hour or part thereof"
+    },
+    {
+      "value": "162 444.27",
+      "unit": "ZAR",
+      "context": "Tanker fire watch, Port of Saldanha, Maximum for First 12 hours"
+    },
+    {
+      "value": "13 537.32",
+      "unit": "ZAR",
+      "context": "Tanker fire watch, Port of Saldanha, Following 12 hours up to 24 hours, per hour or part thereof"
+    },
+    {
+      "value": "284 308.38",
+      "unit": "ZAR",
+      "context": "Tanker fire watch, Port of Saldanha, Maximum for 24 hours"
+    },
+    {
+      "value": "10 152.19",
+      "unit": "ZAR",
+      "context": "Tanker fire watch, Port of Saldanha, Thereafter, per tug per hour or part thereof"
+    },
+    {
+      "value": "44 374.14",
+      "unit": "ZAR",
+      "context": "Mobilisation and demobilisation charge for floating cranes, Minimum fee per service at the Port of Durban"
+    },
+    {
+      "value": "19 017.50",
+      "unit": "ZAR",
+      "context": "Floating cranes, For handling loads, per hour or part thereof at the Port of Durban"
+    },
+    {
+      "value": "2",
+      "unit": "hours",
+      "context": "Floating cranes, minimum hire period"
+    },
+    {
+      "value": "16 095.12",
+      "unit": "ZAR",
+      "context": "Other vessel services, Large Tug, All Ports except Ngqura, Port Elizabeth and Saldanha, per hour or part thereof"
+    },
+    {
+      "value": "22 050.30",
+      "unit": "ZAR",
+      "context": "Other vessel services, Large Tug, Port of Ngqura/Port Elizabeth, per hour or part thereof"
+    },
+    {
+      "value": "20 301.18",
+      "unit": "ZAR",
+      "context": "Other vessel services, Large Tug, At the Port of Saldanha for services of a special nature, per hour or part thereof"
+    },
+    {
+      "value": "5 955.53",
+      "unit": "ZAR",
+      "context": "Other vessel services, Small Tug/Workboat, All Ports except East London, Ngqura and Port Elizabeth, per hour or part thereof"
+    },
+    {
+      "value": "9 851.06",
+      "unit": "ZAR",
+      "context": "Other vessel services, Small Tug/Workboat, Port of East London, per hour or part thereof"
+    },
+    {
+      "value": "8 159.07",
+      "unit": "ZAR",
+      "context": "Other vessel services, Small Tug/Workboat, Port of Ngqura/Port Elizabeth, per hour or part thereof"
+    }
+  ],
+  "parameters_mentioned": [
+    "hours",
+    "tug",
+    "vessel",
+    "Port (Saldanha, Durban, Ngqura, Port Elizabeth, East London)",
+    "service",
+    "floating crane",
+    "large tug",
+    "small tug/workboat",
+    "special nature (services)"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The first section 'At the Port of Saldanha' is a continuation of the 'Tanker fire watch, fire fighting and standby services' section that started on the previous page (page 16). The overall section heading '3.7 MISCELLANEOUS TUG/VESSEL SERVICES' is also established on the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The sections on this page appear to be self-contained and conclude their respective tariff listings. While a tariff book may have more services on subsequent pages, the current topics seem complete.",
+  "search_keywords": [
+    "Tariffs",
+    "Saldanha",
+    "Durban",
+    "Floating Cranes",
+    "Tug Services",
+    "Large Tug",
+    "Small Tug",
+    "Workboat",
+    "Fire Watch",
+    "Standby",
+    "Mobilisation",
+    "Demobilisation",
+    "Hourly Rates",
+    "Port Elizabeth",
+    "Ngqura",
+    "East London",
+    "Miscellaneous Vessel Services"
+  ],
+  "ambiguities_or_risks": [
+    "The term 'services of a special nature' for Large Tug at the Port of Saldanha is not defined, which could lead to ambiguity in application.",
+    "The phrase 'Following 12 hours up to 24 hours per hour or part thereof' implies cumulative hours, meaning hours 13-24 of service, which is a common interpretation but not explicitly stated as 'after the first 12 hours'."
+  ]
+}

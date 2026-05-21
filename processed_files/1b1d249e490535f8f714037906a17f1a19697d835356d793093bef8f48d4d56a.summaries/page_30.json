@@ -1,0 +1,103 @@
+{
+  "page_number": "30",
+  "section_heading": "4.3.5 FIRE EQUIPMENT HIRE, 4.4 SECURITY SERVICES, 4.5 FRESH WATER, 4.6 ELECTRICITY, 4.7 REMOVAL OF REFUSE, 4.8 COMBATING OF OIL POLLUTION",
+  "plain_summary": "This page lists tariffs for various services. It details rates for hiring fire equipment, including training facilities, fire pumps, ejector pumps, fire hoses, branch pipes and nozzles, fire extinguishers, and a fire tender with driver for social functions. It also specifies a daily rate for crew transportation services provided by the Authority's security for vessels at Island View berths 1-8 in the Port of Durban. Fees for fresh water, electricity, and refuse removal are stated as 'available on application'. For combating oil pollution, there is an hourly rate for the utilization of an oil boom, while fees for oil spill emulsifier and any tugs used are 'on application' or 'raised separately'.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "5 487.25",
+      "unit": "Rand",
+      "context": "Training Facilities Hire per day (excluding fire equipment)"
+    },
+    {
+      "value": "500.47",
+      "unit": "Rand",
+      "context": "Fire pump hire (per half hour)"
+    },
+    {
+      "value": "188.37",
+      "unit": "Rand",
+      "context": "Ejector pump hire (per half hour)"
+    },
+    {
+      "value": "47.11",
+      "unit": "Rand",
+      "context": "Fire hose hire (per half hour)"
+    },
+    {
+      "value": "47.11",
+      "unit": "Rand",
+      "context": "Branch pipe and nozzle hire (per 8 hr day)"
+    },
+    {
+      "value": "156.06",
+      "unit": "Rand",
+      "context": "Fire extinguisher hire (per 8 hr day)"
+    },
+    {
+      "value": "3 762.19",
+      "unit": "Rand",
+      "context": "Fire tender and driver – social functions (per hour)"
+    },
+    {
+      "value": "1 192.11",
+      "unit": "Rand",
+      "context": "Crew Transportation per day"
+    },
+    {
+      "value": "1",
+      "unit": "to 8",
+      "context": "Island View berths range"
+    },
+    {
+      "value": "1 030.12",
+      "unit": "Rand",
+      "context": "Utilization of oil boom per hour or part thereof"
+    }
+  ],
+  "parameters_mentioned": [
+    "day",
+    "half hour",
+    "8 hr day",
+    "hour",
+    "litre",
+    "vessel",
+    "crew members",
+    "Port of Durban",
+    "Island View berths",
+    "oil boom",
+    "oil spill emulsifier",
+    "tugs"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The general tariff conditions, including the VAT rate and currency, are established on the previous page. The section numbering (4.3.5) indicates a continuation of the 'FIRE EQUIPMENT' section from the previous page (4.3.4).",
+  "next_page_likely_needed": false,
+  "next_page_reason": "",
+  "search_keywords": [
+    "Fire Equipment Hire",
+    "Security Services",
+    "Crew Transportation",
+    "Fresh Water",
+    "Electricity",
+    "Refuse Removal",
+    "Oil Pollution",
+    "Oil Boom",
+    "Tariffs",
+    "Rates",
+    "Durban",
+    "VAT",
+    "Rand"
+  ],
+  "ambiguities_or_risks": []
+}

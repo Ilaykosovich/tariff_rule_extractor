@@ -1,0 +1,165 @@
+{
+  "page_number": "18",
+  "section_heading": "3.8 BERTHING SERVICES",
+  "plain_summary": "The page begins by listing hourly fees for launch services, differentiating between large and small launches and specific ports (All Ports, Ngqura/Port Elizabeth). It then includes a note on special conditions for tugs/vessels involved in salvage operations. The main section, '3.8 BERTHING SERVICES', defines the scope of these services (e.g., entering/leaving port, shifting berth, engine trials) and clarifies that berthing and unberthing are charged as two separate services. A table provides basic berthing fees and additional charges per 100 tons for various ports (Richards Bay, Port Elizabeth/Ngqura, Cape Town, Saldanha, Other Ports). Finally, the page details a 50% surcharge applicable under specific conditions (outside ordinary working hours, cancelled standby, or late vessel arrival/departure) and a separate hourly fee for berthing staff attending tanker vessels at Mossel Bay and Saldanha Bay.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Berthing service fees per service, including conveyance of staff, for vessels entering or leaving a port, shifting berth, undergoing engine trials, remooring and crewing, berthing gang standing by or detained.",
+      "columns": [
+        "Richards Bay",
+        "Port Elizabeth / Ngqura",
+        "Cape Town",
+        "Saldanha",
+        "Other Ports"
+      ],
+      "row_categories": [
+        "Basic fee",
+        "Plus Per 100 tons or part thereof"
+      ],
+      "important_values": [
+        {
+          "category": "Basic fee",
+          "Richards Bay": "3 175.89",
+          "Port Elizabeth / Ngqura": "3 838.62",
+          "Cape Town": "3 052.33",
+          "Saldanha": "4 006.34",
+          "Other Ports": "2 801.91",
+          "unit": "ZAR"
+        },
+        {
+          "category": "Plus Per 100 tons or part thereof",
+          "Richards Bay": "13.46",
+          "Port Elizabeth / Ngqura": "18.72",
+          "Cape Town": "14.92",
+          "Saldanha": "16.97",
+          "Other Ports": "13.68",
+          "unit": "ZAR"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "2 370.85",
+      "unit": "ZAR",
+      "context": "Fees for launch per hour or part thereof, All Ports, Large Launch"
+    },
+    {
+      "value": "1 659.57",
+      "unit": "ZAR",
+      "context": "Fees for launch per hour or part thereof, All Ports, Small Launch"
+    },
+    {
+      "value": "3 248.01",
+      "unit": "ZAR",
+      "context": "Fees for launch per hour or part thereof, Port of Ngqura/Port Elizabeth, Large Launch"
+    },
+    {
+      "value": "2 273.62",
+      "unit": "ZAR",
+      "context": "Fees for launch per hour or part thereof, Port of Ngqura/Port Elizabeth, Small Launch"
+    },
+    {
+      "value": "3 175.89",
+      "unit": "ZAR",
+      "context": "Berthing Services Basic fee, Richards Bay"
+    },
+    {
+      "value": "3 838.62",
+      "unit": "ZAR",
+      "context": "Berthing Services Basic fee, Port Elizabeth / Ngqura"
+    },
+    {
+      "value": "3 052.33",
+      "unit": "ZAR",
+      "context": "Berthing Services Basic fee, Cape Town"
+    },
+    {
+      "value": "4 006.34",
+      "unit": "ZAR",
+      "context": "Berthing Services Basic fee, Saldanha"
+    },
+    {
+      "value": "2 801.91",
+      "unit": "ZAR",
+      "context": "Berthing Services Basic fee, Other Ports"
+    },
+    {
+      "value": "13.46",
+      "unit": "ZAR",
+      "context": "Berthing Services Plus Per 100 tons or part thereof, Richards Bay"
+    },
+    {
+      "value": "18.72",
+      "unit": "ZAR",
+      "context": "Berthing Services Plus Per 100 tons or part thereof, Port Elizabeth / Ngqura"
+    },
+    {
+      "value": "14.92",
+      "unit": "ZAR",
+      "context": "Berthing Services Plus Per 100 tons or part thereof, Cape Town"
+    },
+    {
+      "value": "16.97",
+      "unit": "ZAR",
+      "context": "Berthing Services Plus Per 100 tons or part thereof, Saldanha"
+    },
+    {
+      "value": "13.68",
+      "unit": "ZAR",
+      "context": "Berthing Services Plus Per 100 tons or part thereof, Other Ports"
+    },
+    {
+      "value": "50",
+      "unit": "%",
+      "context": "Surcharge for specific instances"
+    },
+    {
+      "value": "30",
+      "unit": "minutes",
+      "context": "Threshold for vessel arrival/departure delay triggering surcharge"
+    },
+    {
+      "value": "1 267.83",
+      "unit": "ZAR",
+      "context": "Berthing staff in attendance on tanker vessels at Port of Mossel Bay and Port of Saldanha Bay, per hour or part thereof"
+    }
+  ],
+  "parameters_mentioned": [
+    "hours",
+    "tons",
+    "vessel type (Large Launch, Small Launch, Tugs/vessels, tanker vessels, Liquefied Petroleum Gas vessels)",
+    "cargo type (crude and petroleum products, Liquefied Petroleum Gas)",
+    "days",
+    "minutes",
+    "movements (entering/leaving a port, shifting berth, warping, shifting to/from drydock/slipway, engine trials, remooring, crewing, unmooring/mooring)",
+    "arrivals/departures",
+    "ports (All Ports, Port of Ngqura, Port Elizabeth, Richards Bay, Cape Town, Saldanha, Other Ports, Port of Mossel Bay)"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The 'Fees for launch per hour or part thereof' section is a direct continuation of the 'Other vessel services' section that started on page 17, which listed fees for different tug types. The general tariff context (VAT, currency) also carries over from the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The 'BERTHING SERVICES' section appears to conclude on this page with a specific hourly fee, and there is no indication of a table or list being cut off.",
+  "search_keywords": [
+    "Launch fees",
+    "Salvage conditions",
+    "Berthing services",
+    "Berthing fees",
+    "Tonnage fees",
+    "Port fees",
+    "Surcharge",
+    "Tanker vessels",
+    "Mossel Bay",
+    "Saldanha Bay"
+  ],
+  "ambiguities_or_risks": [
+    "The term 'Other Ports' in the berthing services table is not explicitly defined on this page and may require reference to other sections of the tariff book.",
+    "The definition of 'per service' for berthing services is detailed and could be complex to interpret for specific scenarios (e.g., what constitutes a single 'service' when multiple actions occur)."
+  ]
+}

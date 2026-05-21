@@ -1,0 +1,63 @@
+{
+  "page_number": "47",
+  "section_heading": "7.8 LATE ORDER AND RELATED FEES",
+  "plain_summary": "This page details various fees related to late orders, cancellations, and late/incomplete submission of cargo documentation. It lists specific charges for cargo dues order amendments, late manifests/outturn reports, and cargo dues order framing. Additionally, it specifies fees for cargo conveyed by vessels permitted to service other vessels within and outside the port, and administrative fees for photocopies.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "336.53",
+      "unit": "Rand",
+      "context": "Cargo dues order amendment fee per order"
+    },
+    {
+      "value": "1 682.72",
+      "unit": "Rand",
+      "context": "Late, incomplete and non-submission of manifests and outturn reports per manifest/outturn report"
+    },
+    {
+      "value": "336.53",
+      "unit": "Rand",
+      "context": "Cargo dues order framing fee per order"
+    },
+    {
+      "value": "398.96",
+      "unit": "Rand",
+      "context": "Cargo conveyed by vessel permitted to service vessels within and outside the port, per trip"
+    },
+    {
+      "value": "10.54",
+      "unit": "Rand",
+      "context": "Administrative fees for photocopies per page"
+    }
+  ],
+  "parameters_mentioned": [
+    "order",
+    "manifest",
+    "outturn report",
+    "trip",
+    "page"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": false,
+  "next_page_reason": "",
+  "search_keywords": [
+    "Late order fee",
+    "Cargo documentation",
+    "Manifests",
+    "Outturn reports",
+    "Cargo dues order",
+    "Service vessels",
+    "Administrative fees",
+    "Photocopies",
+    "Cancellations",
+    "Submission fees"
+  ],
+  "ambiguities_or_risks": []
+}

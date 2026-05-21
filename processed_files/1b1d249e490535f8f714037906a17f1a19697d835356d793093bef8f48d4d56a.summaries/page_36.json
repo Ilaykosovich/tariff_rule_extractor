@@ -1,0 +1,71 @@
+{
+  "page_number": "36",
+  "section_heading": "6.5 DOCKING AND UNDOCKING OF VESSELS; 6.6 DRYDOCK, FLOATING DOCK AND SYNCROLIFT DUES",
+  "plain_summary": "This page details the fees payable for the docking and undocking of vessels at the Ports of Cape Town, East London, and Durban. It specifies that docking and undocking are considered separate services. It also introduces the section for Drydock, Floating Dock, and Syncrolift Dues, noting that these charges are subject to overstay penalties defined on the previous page. A definition for 'Tons' is provided for the calculation of dues.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "13 083.00",
+      "unit": "South African Rand",
+      "context": "Drydock fee per service at Cape Town and East London"
+    },
+    {
+      "value": "5 771.23",
+      "unit": "South African Rand",
+      "context": "Syncrolift fee per service at Cape Town and East London"
+    },
+    {
+      "value": "13 083.00",
+      "unit": "South African Rand",
+      "context": "Drydock fee per service at Durban"
+    },
+    {
+      "value": "6.3",
+      "unit": "Clause number",
+      "context": "Reference to overstay penalties"
+    },
+    {
+      "value": "35",
+      "unit": "Page number",
+      "context": "Reference to overstay penalties"
+    }
+  ],
+  "parameters_mentioned": [
+    "GT / gross tonnage",
+    "cubic metres",
+    "services (docking, undocking)",
+    "ordinary working hours"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The general tariff header 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' is a continuation from the previous page. Section 6.6 explicitly refers to 'overstay penalties as specified in Clause 6.3 on page 35', which is on the previous page.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "Section '6.6.1 Drydock: Ports of Cape Town and East London' starts on this page, defines 'Tons' but does not list any actual fees or dues for the drydock use, indicating that the tariff rates for this section will be on the subsequent page.",
+  "search_keywords": [
+    "Docking",
+    "Undocking",
+    "Drydock",
+    "Syncrolift",
+    "Floating Dock",
+    "Dues",
+    "Cape Town",
+    "East London",
+    "Durban",
+    "Penalties",
+    "Gross Tonnage",
+    "Preparation fees"
+  ],
+  "ambiguities_or_risks": [
+    "The definition 'Tons shall mean gross tonnage in cubic metres' is repeated from the previous page (under 6.4.1) and appears again on this page (under 6.6.1). It's unclear if this is a general definition for the entire tariff book or specific to the sections where it appears."
+  ]
+}

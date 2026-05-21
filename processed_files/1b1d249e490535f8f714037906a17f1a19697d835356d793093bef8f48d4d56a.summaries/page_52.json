@@ -1,0 +1,111 @@
+{
+  "page_number": "52",
+  "section_heading": "8.2 RESPONSIBLE PARTY / 8.3 LATE ORDER FEES",
+  "plain_summary": "This page defines the responsible party for Cargo Dues, stating that it is payable by the importer/exporter, who may appoint an agent. It specifies that if Cargo Dues Orders are not received, charges will be billed to the container operator per TEU for container traffic and to the vessel agent for bulk and break-bulk traffic. It also details the billing for uncleared containers and LCL consignments. The page then introduces 'Late Order Fees' for late submission of Cargo Dues Orders, defining what constitutes a late submission and how interest is calculated. An example calculation for late order fees is provided, along with an exception for public holidays and weekends. Finally, it mentions incremental late order fees for non-submission, with further details expected on a subsequent page.",
+  "contains_formula": true,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_examples": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [
+    {
+      "formula_as_written": "Interest = Value of Order * (Prime Rate + 1%) * (Number of days late / 365)",
+      "what_it_calculates": "Interest charged on late submission of Cargo Dues Orders.",
+      "parameters_used": [
+        "Value of Order",
+        "Prime Rate",
+        "Number of days late"
+      ],
+      "units": "South African Rand (R) for Value of Order and Interest, percentage for Prime Rate, days for Number of days late.",
+      "rounding_or_conditions": "The first public holiday and first weekend will be excluded if they fall within the number of days that the Order has been submitted late for purposes of interest calculation. Example shows interest rounded to 2 decimal places."
+    }
+  ],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15%",
+      "unit": "VAT",
+      "context": "Tariffs subject to VAT"
+    },
+    {
+      "value": "9.0%",
+      "unit": "percentage",
+      "context": "Example Prime Rate"
+    },
+    {
+      "value": "1%",
+      "unit": "percentage",
+      "context": "Added to Prime Rate for interest calculation"
+    },
+    {
+      "value": "10.0%",
+      "unit": "percentage",
+      "context": "Example Prime Rate plus 1%"
+    },
+    {
+      "value": "R10 000",
+      "unit": "South African Rand",
+      "context": "Example Value of Order"
+    },
+    {
+      "value": "14",
+      "unit": "days",
+      "context": "Example Number of days late"
+    },
+    {
+      "value": "365",
+      "unit": "days",
+      "context": "Days in a year for interest calculation"
+    },
+    {
+      "value": "R38.37",
+      "unit": "South African Rand",
+      "context": "Example Interest Calculation result"
+    },
+    {
+      "value": "R10 038.37",
+      "unit": "South African Rand",
+      "context": "Example Total Cargo Dues Payable"
+    }
+  ],
+  "parameters_mentioned": [
+    "TEU",
+    "container traffic",
+    "bulk traffic",
+    "break-bulk traffic",
+    "container operator",
+    "vessel agent",
+    "importer/exporter",
+    "clearing and forwarding agent",
+    "LCL consignments",
+    "Cargo Dues Orders",
+    "container numbers",
+    "days late",
+    "Prime Rate",
+    "public holiday",
+    "weekend"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The 'stipulated timeframes' mentioned for late submission of Cargo Dues Orders refer to the timeframes detailed on the previous page (e.g., 'three (3) days after vessel departure'). The general context of 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' is also carried over from the previous page header.",
+  "next_page_likely_needed": true,
+  "next_page_reason": "Section 8.3.2 'Non-submission of Cargo Dues Orders' ends with 'Refer below for late order application:', indicating that the details of the incremental late order fee structure will be provided on the next page.",
+  "search_keywords": [
+    "Cargo Dues",
+    "Responsible Party",
+    "Late Order Fees",
+    "Interest Calculation",
+    "Prime Rate",
+    "Non-submission",
+    "Documentation",
+    "TEU",
+    "Container Operator",
+    "Vessel Agent",
+    "Importer",
+    "Exporter"
+  ],
+  "ambiguities_or_risks": [
+    "The formula for interest calculation is presented as an example, not a general mathematical expression, requiring generalization for programmatic use.",
+    "The 'incremental late order fee' for non-submission is mentioned but not detailed on this page, requiring the next page for full understanding."
+  ]
+}

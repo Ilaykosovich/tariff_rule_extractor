@@ -1,0 +1,62 @@
+{
+  "page_number": "11",
+  "section_heading": "SECTION 2 VESSEL TRAFFIC SERVICES (VTS)",
+  "plain_summary": "This page introduces Vessel Traffic Services (VTS) charges, explaining they are for safe navigation, pollution, and conservancy, based on a vessel's gross tonnage (GT). It specifies how GT is determined for tariff purposes, referencing the Tonnage Convention 1969. It then lists the VTS charges per GT per port call, differentiating rates for Durban and Saldanha Bay versus other ports, and states a minimum fee. Finally, it provides a list of exemptions from VTS charges.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_examples": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "0.54",
+      "unit": "ZAR per GT",
+      "context": "VTS charge per port call at all ports excluding Durban and Saldanha Bay"
+    },
+    {
+      "value": "0.65",
+      "unit": "ZAR per GT",
+      "context": "VTS charge per port call at the ports of Durban and Saldanha Bay"
+    },
+    {
+      "value": "235.52",
+      "unit": "ZAR",
+      "context": "Minimum VTS fee"
+    },
+    {
+      "value": "1969",
+      "unit": "year",
+      "context": "Tonnage Convention year for GT determination"
+    }
+  ],
+  "parameters_mentioned": [
+    "GT / gross tonnage",
+    "port call",
+    "vessel type (SAPS, SANDF, SAMSA, SA Medical & Research vessels, small vessels, pleasure vessels)",
+    "port limits",
+    "approaches to port limits"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The section 2.1.1 VTS CHARGES appears to be complete with rates and exemptions on this page.",
+  "search_keywords": [
+    "VTS",
+    "Vessel Traffic Services",
+    "Charges",
+    "Gross Tonnage",
+    "GT",
+    "Port Call",
+    "Durban",
+    "Saldanha Bay",
+    "Minimum Fee",
+    "Exemptions",
+    "Tonnage Convention 1969"
+  ],
+  "ambiguities_or_risks": [
+    "The document explicitly states that GT is 'NOT converted to cubic metres', which is an important clarification for calculation but could be overlooked if not highlighted."
+  ]
+}

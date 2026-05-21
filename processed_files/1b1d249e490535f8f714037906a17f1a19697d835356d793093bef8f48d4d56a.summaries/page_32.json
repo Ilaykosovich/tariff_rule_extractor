@@ -1,0 +1,129 @@
+{
+  "page_number": "32",
+  "section_heading": "SECTION 5 PORT SERVICE LICENCE, PORT RULE LICENCE, PORT RULE REGISTRATION AND PORT RULE PERMIT FEES",
+  "plain_summary": "This page details various fees payable for port service licenses, port rule licenses, port rule registrations, and port rule permits issued by the Authority. It lists specific fees for services like floating crane, stevedore, waste disposal, bunkering, diving, fire protection, pest control, and pollution control licenses. It also includes fees for vessel agent registration, motor vehicle access permits, and permit replacements, while noting several access permits and small/pleasure vessel permits are free.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "22 576.31",
+      "unit": "ZAR",
+      "context": "Floating crane services licence fee per port"
+    },
+    {
+      "value": "22 576.31",
+      "unit": "ZAR",
+      "context": "Stevedore services licence fee per port"
+    },
+    {
+      "value": "22 576.31",
+      "unit": "ZAR",
+      "context": "Waste disposal services licence fee per port"
+    },
+    {
+      "value": "22 576.31",
+      "unit": "ZAR",
+      "context": "Bunkering licence fee per port"
+    },
+    {
+      "value": "22 576.31",
+      "unit": "ZAR",
+      "context": "Diving licence fee per port"
+    },
+    {
+      "value": "22 576.31",
+      "unit": "ZAR",
+      "context": "Fire protection and fire equipment installation and maintenance licence fee per port"
+    },
+    {
+      "value": "22 576.31",
+      "unit": "ZAR",
+      "context": "Pest control licence fee per port"
+    },
+    {
+      "value": "22 576.31",
+      "unit": "ZAR",
+      "context": "Pollution control licence fee per port"
+    },
+    {
+      "value": "742.65",
+      "unit": "ZAR",
+      "context": "Vessel agent registration fee per port"
+    },
+    {
+      "value": "free",
+      "unit": "ZAR",
+      "context": "Persons ad hoc access permit fee"
+    },
+    {
+      "value": "free",
+      "unit": "ZAR",
+      "context": "Persons longer-term access permit fee"
+    },
+    {
+      "value": "328.69",
+      "unit": "ZAR",
+      "context": "Motor vehicle access permit fee per financial year"
+    },
+    {
+      "value": "free",
+      "unit": "ZAR",
+      "context": "Small vessel permit fee"
+    },
+    {
+      "value": "free",
+      "unit": "ZAR",
+      "context": "Pleasure vessel permit fee"
+    },
+    {
+      "value": "418.76",
+      "unit": "ZAR",
+      "context": "Permit replacement fee"
+    }
+  ],
+  "parameters_mentioned": [
+    "port",
+    "duration of licence",
+    "duration of registration",
+    "persons",
+    "vehicles",
+    "financial year",
+    "small vessels",
+    "pleasure vessels"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This page appears to complete the listing for Section 5.",
+  "search_keywords": [
+    "Port Service Licence",
+    "Port Rule Licence",
+    "Port Rule Registration",
+    "Port Rule Permit Fees",
+    "Licence fees",
+    "Permit fees",
+    "Registration fees",
+    "Floating crane",
+    "Stevedore",
+    "Waste disposal",
+    "Bunkering",
+    "Diving",
+    "Fire protection",
+    "Pest control",
+    "Pollution control",
+    "Vessel agent",
+    "Access permit",
+    "Motor vehicle",
+    "Small vessel",
+    "Pleasure vessel",
+    "Permit replacement"
+  ],
+  "ambiguities_or_risks": [
+    "The specific 'duration of licence' or 'duration of registration' is not defined on this page, only that fees are payable 'on an annual basis, over the period of the licence'."
+  ]
+}

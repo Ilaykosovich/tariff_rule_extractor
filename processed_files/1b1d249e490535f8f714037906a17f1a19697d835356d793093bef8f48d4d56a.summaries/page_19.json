@@ -1,0 +1,187 @@
+{
+  "page_number": "19",
+  "section_heading": "3.9 RUNNING OF VESSEL LINES",
+  "plain_summary": "This page defines and details the tariffs for running vessel lines, which involves using a launch/mooring boat to transfer lines from a ship to a bollard. It provides specific per-service charges for various ports, with different rates applying if the service occurs outside ordinary working hours. Additional charges are specified for vessels arriving or departing 30 minutes or more after the notified time, calculated per hour or part thereof. The page also outlines fees for cancelled standby requests for tugs/vessels (subject to a 2-hour minimum) and a specific fee for remooring without tugs/pilots at the Port of Saldanha.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [
+    {
+      "what_table_lists": "Tariffs for running of vessel lines per service, distinguishing between standard service and services terminating or commencing outside ordinary working hours.",
+      "columns": [
+        "Port Elizabeth / Ngqura",
+        "Cape Town",
+        "Saldanha",
+        "Other Ports"
+      ],
+      "row_categories": [
+        "Per service",
+        "If the service terminates or commences outside ordinary working hours, minimum"
+      ],
+      "important_values": [
+        {
+          "category": "Per service",
+          "Port Elizabeth / Ngqura": "2 266.73 ZAR",
+          "Cape Town": "2 370.84 ZAR",
+          "Saldanha": "2 085.59 ZAR",
+          "Other Ports": "1 654.56 ZAR"
+        },
+        {
+          "category": "If the service terminates or commences outside ordinary working hours, minimum",
+          "Port Elizabeth / Ngqura": "4 533.42 ZAR",
+          "Cape Town": "3 309.05 ZAR",
+          "Saldanha": "4 171.18 ZAR",
+          "Other Ports": "3 309.05 ZAR"
+        }
+      ]
+    },
+    {
+      "what_table_lists": "Charges applicable per hour or part thereof for running of vessel lines when a vessel arrives or departs 30 minutes or more after the notified time, calculated from the notified time until service completion. These charges distinguish between standard service and services terminating or commencing outside ordinary working hours.",
+      "columns": [
+        "Port Elizabeth / Ngqura",
+        "Cape Town",
+        "Saldanha",
+        "Other Ports"
+      ],
+      "row_categories": [
+        "Per service",
+        "If the service terminates or commences outside ordinary working hours, minimum"
+      ],
+      "important_values": [
+        {
+          "category": "Per service (per hour or part thereof)",
+          "Port Elizabeth / Ngqura": "2 266.73 ZAR",
+          "Cape Town": "2 370.84 ZAR",
+          "Saldanha": "2 085.59 ZAR",
+          "Other Ports": "1 654.56 ZAR"
+        },
+        {
+          "category": "If the service terminates or commences outside ordinary working hours, minimum (per hour or part thereof)",
+          "Port Elizabeth / Ngqura": "4 533.42 ZAR",
+          "Cape Town": "4 741.69 ZAR",
+          "Saldanha": "4 171.18 ZAR",
+          "Other Ports": "3 309.05 ZAR"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "2 266.73",
+      "unit": "ZAR",
+      "context": "Running lines, Port Elizabeth / Ngqura, per service"
+    },
+    {
+      "value": "2 370.84",
+      "unit": "ZAR",
+      "context": "Running lines, Cape Town, per service"
+    },
+    {
+      "value": "2 085.59",
+      "unit": "ZAR",
+      "context": "Running lines, Saldanha, per service"
+    },
+    {
+      "value": "1 654.56",
+      "unit": "ZAR",
+      "context": "Running lines, Other Ports, per service"
+    },
+    {
+      "value": "4 533.42",
+      "unit": "ZAR",
+      "context": "Running lines, Port Elizabeth / Ngqura, minimum for service outside ordinary working hours"
+    },
+    {
+      "value": "3 309.05",
+      "unit": "ZAR",
+      "context": "Running lines, Cape Town, minimum for service outside ordinary working hours"
+    },
+    {
+      "value": "4 171.18",
+      "unit": "ZAR",
+      "context": "Running lines, Saldanha, minimum for service outside ordinary working hours"
+    },
+    {
+      "value": "3 309.05",
+      "unit": "ZAR",
+      "context": "Running lines, Other Ports, minimum for service outside ordinary working hours"
+    },
+    {
+      "value": "30",
+      "unit": "minutes",
+      "context": "Threshold for late vessel arrival/departure"
+    },
+    {
+      "value": "4 741.69",
+      "unit": "ZAR",
+      "context": "Running lines, Cape Town, minimum for service outside ordinary working hours, when vessel is late (per hour or part thereof)"
+    },
+    {
+      "value": "1 654.56",
+      "unit": "ZAR",
+      "context": "Fee per hour or part thereof for cancelled tug/vessel standby"
+    },
+    {
+      "value": "2",
+      "unit": "hours",
+      "context": "Minimum charge period for cancelled tug/vessel standby"
+    },
+    {
+      "value": "4 739.14",
+      "unit": "ZAR",
+      "context": "Fee per service for remooring without tug/pilots at Port of Saldanha"
+    }
+  ],
+  "parameters_mentioned": [
+    "launch/mooring boat",
+    "vessels' lines (steel wire lines/mooring ropes)",
+    "bollard",
+    "service",
+    "ordinary working hours",
+    "hours",
+    "minutes",
+    "notified time",
+    "standby",
+    "tug/vessel",
+    "pilots",
+    "Port Elizabeth",
+    "Ngqura",
+    "Cape Town",
+    "Saldanha",
+    "Other Ports"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The general context of 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' is established on the previous page. The section numbering (3.9) indicates it is part of a larger tariff structure. The concept of 'ordinary working hours' is implicitly defined by contrast with 'outside ordinary working hours' on the previous page, which also lists similar service types and conditions.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The section 3.9 appears to be self-contained and concludes on this page. The next page is expected to cover a new section.",
+  "search_keywords": [
+    "Running vessel lines",
+    "mooring boat",
+    "launch",
+    "bollard",
+    "late arrival",
+    "late departure",
+    "cancelled standby",
+    "remooring",
+    "Saldanha",
+    "Port Elizabeth",
+    "Ngqura",
+    "Cape Town",
+    "Other Ports",
+    "ordinary working hours",
+    "tariff",
+    "fees"
+  ],
+  "ambiguities_or_risks": [
+    "The second table's row categories 'Per service' and 'If the service terminates or commences outside ordinary working hours, minimum' are applied 'per hour or part thereof' when a vessel is late. This implies that the listed 'per service' rates effectively become 'per hour' rates under the late arrival/departure condition.",
+    "The 'minimum of 2 hours' for cancelled standby means that if the actual standby period is less than 2 hours, a charge for 2 hours at the specified hourly rate applies. If the actual period is 2 hours or more, the charge is for the actual period at the hourly rate."
+  ]
+}

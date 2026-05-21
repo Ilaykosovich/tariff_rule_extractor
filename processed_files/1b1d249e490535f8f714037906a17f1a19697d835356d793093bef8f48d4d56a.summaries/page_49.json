@@ -1,0 +1,79 @@
+{
+  "page_number": "49",
+  "section_heading": "INCORRECT OR INCOMPLETE DECLARATIONS / 8.1.1 TYPES OF DOCUMENTATION",
+  "plain_summary": "This page details the consequences of incorrect or incomplete cargo dues declarations, which include nullifying the original order, charging late cargo dues order fees, penalties, and a cancellation fee for the original order. Fraudulent declarations incur a 100% penalty of cargo dues, plus interest and potential legal action. The page then lists the specific documentation required for various cargo types: Container (Import/Export), Bulk and Breakbulk (Import/Export), Coastal Cargo, and Transshipment Cargo. For Coastal and Transshipment Cargo, documentation must differentiate between full, empty, 6m (20'), 12m (40'), or 13,75m (45') containers. Additional documentation specifying vehicle lengths is required for vehicles.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "100%",
+      "unit": "percentage",
+      "context": "penalty for fraudulent declarations of cargo dues"
+    },
+    {
+      "value": "6m (20')",
+      "unit": "meters (feet)",
+      "context": "container length for Coastal and Transshipment Cargo documentation"
+    },
+    {
+      "value": "12m (40')",
+      "unit": "meters (feet)",
+      "context": "container length for Coastal and Transshipment Cargo documentation"
+    },
+    {
+      "value": "13,75m (45')",
+      "unit": "meters (feet)",
+      "context": "container length for Coastal and Transshipment Cargo documentation"
+    }
+  ],
+  "parameters_mentioned": [
+    "cargo dues order",
+    "cargo dues",
+    "vessel manifest",
+    "empty container list",
+    "bill of lading",
+    "delivery order",
+    "landing order",
+    "mates receipt",
+    "draft survey",
+    "container (full, empty, 6m, 20', 12m, 40', 13,75m, 45')",
+    "bulk cargo",
+    "breakbulk cargo",
+    "coastal cargo",
+    "transshipment cargo",
+    "inward movement",
+    "outward movement",
+    "vehicle length"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The section 'INCORRECT OR INCOMPLETE DECLARATIONS' continues the discussion of 'Cargo Dues Order' from Section 8.1 on the previous page. Section 8.1.1 'TYPES OF DOCUMENTATION' is a sub-section of 8.1. The context of 'cargo dues order' and its associated processes is established on page 48.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "The current topic of documentation types appears to be fully covered on this page.",
+  "search_keywords": [
+    "incorrect declaration",
+    "incomplete declaration",
+    "fraudulent declaration",
+    "penalty",
+    "cargo dues",
+    "documentation",
+    "cargo dues order",
+    "vessel manifest",
+    "bill of lading",
+    "container",
+    "bulk",
+    "breakbulk",
+    "coastal cargo",
+    "transshipment cargo",
+    "vehicles",
+    "container length"
+  ],
+  "ambiguities_or_risks": [
+    "The specific values for 'late cargo dues order fees' and 'cancellation fee' are not provided on this page.",
+    "The interest rate for fraudulent declarations is not specified."
+  ]
+}

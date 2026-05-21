@@ -1,0 +1,108 @@
+{
+  "page_number": "28",
+  "section_heading": "4.3.3 FIRE AWARENESS TRAINING (MEALS EXCLUDED)",
+  "plain_summary": "This page lists various fire awareness and hazmat training courses, as well as on-site evacuation drills/simulations and fire risk assessment services. Each service has a specific tariff rate, often calculated per person or per day, with the duration of multi-day courses specified. Meals are explicitly excluded from the listed tariffs.",
+  "contains_formula": false,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "1 174.57",
+      "unit": "South African Rand",
+      "context": "Fire induction course per person per day"
+    },
+    {
+      "value": "1",
+      "unit": "day",
+      "context": "Duration of Fire induction course"
+    },
+    {
+      "value": "2 352.07",
+      "unit": "South African Rand",
+      "context": "Hazmat awareness course per person"
+    },
+    {
+      "value": "2",
+      "unit": "days",
+      "context": "Duration of Hazmat awareness course"
+    },
+    {
+      "value": "1 174.57",
+      "unit": "South African Rand",
+      "context": "Fire marshal course per person"
+    },
+    {
+      "value": "1",
+      "unit": "day",
+      "context": "Duration of Fire marshal course"
+    },
+    {
+      "value": "2 352.07",
+      "unit": "South African Rand",
+      "context": "Fire team course per person"
+    },
+    {
+      "value": "2",
+      "unit": "days",
+      "context": "Duration of Fire team course"
+    },
+    {
+      "value": "3 526.67",
+      "unit": "South African Rand",
+      "context": "Fire co-ordination course per person"
+    },
+    {
+      "value": "3",
+      "unit": "days",
+      "context": "Duration of Fire co-ordination course"
+    },
+    {
+      "value": "6 270.26",
+      "unit": "South African Rand",
+      "context": "On site evacuation drills / simulations and feedback"
+    },
+    {
+      "value": "2 352.07",
+      "unit": "South African Rand",
+      "context": "Hazmat training for drivers"
+    },
+    {
+      "value": "2",
+      "unit": "days",
+      "context": "Duration of Hazmat training for drivers"
+    },
+    {
+      "value": "3 135.14",
+      "unit": "South African Rand",
+      "context": "Fire risk assessment per day"
+    }
+  ],
+  "parameters_mentioned": [
+    "person",
+    "day",
+    "days"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This page appears to complete the '4.3.3 FIRE AWARENESS TRAINING' section. No indication of continuation for these specific items is present.",
+  "search_keywords": [
+    "Fire awareness training",
+    "Hazmat awareness course",
+    "Fire marshal course",
+    "Fire team course",
+    "Fire co-ordination course",
+    "Evacuation drills",
+    "Hazmat training for drivers",
+    "Fire risk assessment",
+    "Training fees",
+    "Tariff 4.3.3"
+  ],
+  "ambiguities_or_risks": [
+    "The heading 'MEALS EXCLUDED' is a critical condition for all tariffs listed under this section."
+  ]
+}

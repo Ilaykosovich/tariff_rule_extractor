@@ -1,0 +1,172 @@
+{
+  "page_number": "13",
+  "section_heading": "3.3 PILOTAGE SERVICES",
+  "plain_summary": "This page outlines the compulsory pilotage services provided by the Authority (Marine Services) at various ports. It specifies the tonnage basis for pilotage services and provides a table of tariff rates for normal entering or leaving the port, consisting of a basic fee per service and an additional charge per 100 tons or part thereof, varying by port. The page also details conditions under which a 50% surcharge is applicable, such as services outside ordinary working hours, vessel unreadiness, or late cancellation of service requests.",
+  "contains_formula": true,
+  "contains_tariff_rates": true,
+  "contains_table": true,
+  "contains_definitions": false,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [
+    {
+      "formula_as_written": "Total Pilotage Dues = Basic Fee (Per Service) + (Ceiling(Vessel Tonnage / 100) * Rate per 100 tons)",
+      "what_it_calculates": "The total pilotage dues for normal entering or leaving the port.",
+      "parameters_used": [
+        "Basic Fee (Per Service)",
+        "Vessel Tonnage",
+        "Rate per 100 tons"
+      ],
+      "units": "South African Rand (ZAR)",
+      "rounding_or_conditions": "The 'Per 100 tons or part thereof' implies rounding up to the nearest 100 tons for the calculation of the tonnage component. A 50% surcharge applies under specific conditions."
+    }
+  ],
+  "tables": [
+    {
+      "what_table_lists": "Pilotage dues for normal entering or leaving the port, categorized by port.",
+      "columns": [
+        "Ports",
+        "Richards Bay",
+        "Durban",
+        "Port Elizabeth / Ngqura",
+        "Cape Town",
+        "Saldanha",
+        "Other"
+      ],
+      "row_categories": [
+        "Per Service (normal entering or leaving the port)",
+        "Basic Fee",
+        "Per 100 tons or part thereof"
+      ],
+      "important_values": [
+        {
+          "category": "Per Service (normal entering or leaving the port)",
+          "Richards Bay": "30 960.46",
+          "Durban": "18 608.61",
+          "Port Elizabeth / Ngqura": "8 970.00",
+          "Cape Town": "6 342.39",
+          "Saldanha": "9 673.57",
+          "Other": "6 547.45",
+          "unit": "ZAR"
+        },
+        {
+          "category": "Per 100 tons or part thereof",
+          "Richards Bay": "10.93",
+          "Durban": "9.72",
+          "Port Elizabeth / Ngqura": "14.33",
+          "Cape Town": "10.20",
+          "Saldanha": "13.66",
+          "Other": "10.49",
+          "unit": "ZAR"
+        }
+      ]
+    }
+  ],
+  "calculation_relevant_numbers": [
+    {
+      "value": "30960.46",
+      "unit": "ZAR",
+      "context": "Basic Fee for Richards Bay pilotage service"
+    },
+    {
+      "value": "18608.61",
+      "unit": "ZAR",
+      "context": "Basic Fee for Durban pilotage service"
+    },
+    {
+      "value": "8970.00",
+      "unit": "ZAR",
+      "context": "Basic Fee for Port Elizabeth / Ngqura pilotage service"
+    },
+    {
+      "value": "6342.39",
+      "unit": "ZAR",
+      "context": "Basic Fee for Cape Town pilotage service"
+    },
+    {
+      "value": "9673.57",
+      "unit": "ZAR",
+      "context": "Basic Fee for Saldanha pilotage service"
+    },
+    {
+      "value": "6547.45",
+      "unit": "ZAR",
+      "context": "Basic Fee for 'Other' ports pilotage service"
+    },
+    {
+      "value": "10.93",
+      "unit": "ZAR",
+      "context": "Rate per 100 tons for Richards Bay pilotage service"
+    },
+    {
+      "value": "9.72",
+      "unit": "ZAR",
+      "context": "Rate per 100 tons for Durban pilotage service"
+    },
+    {
+      "value": "14.33",
+      "unit": "ZAR",
+      "context": "Rate per 100 tons for Port Elizabeth / Ngqura pilotage service"
+    },
+    {
+      "value": "10.20",
+      "unit": "ZAR",
+      "context": "Rate per 100 tons for Cape Town pilotage service"
+    },
+    {
+      "value": "13.66",
+      "unit": "ZAR",
+      "context": "Rate per 100 tons for Saldanha pilotage service"
+    },
+    {
+      "value": "10.49",
+      "unit": "ZAR",
+      "context": "Rate per 100 tons for 'Other' ports pilotage service"
+    },
+    {
+      "value": "50",
+      "unit": "%",
+      "context": "Surcharge rate"
+    },
+    {
+      "value": "30",
+      "unit": "minutes",
+      "context": "Time threshold for vessel readiness or cancellation of service"
+    }
+  ],
+  "parameters_mentioned": [
+    "Tonnage of a vessel",
+    "Ports (Richards Bay, Durban, East London, Ngqura, Port Elizabeth, Mossel Bay, Cape Town, Saldanha)",
+    "Service (normal entering or leaving the port, towage, standing by)",
+    "Ordinary working hours",
+    "Vessel readiness",
+    "Pilot boarding time",
+    "Notified time (for service request)"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "The definition of 'Tonnage of Vessels for Port Tariff Purposes' (gross tonnage) on page 12 is crucial for understanding 'Tonnage of a vessel for Pilotage services purposes' on this page. Additionally, the definition of 'Ordinary Working Hours' on page 12 is referenced for the surcharge conditions on this page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This section (3.3 Pilotage Services) appears to be self-contained on this page, covering rates and conditions. The next page is likely to cover a different marine service or a new section.",
+  "search_keywords": [
+    "Pilotage Services",
+    "Tariff",
+    "Rates",
+    "Surcharge",
+    "Tonnage",
+    "Ports",
+    "Richards Bay",
+    "Durban",
+    "East London",
+    "Ngqura",
+    "Port Elizabeth",
+    "Mossel Bay",
+    "Cape Town",
+    "Saldanha",
+    "Marine Services",
+    "Compulsory Pilotage",
+    "Working Hours"
+  ],
+  "ambiguities_or_risks": [
+    "The 'Basic Fee' row in the table is empty for all ports, while the 'Per Service (normal entering or leaving the port)' row contains values. It is assumed that the 'Per Service' values represent the basic fee.",
+    "The 'Other' category in the table is not explicitly defined, making it unclear which specific ports it refers to, although East London and Mossel Bay are mentioned as compulsory pilotage ports not listed individually in the table columns."
+  ]
+}

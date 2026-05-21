@@ -1,0 +1,99 @@
+{
+  "page_number": "7",
+  "section_heading": "Definitions (continuation)",
+  "plain_summary": "This page continues the definitions of terms used in the Tariff Book, under the general heading 'Tariffs subject to VAT at 15%: Tariffs in South African Rand'. It defines terms such as 'Port Rules', 'Republic', 'Revenue Office', 'SAMSA', 'shift', 'small vessel', 'tanker', 'Tariff Book', 'Transhipment', and 'Transnet'. Crucially, it also defines 'Unit of tonnage' for tariffing purposes, specifying that 1 metric ton equals 1000 kg with a minimum of 1 ton, that bulk liquids are measured as 1 kilolitre, and that all packaging must be included in the metric tonnage calculation.",
+  "contains_formula": true,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [
+    {
+      "formula_as_written": "1 metric ton (1 000 kg), subject to a minimum of 1 ton, except for the following:\n• Bulk liquids = 1 kilolitre\n• The metric tonnage for tariffing purposes of cargo dues shall include all packaging i.e. mass of cargo, cases, pallets, bags etc.",
+      "what_it_calculates": "The 'Unit of tonnage' for tariffing purposes of cargo dues.",
+      "parameters_used": [
+        "cargo mass (kg)",
+        "cargo type (general, bulk liquids)",
+        "packaging components (cases, pallets, bags)"
+      ],
+      "units": "metric ton, kg, kilolitre",
+      "rounding_or_conditions": "Subject to a minimum of 1 ton. Shall include all packaging (mass of cargo, cases, pallets, bags etc.)."
+    }
+  ],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15",
+      "unit": "%",
+      "context": "VAT rate"
+    },
+    {
+      "value": "1",
+      "unit": "metric ton",
+      "context": "Standard unit of tonnage"
+    },
+    {
+      "value": "1000",
+      "unit": "kg",
+      "context": "Equivalence of 1 metric ton"
+    },
+    {
+      "value": "1",
+      "unit": "ton",
+      "context": "Minimum unit of tonnage"
+    },
+    {
+      "value": "1",
+      "unit": "kilolitre",
+      "context": "Unit of tonnage for bulk liquids"
+    }
+  ],
+  "parameters_mentioned": [
+    "vessel",
+    "shift (movement)",
+    "small vessel",
+    "commercial small vessel",
+    "tug",
+    "fishing vessel",
+    "launch",
+    "barge",
+    "lighter",
+    "rowing boat",
+    "ski boat",
+    "sailing boat",
+    "yacht",
+    "hulk",
+    "tanker",
+    "liquid cargo",
+    "bulk liquids",
+    "cargo",
+    "packaging (cases, pallets, bags)",
+    "metric ton",
+    "kg",
+    "kilolitre"
+  ],
+  "requires_previous_page": true,
+  "previous_page_dependency_reason": "This page is a direct continuation of the 'Definitions' section that began on the previous page. The general heading 'Tariffs subject to VAT at 15%: Tariffs in South African Rand' also carries over from the previous page.",
+  "next_page_likely_needed": false,
+  "next_page_reason": "This page appears to conclude the 'Definitions' section. While the next page will contain new information, it is not directly required to understand the definitions presented here.",
+  "search_keywords": [
+    "Port Rules",
+    "Republic",
+    "Revenue Office",
+    "SAMSA",
+    "shift",
+    "small vessel",
+    "tanker",
+    "Tariff Book",
+    "Transhipment",
+    "Transnet",
+    "Unit of tonnage",
+    "definitions",
+    "cargo dues",
+    "metric ton",
+    "kilolitre",
+    "packaging",
+    "VAT"
+  ],
+  "ambiguities_or_risks": []
+}

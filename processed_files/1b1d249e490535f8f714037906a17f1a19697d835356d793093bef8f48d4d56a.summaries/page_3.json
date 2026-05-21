@@ -1,0 +1,187 @@
+{
+  "page_number": "3",
+  "section_heading": "CONTENTS",
+  "plain_summary": "This page provides the Table of Contents for the Transnet National Ports Authority Tariff Book, listing the main sections and their sub-sections along with their corresponding starting page numbers. It outlines the structure of the tariff document, covering definitions, various marine and port services, port fees, and licensing fees.",
+  "contains_formula": false,
+  "contains_tariff_rates": false,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": false,
+  "formulas": [],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "5-8",
+      "unit": "page numbers",
+      "context": "Page range for Section 1"
+    },
+    {
+      "value": "9",
+      "unit": "page number",
+      "context": "Starting page for Section 2"
+    },
+    {
+      "value": "10",
+      "unit": "page number",
+      "context": "Starting page for Section 3.1"
+    },
+    {
+      "value": "11",
+      "unit": "page number",
+      "context": "Starting page for Section 3.2"
+    },
+    {
+      "value": "12",
+      "unit": "page number",
+      "context": "Starting page for Section 3.3 and 3.4"
+    },
+    {
+      "value": "13",
+      "unit": "page number",
+      "context": "Starting page for Section 3.5"
+    },
+    {
+      "value": "14",
+      "unit": "page number",
+      "context": "Starting page for Section 3.6 and 3.7"
+    },
+    {
+      "value": "15",
+      "unit": "page number",
+      "context": "Starting page for Section 3.8"
+    },
+    {
+      "value": "16",
+      "unit": "page number",
+      "context": "Starting page for Section 3.9"
+    },
+    {
+      "value": "18",
+      "unit": "page number",
+      "context": "Starting page for Section 3.10"
+    },
+    {
+      "value": "19",
+      "unit": "page number",
+      "context": "Starting page for Section 4.1"
+    },
+    {
+      "value": "20",
+      "unit": "page number",
+      "context": "Starting page for Section 4.2"
+    },
+    {
+      "value": "21",
+      "unit": "page number",
+      "context": "Starting page for Section 4.3"
+    },
+    {
+      "value": "22",
+      "unit": "page number",
+      "context": "Starting page for Section 4.3.1"
+    },
+    {
+      "value": "24",
+      "unit": "page number",
+      "context": "Starting page for Section 4.3.2"
+    },
+    {
+      "value": "26",
+      "unit": "page number",
+      "context": "Starting page for Section 4.3.3"
+    },
+    {
+      "value": "27",
+      "unit": "page number",
+      "context": "Starting page for Section 4.3.4"
+    },
+    {
+      "value": "28",
+      "unit": "page number",
+      "context": "Starting page for Section 4.3.5"
+    },
+    {
+      "value": "29",
+      "unit": "page number",
+      "context": "Starting page for Section 4.4"
+    },
+    {
+      "value": "30",
+      "unit": "page number",
+      "context": "Starting page for Sections 4.5, 4.6, 4.7, 4.8, 4.9"
+    },
+    {
+      "value": "31",
+      "unit": "page number",
+      "context": "Starting page for Sections 4.10, 4.11"
+    },
+    {
+      "value": "32",
+      "unit": "page number",
+      "context": "Starting page for Section 5.1 and 5.2"
+    },
+    {
+      "value": "33",
+      "unit": "page number",
+      "context": "Starting page for Section 5.3"
+    },
+    {
+      "value": "12",
+      "unit": "Act number",
+      "context": "National Ports Act, No. 12 of 2005"
+    },
+    {
+      "value": "2005",
+      "unit": "year",
+      "context": "National Ports Act, No. 12 of 2005"
+    }
+  ],
+  "parameters_mentioned": [
+    "small vessels",
+    "life saving appliances",
+    "Pilotage exemption certificate",
+    "Tugs",
+    "Vessel assistance",
+    "Berthing services",
+    "vessel lines",
+    "marine equipment",
+    "hulks",
+    "pleasure vessels",
+    "Fire and emergency services",
+    "Fire protection",
+    "Fire awareness training",
+    "Fire equipment maintenance",
+    "Fire equipment hire",
+    "Security services",
+    "Fresh water",
+    "Electricity",
+    "Removal of refuse",
+    "Combating of Oil Pollution",
+    "Passenger baggage",
+    "Passengers' levy",
+    "Administrative fees",
+    "Port Service licences",
+    "Port Rule licences",
+    "Port Rule registration",
+    "Port Rule permit fees",
+    "environmental compliance",
+    "Hull Cleaning"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page is a table of contents; the actual definitions, terms, conditions, and tariff details for the listed sections begin on subsequent pages.",
+  "search_keywords": [
+    "Contents",
+    "Table of Contents",
+    "Sections",
+    "Definitions",
+    "Light Dues",
+    "Vessel Traffic Services",
+    "Marine Services",
+    "Port Fees",
+    "Licences",
+    "Port Rules"
+  ],
+  "ambiguities_or_risks": []
+}

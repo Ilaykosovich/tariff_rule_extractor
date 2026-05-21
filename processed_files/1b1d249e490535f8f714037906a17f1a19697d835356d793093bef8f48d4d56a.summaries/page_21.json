@@ -1,0 +1,118 @@
+{
+  "page_number": "21",
+  "section_heading": "4.1.1 PORT DUES",
+  "plain_summary": "This page introduces Section 4, covering Port Fees on Vessels, Miscellaneous Fees, and Services. Specifically, it details the calculation of Port Dues. It defines how vessel tonnage (Gross Tonnage as per Tonnage Convention 1969) is determined for tariff purposes. It specifies who is liable to pay Port Dues (vessels entering/leaving port, taking bunkers at anchorage, or at offshore moorings). The page outlines a basic fee and an incremental daily fee based on tonnage and duration of stay. It also lists a minimum fee for small and pleasure vessels, various conditions for reductions (35% for certain vessel types/activities, 60% for bunker calls under 48 hours), and a surcharge (20% for long stays not involving cargo working or repairs).",
+  "contains_formula": true,
+  "contains_tariff_rates": true,
+  "contains_table": false,
+  "contains_definitions": true,
+  "contains_footnotes_or_exceptions": true,
+  "formulas": [
+    {
+      "formula_as_written": "Basic fee per 100 tons or part thereof... plus per 100 tons or part thereof per 24 hour period, a part of a 24 hour period being applied pro rata.",
+      "what_it_calculates": "Port Dues for vessels.",
+      "parameters_used": [
+        "Vessel's gross tonnage (GT)",
+        "Duration of stay in port (in 24-hour periods or parts thereof)"
+      ],
+      "units": "South African Rand (ZAR) for fees, tons for tonnage, 24-hour period for duration.",
+      "rounding_or_conditions": "Tonnage is calculated 'per 100 tons or part thereof' (implying ceiling for 100-ton blocks). Duration is calculated 'per 24 hour period, a part of a 24 hour period being applied pro rata' (implying fractional calculation for time). A minimum fee of R470.98 applies to small vessels and pleasure vessels. Reductions of 35% or 60% and a surcharge of 20% apply under specific conditions related to vessel type, activity (cargo working, bunkers, repairs), and duration of stay."
+    }
+  ],
+  "tables": [],
+  "calculation_relevant_numbers": [
+    {
+      "value": "15%",
+      "unit": "VAT",
+      "context": "Tariffs subject to VAT"
+    },
+    {
+      "value": "1969",
+      "unit": "year",
+      "context": "Tonnage Convention"
+    },
+    {
+      "value": "192.73",
+      "unit": "ZAR",
+      "context": "Basic fee per 100 tons or part thereof"
+    },
+    {
+      "value": "57.79",
+      "unit": "ZAR",
+      "context": "Fee per 100 tons or part thereof per 24 hour period"
+    },
+    {
+      "value": "470.98",
+      "unit": "ZAR",
+      "context": "Minimum fee for small vessels and pleasure vessels"
+    },
+    {
+      "value": "35%",
+      "unit": "percentage",
+      "context": "Reduction allowed in specific instances"
+    },
+    {
+      "value": "30",
+      "unit": "days",
+      "context": "Condition for 35% reduction (first 30 days only)"
+    },
+    {
+      "value": "20%",
+      "unit": "percentage",
+      "context": "Surcharge on incremental fee of port dues"
+    },
+    {
+      "value": "30",
+      "unit": "days",
+      "context": "Condition for 20% surcharge (longer than 30 days)"
+    },
+    {
+      "value": "60%",
+      "unit": "percentage",
+      "context": "Reduction allowed for vessels calling for sole purpose of taking on bunkers/stores/water"
+    },
+    {
+      "value": "48",
+      "unit": "hours",
+      "context": "Condition for 60% reduction (entire stay not exceeding 48 hours)"
+    }
+  ],
+  "parameters_mentioned": [
+    "gross tonnage (GT)",
+    "100 tons",
+    "24 hour period",
+    "30 days",
+    "48 hours",
+    "vessel type (small vessels, pleasure vessels, bona fide coasters, passenger vessels)",
+    "cargo working (engaged/not engaged)",
+    "bunkers",
+    "stores",
+    "water",
+    "repairs",
+    "arrivals/departures (entering/passing entrance inwards/outwards)"
+  ],
+  "requires_previous_page": false,
+  "previous_page_dependency_reason": "",
+  "next_page_likely_needed": true,
+  "next_page_reason": "This page introduces 'SECTION 4 PORT FEES ON VESSELS, MISCELLANEOUS FEES AND SERVICES' and only covers '4.1.1 PORT DUES'. It is highly probable that other sub-sections of '4.1 PORT FEES ON VESSELS' or other services under 'SECTION 4' will be detailed on subsequent pages.",
+  "search_keywords": [
+    "Port Fees",
+    "Port Dues",
+    "Vessel Tonnage",
+    "Gross Tonnage",
+    "Tonnage Convention 1969",
+    "Reductions",
+    "Surcharges",
+    "Bunkers",
+    "Coasters",
+    "Passenger Vessels",
+    "Small Vessels",
+    "24 hour period",
+    "48 hours",
+    "30 days"
+  ],
+  "ambiguities_or_risks": [
+    "The calculation for Port Dues is described in text rather than a formal mathematical formula, requiring careful interpretation of 'per 100 tons or part thereof' and 'pro rata' application for time.",
+    "The interaction between the 35% and 60% reductions is explicitly stated as non-cumulative, which is important for calculation logic."
+  ]
+}
