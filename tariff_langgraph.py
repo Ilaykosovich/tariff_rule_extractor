@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import datetime as dt
 import hashlib
 import importlib.util
 import json
@@ -18,6 +17,7 @@ from google import genai
 from google.genai import types
 from langgraph.graph import END, START, StateGraph
 
+from input_context import deterministic_input_context
 from pdf_pipeline import run_ocr_pipeline, search_rag_pages, summarize_pages
 from solver import evalute_results_tool, normalize_candidate_code
 
@@ -803,76 +803,6 @@ Page {page_number} OCR text:
         "discarded_pages": discarded,
         "evidence_pages": {k: sorted(set(v)) for k, v in evidence_pages.items()},
         "extracted_evidence": extracted_evidence,
-    }
-
-
-def parse_iso_datetime(value: Any) -> dt.datetime | None:
-    if not isinstance(value, str):
-        return None
-    text = value.strip()
-    if not text:
-        return None
-    try:
-        return dt.datetime.fromisoformat(text.replace("Z", "+00:00"))
-    except ValueError:
-        return None
-
-
-def collect_datetime_fields(value: Any, prefix: str = "") -> dict[str, str]:
-    found: dict[str, str] = {}
-    if isinstance(value, dict):
-        for key, item in value.items():
-            path = f"{prefix}.{key}" if prefix else str(key)
-            found.update(collect_datetime_fields(item, path))
-    elif isinstance(value, list):
-        for index, item in enumerate(value):
-            path = f"{prefix}[{index}]"
-            found.update(collect_datetime_fields(item, path))
-    elif parse_iso_datetime(value):
-        found[prefix] = str(value)
-    return found
-
-
-def describe_datetime(value: str, standard_work_start: int = 8, standard_work_end: int = 17) -> dict[str, Any]:
-    parsed = parse_iso_datetime(value)
-    if parsed is None:
-        return {"raw": value}
-    is_weekend = parsed.weekday() >= 5
-    is_standard_working_hours = (
-        not is_weekend
-        and standard_work_start <= parsed.hour < standard_work_end
-    )
-    return {
-        "raw": value,
-        "date": parsed.date().isoformat(),
-        "time": parsed.time().replace(microsecond=0).isoformat(),
-        "weekday": parsed.strftime("%A"),
-        "weekday_number": parsed.isoweekday(),
-        "is_weekend": is_weekend,
-        "is_standard_workday": not is_weekend,
-        "is_standard_working_hours": is_standard_working_hours,
-        "standard_working_hours_assumption": f"Monday-Friday {standard_work_start:02d}:00-{standard_work_end:02d}:00 local port time",
-    }
-
-
-def deterministic_input_context(vessel_data: dict[str, Any]) -> dict[str, Any]:
-    datetime_fields = collect_datetime_fields(vessel_data)
-    return {
-        "domain_context": {
-            "subject": "vessel",
-            "operation": "vessel departing from a port",
-            "port": vessel_data.get("port"),
-            "default_time_basis": "local port time",
-        },
-        "date_time_context": {
-            path: describe_datetime(value)
-            for path, value in sorted(datetime_fields.items())
-        },
-        "assumptions": [
-            "Use standard working time when the tariff text does not define special working hours.",
-            "Default standard working time is Monday-Friday 08:00-17:00 in local port time.",
-            "Weekend dates are treated as non-standard working days by default.",
-        ],
     }
 
 

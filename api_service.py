@@ -13,6 +13,7 @@ from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, Field
 
+from input_context import enrich_vessel_data_for_inference
 from pdf_pipeline import run_ocr_pipeline, summarize_pages
 
 DOCUMENT_STORE_DIR = "document_store"
@@ -282,7 +283,8 @@ def infer(request: InferenceRequest) -> dict[str, Any]:
     calculator_record = find_calculator(request)
     calculate = load_calculator(calculator_record["code_path"])
 
-    raw_results = calculate(request.vessel_data)
+    vessel_data = enrich_vessel_data_for_inference(request.vessel_data)
+    raw_results = calculate(vessel_data)
     if not isinstance(raw_results, dict):
         raise HTTPException(status_code=500, detail="Calculator returned a non-dict result")
 
