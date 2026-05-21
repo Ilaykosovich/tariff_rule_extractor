@@ -10,15 +10,17 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from pathlib import Path
 from typing import Any
 from uuid import uuid4
 
 
+PROJECT_ROOT = Path(__file__).resolve().parent
 API_BASE_URL = "http://127.0.0.1:8001"
-PDF_PATH = os.path.join("pdf_data", "Port Tariff.pdf")
-INPUT_JSON_PATH = "input_param.json"
+PDF_PATH = PROJECT_ROOT / "pdf_data" / "Port Tariff.pdf"
+INPUT_JSON_PATH = PROJECT_ROOT / "input_param.json"
 DOCUMENT_NAME = "Port Tariff.pdf"
-REPORT_DIR = "test_report"
+REPORT_DIR = PROJECT_ROOT / "test_report"
 
 EXPECTED_RESULTS: dict[str, float] = {
     "Light Dues": 60062.04,
@@ -30,7 +32,7 @@ EXPECTED_RESULTS: dict[str, float] = {
 }
 
 
-def write_report(path: str, report: dict[str, Any]) -> None:
+def write_report(path: str | os.PathLike[str], report: dict[str, Any]) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     report["updated_at"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
     with open(path, "w", encoding="utf-8") as f:
@@ -108,14 +110,12 @@ def percent_error(expected: float, actual: float | None) -> float | None:
 
 def run_tariff_test(
     api_base_url: str,
-    pdf_path: str,
-    input_json_path: str,
-    document_name: str,
+    input_json_path: Path,
     tariff: str,
 ) -> dict[str, Any]:
     body, boundary = multipart_form_data(
-        fields={"document_name": document_name, "target_tariff": tariff},
-        files={"pdf_file": pdf_path, "input_json": input_json_path},
+        fields={"target_tariff": tariff},
+        files={"input_json": str(input_json_path)},
     )
     status_code, response_text = request_text(
         "POST",
@@ -151,25 +151,26 @@ def run_tariff_test(
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run API tariff inference smoke tests.")
     parser.add_argument("--api", default=API_BASE_URL, help="API base URL.")
-    parser.add_argument("--pdf", default=PDF_PATH, help="Path to Port Tariff.pdf.")
-    parser.add_argument("--input", default=INPUT_JSON_PATH, help="Path to input_param.json.")
-    parser.add_argument("--document-name", default=DOCUMENT_NAME, help="Document name used by API.")
+    parser.add_argument("--input", default=str(INPUT_JSON_PATH), help="Path to input_param.json.")
     args = parser.parse_args()
 
-    if not os.path.exists(args.pdf):
-        print(f"PDF not found: {args.pdf}", file=sys.stderr)
+    pdf_path = PDF_PATH
+    input_json_path = Path(args.input)
+
+    if not pdf_path.exists():
+        print(f"PDF not found: {pdf_path}", file=sys.stderr)
         return 2
-    if not os.path.exists(args.input):
-        print(f"Input JSON not found: {args.input}", file=sys.stderr)
+    if not input_json_path.exists():
+        print(f"Input JSON not found: {input_json_path}", file=sys.stderr)
         return 2
 
     started_at = time.strftime("%Y%m%d_%H%M%S")
-    report_path = os.path.join(REPORT_DIR, f"test_report_{started_at}.json")
+    report_path = REPORT_DIR / f"test_report_{started_at}.json"
     report: dict[str, Any] = {
         "api_base_url": args.api,
-        "pdf_path": args.pdf,
-        "input_json_path": args.input,
-        "document_name": args.document_name,
+        "pdf_path": str(pdf_path),
+        "input_json_path": str(input_json_path),
+        "document_name": DOCUMENT_NAME,
         "started_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "expected_results": EXPECTED_RESULTS,
         "endpoint": "/ui/infer",
@@ -180,9 +181,7 @@ def main() -> int:
     for tariff in EXPECTED_RESULTS:
         result = run_tariff_test(
             args.api,
-            args.pdf,
-            args.input,
-            args.document_name,
+            input_json_path,
             tariff,
         )
         report["tests"].append(result)

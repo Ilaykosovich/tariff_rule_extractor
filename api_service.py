@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import hashlib
+import html
 import importlib.util
 import json
 import os
 import shutil
+from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
@@ -16,6 +18,9 @@ from pdf_pipeline import run_ocr_pipeline, summarize_pages
 DOCUMENT_STORE_DIR = "document_store"
 DOCUMENT_REGISTRY_PATH = "documents_registry.json"
 CALCULATOR_REGISTRY_PATH = "calculators_registry.json"
+PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_PDF_PATH = PROJECT_ROOT / "pdf_data" / "Port Tariff.pdf"
+PROJECT_DOCUMENT_NAME = "Port Tariff.pdf"
 
 app = FastAPI(title="Tariff Calculator Inference API")
 
@@ -51,6 +56,32 @@ def safe_filename(value: str) -> str:
     return "".join(ch if ch.isalnum() or ch in "._-" else "_" for ch in value).strip("_") or "document.pdf"
 
 
+def registry_tariffs() -> list[str]:
+    registry = read_json_file(CALCULATOR_REGISTRY_PATH, [])
+    if not isinstance(registry, list):
+        return []
+
+    tariffs: list[str] = []
+    for record in registry:
+        for tariff in record.get("target_tariffs", []):
+            if tariff not in tariffs:
+                tariffs.append(tariff)
+    return tariffs
+
+
+def project_document_record() -> dict[str, Any]:
+    if not PROJECT_PDF_PATH.exists():
+        raise HTTPException(status_code=404, detail=f"Project PDF not found: {PROJECT_PDF_PATH}")
+
+    document_hash = file_sha256(str(PROJECT_PDF_PATH))
+    return {
+        "document_hash": document_hash,
+        "document_name": PROJECT_DOCUMENT_NAME,
+        "stored_path": str(PROJECT_PDF_PATH),
+        "processed": False,
+    }
+
+
 def load_calculator(code_path: str):
     if not os.path.exists(code_path):
         raise HTTPException(status_code=404, detail=f"Calculator file not found: {code_path}")
@@ -68,7 +99,7 @@ def load_calculator(code_path: str):
 
 
 def calculator_matches(record: dict[str, Any], request: InferenceRequest) -> bool:
-    if record.get("status", "success") != "success":
+    if not record.get("code_path"):
         return False
     record_tariffs = set(record.get("target_tariffs", []))
     requested_tariffs = set(request.target_tariffs)
@@ -81,6 +112,13 @@ def calculator_matches(record: dict[str, Any], request: InferenceRequest) -> boo
     return True
 
 
+def calculator_sort_key(record: dict[str, Any]) -> tuple[int, float]:
+    code_path = record.get("code_path", "")
+    mtime = os.path.getmtime(code_path) if code_path and os.path.exists(code_path) else 0
+    status_priority = 1 if record.get("status", "success") == "success" else 0
+    return status_priority, mtime
+
+
 def find_calculator(request: InferenceRequest) -> dict[str, Any]:
     registry = read_json_file(CALCULATOR_REGISTRY_PATH, [])
     if not isinstance(registry, list):
@@ -91,12 +129,12 @@ def find_calculator(request: InferenceRequest) -> dict[str, Any]:
         raise HTTPException(
             status_code=404,
             detail=(
-                "No trained calculator found. Run tariff_langgraph.py first for this "
+                "No calculator found. Run tariff_langgraph.py first for this "
                 "document/tariff set, then call inference again."
             ),
         )
 
-    matches.sort(key=lambda item: os.path.getmtime(item["code_path"]) if os.path.exists(item["code_path"]) else 0)
+    matches.sort(key=calculator_sort_key)
     return matches[-1]
 
 
@@ -107,34 +145,41 @@ def health() -> dict[str, str]:
 
 @app.get("/", response_class=HTMLResponse)
 def inference_page() -> str:
-    return """
+    tariffs = registry_tariffs()
+    options = "\n".join(
+        f'    <option value="{html.escape(tariff, quote=True)}">{html.escape(tariff)}</option>'
+        for tariff in tariffs
+    )
+    if not options:
+        options = '    <option value="">No calculators found</option>'
+
+    return f"""
 <!doctype html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Tariff Inference</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 760px; margin: 40px auto; line-height: 1.45; }
-    label { display: block; margin-top: 16px; font-weight: 700; }
-    input, button { width: 100%; box-sizing: border-box; padding: 10px; margin-top: 6px; }
-    button { cursor: pointer; margin-top: 22px; }
-    pre { background: #f4f4f4; padding: 14px; overflow: auto; }
+    body {{ font-family: Arial, sans-serif; max-width: 760px; margin: 40px auto; line-height: 1.45; }}
+    label {{ display: block; margin-top: 16px; font-weight: 700; }}
+    input, button {{ width: 100%; box-sizing: border-box; padding: 10px; margin-top: 6px; }}
+    select {{ width: 100%; box-sizing: border-box; padding: 10px; margin-top: 6px; }}
+    button {{ cursor: pointer; margin-top: 22px; }}
+    pre {{ background: #f4f4f4; padding: 14px; overflow: auto; }}
+    .note {{ background: #f4f4f4; padding: 12px; margin: 18px 0; }}
   </style>
 </head>
 <body>
   <h1>Tariff Inference</h1>
+  <div class="note">Current calculation rules were generated from: <strong>{PROJECT_DOCUMENT_NAME}</strong></div>
   <form action="/ui/infer" method="post" enctype="multipart/form-data">
-    <label>Port Tariff.pdf</label>
-    <input name="pdf_file" type="file" accept=".pdf,application/pdf" required>
-
-    <label>PDF filename</label>
-    <input name="document_name" value="Port Tariff.pdf" required>
-
     <label>input_param.json</label>
     <input name="input_json" type="file" accept=".json,application/json" required>
 
     <label>Tariff name</label>
-    <input name="target_tariff" value="Light Dues" required>
+    <select name="target_tariff" required>
+{options}
+    </select>
 
     <button type="submit">Calculate</button>
   </form>
@@ -145,9 +190,7 @@ def inference_page() -> str:
 
 @app.post("/ui/infer", response_class=HTMLResponse)
 def ui_infer(
-    document_name: str = Form(...),
     target_tariff: str = Form(...),
-    pdf_file: UploadFile = File(...),
     input_json: UploadFile = File(...),
 ) -> str:
     try:
@@ -155,11 +198,7 @@ def ui_infer(
     except (UnicodeDecodeError, json.JSONDecodeError) as exc:
         raise HTTPException(status_code=400, detail=f"Invalid JSON file: {exc}") from exc
 
-    document_record = upload_document(
-        file=pdf_file,
-        document_name=document_name,
-        process=False,
-    )
+    document_record = project_document_record()
     request = InferenceRequest(
         vessel_data=vessel_data,
         target_tariffs=[target_tariff],

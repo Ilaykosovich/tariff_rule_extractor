@@ -32,4 +32,5 @@ docker compose down
 
 The compose file mounts the project into `/app`, so the container uses the current
 `calculators_registry.json`, generated calculator modules, PDF files, and input JSON files.
-The local `.env` file is passed at runtime but is excluded from the Docker image.
+The inference API uses already generated calculator rules, so it does not require `.env`
+or LLM API keys at runtime.

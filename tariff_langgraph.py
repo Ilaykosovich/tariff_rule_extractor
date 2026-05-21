@@ -53,14 +53,16 @@ ACTIVE_LLM_PROVIDER: Literal["gemini", "anthropic"] = "gemini"
 _LLM_CALL_COUNT = 0
 LLM_MAX_RETRIES = 5
 LLM_RETRY_BASE_SECONDS = 10
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+GEMINI_API_KEY = os.getenv("Gemini_API_KEY") or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
 
 
 def use_rag_retrieval() -> bool:
     return RETRIEVAL_MODE in {"rag", "hybrid_rag", "hybrid-rag", "embeddings"}
 
-anthropic_client = Anthropic()
+anthropic_client = Anthropic(api_key=ANTHROPIC_API_KEY) if ANTHROPIC_API_KEY else None
 gemini_client = genai.Client(
-    api_key=os.getenv("Gemini_API_KEY") or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+    api_key=GEMINI_API_KEY
 )
 
 
@@ -158,7 +160,9 @@ def trace_node(name: str, fn):
 
 
 def llm_provider_for_state(state: GraphState) -> Literal["gemini", "anthropic"]:
-    return "anthropic" if int(state.get("retrieval_rounds", 0)) == 0 else "gemini"
+    if int(state.get("retrieval_rounds", 0)) == 0 and anthropic_client is not None:
+        return "anthropic"
+    return "gemini"
 
 
 def active_model_id() -> str:
@@ -378,6 +382,8 @@ def _llm_text_once(
 ) -> str:
 
     if provider == "gemini":
+        if not GEMINI_API_KEY:
+            raise RuntimeError("Gemini API key is required. Set Gemini_API_KEY, GEMINI_API_KEY, or GOOGLE_API_KEY.")
         config = types.GenerateContentConfig(
             temperature=0,
             response_mime_type="application/json" if json_mode else None,
@@ -394,6 +400,9 @@ def _llm_text_once(
         if LOG_PROMPTS:
             log(f"[LLM #{call_number}] response:\n{text}")
         return text
+
+    if anthropic_client is None:
+        raise RuntimeError("Anthropic API key is not configured; use Gemini instead.")
 
     system_prompt = (
         "You are a precise tariff-calculation assistant. "
@@ -1350,7 +1359,10 @@ def main() -> None:
 
     log("=== Tariff LangGraph run started ===")
     log(f"[main] requested_claude_model={RAW_CLAUDE_MODEL_ID}")
-    log(f"[main] first_round_model={CLAUDE_MODEL_ID}")
+    log(
+        "[main] first_round_model="
+        + (CLAUDE_MODEL_ID if anthropic_client is not None else f"{GEMINI_MODEL_ID} (Anthropic key not set)")
+    )
     log(f"[main] fallback_model={GEMINI_MODEL_ID}")
     log(f"[main] args={short_json(vars(args), max_chars=1000)}")
     log(f"[main] recursion_limit={args.recursion_limit}")
