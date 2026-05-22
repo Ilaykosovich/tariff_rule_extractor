@@ -159,6 +159,15 @@ Useful logging option:
 ```bash
 python tariff_langgraph.py --pdf "pdf_data/Port Tariff.pdf" --tariff "Towage Dues" --log-file logs/towage_run.log
 ```
+Before running tariff_langgraph.py, delete the following generated files or move them to another directory:
+```bash
+successful_tariff_calculator_72553f727700e9d_Port_Dues.py
+successful_tariff_calculator_af1dc2e1ed809e6_Light_Dues.py
+successful_tariff_calculator_b8a7e63a85047be_Pilotage_Dues.py
+successful_tariff_calculator_b35b9bfcdc8d1b0_VTS_Dues.py
+successful_tariff_calculator_bfc984b6da66bd0_Towage_Dues.py
+calculators_registry.json
+```
 
 ## What `tariff_langgraph.py` Does
 
