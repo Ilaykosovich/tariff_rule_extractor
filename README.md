@@ -246,12 +246,18 @@ is enriched into fields like:
   "date": "2024-11-15",
   "time": "10:12:00",
   "weekday": "Friday",
+  "weekday_number": 5,
   "is_weekend": false,
-  "is_working_day": true,
-  "is_working_time": true,
-  "is_non_working_time": false
+  "is_standard_workday": true,
+  "is_standard_working_hours": true,
+  "whole_hours": 10,
+  "whole_minutes": 12,
+  "hours_until_workday_start": 0,
+  "standard_working_hours_assumption": "Monday-Friday 08:00-17:00 local port time"
 }
 ```
+
+`hours_until_workday_start` is calculated against the current local time. When the current local time is already within the standard working window, it is `0`; otherwise it shows how many whole hours remain until the next working day starts at 08:00.
 
 This matters because many port tariffs apply different rates for working hours, after-hours operations, weekends, holidays, night periods, arrival/departure windows, and time alongside.
 

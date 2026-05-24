@@ -32,16 +32,27 @@ def collect_datetime_fields(value: Any, prefix: str = "") -> dict[str, str]:
     return found
 
 
-def describe_datetime(value: str, standard_work_start: int = 8, standard_work_end: int = 17) -> dict[str, Any]:
+def describe_datetime(
+    value: str,
+    standard_work_start: int = 8,
+    standard_work_end: int = 17,
+    current_time: Any = None,
+) -> dict[str, Any]:
     parsed = parse_iso_datetime(value)
     if parsed is None:
         return {"raw": value}
+
+    now = parse_iso_datetime(current_time) if current_time is not None else dt.datetime.now()
+    if now is None:
+        now = dt.datetime.now()
+
     is_weekend = parsed.weekday() >= 5
     is_standard_working_hours = (
         not is_weekend
         and standard_work_start <= parsed.hour < standard_work_end
     )
-    return {
+
+    description: dict[str, Any] = {
         "raw": value,
         "date": parsed.date().isoformat(),
         "time": parsed.time().replace(microsecond=0).isoformat(),
@@ -50,8 +61,41 @@ def describe_datetime(value: str, standard_work_start: int = 8, standard_work_en
         "is_weekend": is_weekend,
         "is_standard_workday": not is_weekend,
         "is_standard_working_hours": is_standard_working_hours,
+        "whole_hours": parsed.hour,
+        "whole_minutes": parsed.minute,
         "standard_working_hours_assumption": f"Monday-Friday {standard_work_start:02d}:00-{standard_work_end:02d}:00 local port time",
     }
+
+    current_is_standard_working_hours = (
+        now.weekday() < 5
+        and standard_work_start <= now.hour < standard_work_end
+    )
+    if current_is_standard_working_hours:
+        description["hours_until_workday_start"] = 0
+    else:
+        next_work_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+        if now.weekday() >= 5:
+            next_work_start += dt.timedelta(days=(7 - now.weekday()) % 7)
+        else:
+            start_today = now.replace(hour=standard_work_start, minute=0, second=0, microsecond=0)
+            if now < start_today:
+                next_work_start = start_today
+            else:
+                next_work_start += dt.timedelta(days=1)
+                while next_work_start.weekday() >= 5:
+                    next_work_start += dt.timedelta(days=1)
+
+        next_work_start = next_work_start.replace(
+            hour=standard_work_start,
+            minute=0,
+            second=0,
+            microsecond=0,
+        )
+        description["hours_until_workday_start"] = int(
+            (next_work_start - now).total_seconds() // 3600
+        )
+
+    return description
 
 
 def deterministic_input_context(vessel_data: dict[str, Any]) -> dict[str, Any]:
