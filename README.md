@@ -1,6 +1,20 @@
-# tariff_rule_extractor — Tariff Calculator Inference API
+# Tariff Rule Extractor
 
-Repository: `tariff_rule_extractor`
+Proof-of-concept system that extracts tariff calculation rules from a provided PDF
+and turns them into executable Python calculators served through a FastAPI inference API.
+
+This project was completed as an employer-provided technical assignment based on a single PDF.
+It is intended to demonstrate an end-to-end approach rather than claim production-level
+generalization across arbitrary tariff documents.
+
+## What it does
+
+1. Parses the provided tariff PDF.
+2. Retrieves relevant pages for each requested tariff.
+3. Extracts calculation rules with LLM assistance.
+4. Generates Python calculator functions.
+5. Validates results against expected scenarios.
+6. Serves accepted calculators through FastAPI.
 
 This project generates and serves tariff calculation rules for port tariff PDFs. The current checked-in inference setup uses rules generated from `pdf_data/Port Tariff.pdf` and exposes them through a FastAPI service.
 
@@ -168,6 +182,7 @@ successful_tariff_calculator_b35b9bfcdc8d1b0_VTS_Dues.py
 successful_tariff_calculator_bfc984b6da66bd0_Towage_Dues.py
 calculators_registry.json
 ```
+However, deleting these files will break api_service.py. Therefore, it’s better to build the Docker container for api_service.py in advance.
 
 ## What `tariff_langgraph.py` Does
 
