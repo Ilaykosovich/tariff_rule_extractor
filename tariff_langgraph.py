@@ -92,6 +92,8 @@ class GraphState(TypedDict, total=False):
     results: dict[str, float]
     submit_feedback: dict[str, str]
 
+    expected_results: dict[str, float]
+
     current_tariff: str | None
     current_page: int | None
     errors_or_ambiguities: list[str]
@@ -539,6 +541,7 @@ def load_inputs(state: GraphState) -> GraphState:
         "pages": pages,
         "page_summaries": page_summaries,
         "vessel_data": vessel_data,
+        "expected_results": expected,
         "target_tariffs": target_tariffs,
         "candidate_pages": {},
         "pages_to_inspect": [],
@@ -1128,10 +1131,10 @@ def repair_or_finish(state: GraphState) -> GraphState:
 
     if success and all_targets_present:
         rules_hash = source_rules_hash(state)
-        path = output_code_path(state.get("target_tariffs", []), rules_hash)
-        write_text(path, state["code"])
-        register_successful_calculator(state, path, rules_hash)
-        log(f"[RepairOrFinish] saved successful code to {path}")
+        code_path = output_code_path(state.get("target_tariffs", []), rules_hash)
+        write_text(code_path, state["code"])
+        register_successful_calculator(state, code_path, rules_hash)
+        log(f"[RepairOrFinish] saved successful code to {code_path}")
         log(f"[RepairOrFinish] registered calculator rules_hash={rules_hash[:15]}")
         return {**state, "finished": True}
 
@@ -1170,6 +1173,8 @@ def repair_or_finish(state: GraphState) -> GraphState:
             "pages_to_inspect": sorted(expanded_pages - set(state.get("inspected_pages", set()))),
             "finished": False,
         }
+
+    return {**state, "finished": False}
 
     return {**state, "finished": False}
 

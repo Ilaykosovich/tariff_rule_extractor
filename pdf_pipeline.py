@@ -421,6 +421,14 @@ def embed_page_documents(pdf_path, pages, embedding_model=None):
     """Build or load Voyage embeddings for OCR page texts."""
     import voyageai
 
+    def embedding_metadatas(page_numbers):
+        return [{"page_number": int(page_number)} for page_number in page_numbers]
+
+    def set_embedding_rows(target_result, row_page_numbers, existing_embeddings):
+        target_result["page_numbers"] = row_page_numbers
+        target_result["embeddings"] = [existing_embeddings[page_number] for page_number in row_page_numbers]
+        target_result["metadatas"] = embedding_metadatas(row_page_numbers)
+
     if not os.path.exists(CACHE_DIR):
         os.makedirs(CACHE_DIR)
 
@@ -438,6 +446,14 @@ def embed_page_documents(pdf_path, pages, embedding_model=None):
             and cached_result.get("embeddings")
             and len(cached_result.get("embeddings", [])) == len(page_numbers)
         ):
+            metadatas = cached_result.get("metadatas", [])
+            if len(metadatas) != len(page_numbers):
+                cached_result["page_numbers"] = page_numbers
+                cached_result["metadatas"] = embedding_metadatas(page_numbers)
+                cached_result["complete"] = True
+                with open(cache_path, "w", encoding="utf-8") as f:
+                    json.dump(cached_result, f, ensure_ascii=False)
+                print(f"[embeddings] Added metadata to cache (hash: {h[:8]}...)")
             print(f"[embeddings] Loaded from cache (hash: {h[:8]}...)")
             return cached_result
         if cached_result.get("model") == embedding_model:
@@ -454,6 +470,7 @@ def embed_page_documents(pdf_path, pages, embedding_model=None):
             "cache_path": cache_path,
             "page_numbers": [],
             "embeddings": [],
+            "metadatas": [],
         }
 
     existing = {
@@ -462,14 +479,12 @@ def embed_page_documents(pdf_path, pages, embedding_model=None):
     }
     missing_page_numbers = [page_number for page_number in page_numbers if page_number not in existing]
     if not missing_page_numbers:
-        result["page_numbers"] = page_numbers
-        result["embeddings"] = [existing[page_number] for page_number in page_numbers]
+        set_embedding_rows(result, page_numbers, existing)
         result["complete"] = True
         return result
 
     completed_page_numbers = [page_number for page_number in page_numbers if page_number in existing]
-    result["page_numbers"] = completed_page_numbers
-    result["embeddings"] = [existing[page_number] for page_number in completed_page_numbers]
+    set_embedding_rows(result, completed_page_numbers, existing)
     result["complete"] = False
     with open(cache_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False)
@@ -496,15 +511,13 @@ def embed_page_documents(pdf_path, pages, embedding_model=None):
             existing[page_number] = embedding
 
         completed_page_numbers = [page_number for page_number in page_numbers if page_number in existing]
-        result["page_numbers"] = completed_page_numbers
-        result["embeddings"] = [existing[page_number] for page_number in completed_page_numbers]
+        set_embedding_rows(result, completed_page_numbers, existing)
         result["complete"] = len(completed_page_numbers) == len(page_numbers)
         with open(cache_path, "w", encoding="utf-8") as f:
             json.dump(result, f, ensure_ascii=False)
         print(f"[embeddings] Saved progress: {len(completed_page_numbers)}/{len(page_numbers)} pages")
 
-    result["page_numbers"] = page_numbers
-    result["embeddings"] = [existing[page_number] for page_number in page_numbers]
+    set_embedding_rows(result, page_numbers, existing)
     result["complete"] = True
     with open(cache_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False)
@@ -525,7 +538,7 @@ def search_rag_pages(
     Run OCR if needed, then use hybrid Voyage embeddings + BM25 to rank pages.
 
     Returns a list of:
-    {"page_number": int, "score": float, "text": str}
+    {"page_number": int, "score": float, "metadata": dict, "text": str}
     """
     import voyageai
 
@@ -568,6 +581,7 @@ def search_rag_pages(
                 "score": hybrid_score,
                 "dense_score": dense_scores.get(page_number, 0.0),
                 "bm25_score": bm25_by_page.get(page_number, 0.0),
+                "metadata": {"page_number": int(page_number)},
                 "text": pages.get(page_number, "") if include_text else "",
             }
         )

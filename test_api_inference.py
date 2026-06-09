@@ -32,6 +32,15 @@ EXPECTED_RESULTS: dict[str, float] = {
 }
 
 
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Run API tariff inference smoke tests.")
+    parser.add_argument("--api", default=API_BASE_URL, help="API base URL.")
+    parser.add_argument("--input", default=str(INPUT_JSON_PATH), help="Path to input_param.json.")
+    parser.add_argument("--pdf", default=None, help="Path to the PDF used for the run.")
+    parser.add_argument("--document-name", default=None, help="Document name stored in the report.")
+    return parser
+
+
 def write_report(path: str | os.PathLike[str], report: dict[str, Any]) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     report["updated_at"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
@@ -149,13 +158,12 @@ def run_tariff_test(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run API tariff inference smoke tests.")
-    parser.add_argument("--api", default=API_BASE_URL, help="API base URL.")
-    parser.add_argument("--input", default=str(INPUT_JSON_PATH), help="Path to input_param.json.")
+    parser = build_parser()
     args = parser.parse_args()
 
-    pdf_path = PDF_PATH
+    pdf_path = Path(args.pdf) if args.pdf else PDF_PATH
     input_json_path = Path(args.input)
+    document_name = args.document_name or DOCUMENT_NAME
 
     if not pdf_path.exists():
         print(f"PDF not found: {pdf_path}", file=sys.stderr)
@@ -170,7 +178,7 @@ def main() -> int:
         "api_base_url": args.api,
         "pdf_path": str(pdf_path),
         "input_json_path": str(input_json_path),
-        "document_name": DOCUMENT_NAME,
+        "document_name": document_name,
         "started_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "expected_results": EXPECTED_RESULTS,
         "endpoint": "/ui/infer",
