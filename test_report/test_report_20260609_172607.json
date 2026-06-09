@@ -1,0 +1,222 @@
+{
+  "api_base_url": "http://127.0.0.1:8001",
+  "pdf_path": "pdf_data\\Port Tariff.pdf",
+  "input_json_path": "input_param.json",
+  "document_name": "Port Tariff.pdf",
+  "started_at": "2026-06-09T17:26:07+0200",
+  "expected_results": {
+    "Light Dues": 60062.04,
+    "Port Dues": 199549.22,
+    "Towage Dues": 147074.38,
+    "VTS Dues": 33315.75,
+    "Pilotage Dues": 47189.94,
+    "Running Lines": 19639.5
+  },
+  "endpoint": "/ui/infer",
+  "tests": [
+    {
+      "tariff": "Light Dues",
+      "ok": true,
+      "status_code": 200,
+      "expected": 60062.04,
+      "actual": 60062.04,
+      "error_percent": 0.0,
+      "response": {
+        "results": {
+          "Light Dues": 60062.04
+        },
+        "calculator": {
+          "code_path": "successful_tariff_calculator_8d46298abfa8951_Light_Dues.py",
+          "rules_hash": "8d46298abfa89517b76882a27a5865d46c1065f5ca81d21ce30f539485366ce9",
+          "document_hash": "31471bc01ffe8611c652cb2cc134f8aefcef218bd070541c4d1fef9e5052c3f8",
+          "document_name": "Port Tariff.pdf",
+          "pdf_file": "pdf_data/Port Tariff.pdf",
+          "target_tariffs": [
+            "Light Dues"
+          ],
+          "evidence_pages": {
+            "Light Dues": [
+              9
+            ]
+          },
+          "status": "success",
+          "accepted": true,
+          "results": {
+            "Light Dues": 60062.04
+          },
+          "submit_feedback": {
+            "execution": "ok",
+            "evaluation": "{\"ok\": true, \"results\": {\"Light Dues\": {\"ok\": true, \"key\": \"Light Dues\", \"result\": \"within_1_percent\"}}, \"errors\": {}}"
+          }
+        }
+      }
+    },
+    {
+      "tariff": "Port Dues",
+      "ok": true,
+      "status_code": 200,
+      "expected": 199549.22,
+      "actual": 199371.35,
+      "error_percent": 0.08913590341269956,
+      "response": {
+        "results": {
+          "Port Dues": 199371.35
+        },
+        "calculator": {
+          "code_path": "successful_tariff_calculator_295de9c1d12ef82_Port_Dues.py",
+          "rules_hash": "295de9c1d12ef823b9065a8338ed1aa9d1be85cc68467ed314d838aaabf7e6ef",
+          "document_hash": "31471bc01ffe8611c652cb2cc134f8aefcef218bd070541c4d1fef9e5052c3f8",
+          "document_name": "Port Tariff.pdf",
+          "pdf_file": "pdf_data/Port Tariff.pdf",
+          "target_tariffs": [
+            "Port Dues"
+          ],
+          "evidence_pages": {
+            "Port Dues": [
+              21,
+              22,
+              24
+            ]
+          },
+          "status": "success",
+          "accepted": true,
+          "results": {
+            "Port Dues": 199371.35
+          },
+          "submit_feedback": {
+            "execution": "ok",
+            "evaluation": "{\"ok\": true, \"results\": {\"Port Dues\": {\"ok\": true, \"key\": \"Port Dues\", \"result\": \"within_1_percent\"}}, \"errors\": {}}"
+          }
+        }
+      }
+    },
+    {
+      "tariff": "Towage Dues",
+      "ok": true,
+      "status_code": 200,
+      "expected": 147074.38,
+      "actual": 147074.38,
+      "error_percent": 0.0,
+      "response": {
+        "results": {
+          "Towage Dues": 147074.38
+        },
+        "calculator": {
+          "code_path": "successful_tariff_calculator_bfc984b6da66bd0_Towage_Dues.py",
+          "rules_hash": "bfc984b6da66bd0e8a0006223228ccbd6a63f9017b3fa0705f08836aab2ebf2d",
+          "document_hash": "31471bc01ffe8611c652cb2cc134f8aefcef218bd070541c4d1fef9e5052c3f8",
+          "document_name": "Port Tariff.pdf",
+          "pdf_file": "pdf_data/Port Tariff.pdf",
+          "target_tariffs": [
+            "Towage Dues"
+          ],
+          "evidence_pages": {
+            "Towage Dues": [
+              15,
+              16,
+              17
+            ]
+          },
+          "status": "success",
+          "accepted": true,
+          "results": {
+            "Towage Dues": 147074.38
+          },
+          "submit_feedback": {
+            "execution": "ok",
+            "evaluation": "{\"ok\": true, \"results\": {\"Towage Dues\": {\"ok\": true, \"key\": \"Towage Dues\", \"result\": \"within_1_percent\"}}, \"errors\": {}}"
+          }
+        }
+      }
+    },
+    {
+      "tariff": "VTS Dues",
+      "ok": true,
+      "status_code": 200,
+      "expected": 33315.75,
+      "actual": 33345.0,
+      "error_percent": 0.08779631255487269,
+      "response": {
+        "results": {
+          "VTS Dues": 33345.0
+        },
+        "calculator": {
+          "code_path": "successful_tariff_calculator_e82c8a2d7b591bc_VTS_Dues.py",
+          "rules_hash": "e82c8a2d7b591bc66e60aab4725d40232be1df71d882a075df8f508850c2e847",
+          "document_hash": "31471bc01ffe8611c652cb2cc134f8aefcef218bd070541c4d1fef9e5052c3f8",
+          "document_name": "Port Tariff.pdf",
+          "pdf_file": "pdf_data/Port Tariff.pdf",
+          "target_tariffs": [
+            "VTS Dues"
+          ],
+          "evidence_pages": {
+            "VTS Dues": [
+              3,
+              11
+            ]
+          },
+          "status": "success",
+          "accepted": true,
+          "results": {
+            "VTS Dues": 33345.0
+          },
+          "submit_feedback": {
+            "execution": "ok",
+            "evaluation": "{\"ok\": true, \"results\": {\"VTS Dues\": {\"ok\": true, \"key\": \"VTS Dues\", \"result\": \"within_1_percent\"}}, \"errors\": {}}"
+          }
+        }
+      }
+    },
+    {
+      "tariff": "Pilotage Dues",
+      "ok": true,
+      "status_code": 200,
+      "expected": 47189.94,
+      "actual": 47189.94,
+      "error_percent": 0.0,
+      "response": {
+        "results": {
+          "Pilotage Dues": 47189.94
+        },
+        "calculator": {
+          "code_path": "successful_tariff_calculator_1a6fab8d358cfe4_Pilotage_Dues.py",
+          "rules_hash": "1a6fab8d358cfe469e4163dd34d6f429e066ff96e557a46450a100470b7736f9",
+          "document_hash": "31471bc01ffe8611c652cb2cc134f8aefcef218bd070541c4d1fef9e5052c3f8",
+          "document_name": "Port Tariff.pdf",
+          "pdf_file": "pdf_data/Port Tariff.pdf",
+          "target_tariffs": [
+            "Pilotage Dues"
+          ],
+          "evidence_pages": {
+            "Pilotage Dues": [
+              12,
+              13,
+              14
+            ]
+          },
+          "status": "success",
+          "accepted": true,
+          "results": {
+            "Pilotage Dues": 47189.94
+          },
+          "submit_feedback": {
+            "execution": "ok",
+            "evaluation": "{\"ok\": true, \"results\": {\"Pilotage Dues\": {\"ok\": true, \"key\": \"Pilotage Dues\", \"result\": \"within_1_percent\"}}, \"errors\": {}}"
+          }
+        }
+      }
+    },
+    {
+      "tariff": "Running Lines",
+      "ok": false,
+      "status_code": 404,
+      "expected": 19639.5,
+      "actual": null,
+      "error_percent": null,
+      "response": {
+        "detail": "{\"detail\":\"No calculator found. Run tariff_langgraph.py first for this document/tariff set, then call inference again.\"}"
+      }
+    }
+  ],
+  "updated_at": "2026-06-09T17:26:07+0200"
+}

@@ -1,0 +1,66 @@
+{
+  "fd9377723d87a3ac78cd604dc18617d716b7bdb159d7599c4e8650f6afc4fae5": {
+    "model": "gemini-2.5-flash",
+    "document_name": "Port Tariff.pdf",
+    "pdf_file": "pdf_data/Port Tariff.pdf",
+    "tariff": "Light Dues",
+    "queries": [
+      "Light Dues",
+      "Light Dues tariff",
+      "Light Dues charges",
+      "Light Dues rates",
+      "Lighthouse Dues",
+      "Navigation Light Dues",
+      "Light Dues calculation",
+      "Formula for Light Dues",
+      "How are Light Dues calculated?",
+      "Light Dues per GT",
+      "Light Dues per NT",
+      "Light Dues based on Gross Tonnage",
+      "Light Dues based on Net Tonnage",
+      "Light Dues vessel type",
+      "Light Dues cargo type",
+      "Light Dues rules",
+      "Light Dues regulations",
+      "Light Dues exceptions",
+      "Light Dues exemptions",
+      "Minimum Light Dues",
+      "Maximum Light Dues",
+      "Light Dues table",
+      "What are the Light Dues?",
+      "Light Dues footnotes"
+    ]
+  },
+  "b3933524a18c7c595c8ea6fa234d679bcdf72d82cc5c68a2f559c787cfb27682": {
+    "model": "gemini-2.5-flash",
+    "document_name": "Port Tariff.pdf",
+    "pdf_file": "pdf_data/Port Tariff.pdf",
+    "tariff": "VTS Dues",
+    "queries": [],
+    "error": "Server disconnected without sending a response."
+  },
+  "e58a7f63758739a8d6409bb3a8f81cfddbb009c43bfe009fc20de36357ad44b7": {
+    "model": "gemini-2.5-flash",
+    "document_name": "Port Tariff.pdf",
+    "pdf_file": "pdf_data/Port Tariff.pdf",
+    "tariff": "Towage Dues",
+    "queries": [],
+    "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  "14054d6dcf2e8815fc0fd0ed1065da94d608b1bba2b613e462ffaa504736124e": {
+    "model": "gemini-2.5-flash",
+    "document_name": "Port Tariff.pdf",
+    "pdf_file": "pdf_data/Port Tariff.pdf",
+    "tariff": "Port Dues",
+    "queries": [],
+    "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  },
+  "322aa5dd3798828389ec1902517c5d20c04553c2ef27f66c72122f514e34711f": {
+    "model": "gemini-2.5-flash",
+    "document_name": "Port Tariff.pdf",
+    "pdf_file": "pdf_data/Port Tariff.pdf",
+    "tariff": "Pilotage Dues",
+    "queries": [],
+    "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  }
+}

@@ -1,16 +1,16 @@
 def calculate(vessel_data: dict) -> dict[str, float]:
     """
-    Calculate VTS Dues for a vessel based on gross tonnage and port.
+    Calculate VTS Dues for vessel port call.
     
     VTS charges are based on gross tonnage with different rates for 
-    Durban/Saldanha Bay versus other ports, subject to minimum fee.
+    Durban/Saldanha Bay vs other ports, subject to minimum fee.
     """
     
     # Extract required parameters
     gross_tonnage = vessel_data.get('technical_specs', {}).get('gross_tonnage')
     port = vessel_data.get('port', '')
     
-    # Use fallback for missing gross tonnage
+    # Use fallback if gross tonnage missing
     if gross_tonnage is None:
         gross_tonnage = 0
     

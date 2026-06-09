@@ -1,0 +1,18 @@
+{
+  "api_base_url": "http://127.0.0.1:8001",
+  "pdf_path": "pdf_data\\Port Tariff.pdf",
+  "input_json_path": "input_param.json",
+  "document_name": "Port Tariff.pdf",
+  "started_at": "2026-06-09T17:21:12+0200",
+  "expected_results": {
+    "Light Dues": 60062.04,
+    "Port Dues": 199549.22,
+    "Towage Dues": 147074.38,
+    "VTS Dues": 33315.75,
+    "Pilotage Dues": 47189.94,
+    "Running Lines": 19639.5
+  },
+  "endpoint": "/ui/infer",
+  "tests": [],
+  "updated_at": "2026-06-09T17:21:12+0200"
+}

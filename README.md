@@ -33,6 +33,19 @@ Results below are from `test_report/test_report_20260521_132410.json`. The run u
 
 `Running Lines` is included in the registry as the last generated attempt, but it was not accepted as a successful calculator because the result is outside the target tolerance.
 
+Latest local API smoke test: `test_report/test_report_20260609_172607.json`.
+
+| Tariff | Status | Expected | Actual | Error |
+| --- | ---: | ---: | ---: | ---: |
+| Light Dues | 200 | 60,062.04 | 60,062.04 | 0.00% |
+| Port Dues | 200 | 199,549.22 | 199,371.35 | 0.0891% |
+| Towage Dues | 200 | 147,074.38 | 147,074.38 | 0.00% |
+| VTS Dues | 200 | 33,315.75 | 33,345.00 | 0.0878% |
+| Pilotage Dues | 200 | 47,189.94 | 47,189.94 | 0.00% |
+| Running Lines | 404 | 19,639.50 | N/A | N/A |
+
+The latest smoke test confirms that the accepted calculators are still served by the API. `Running Lines` returns `404` because it is not registered as a successful calculator.
+
 ## Run the Inference API with Docker
 
 Build and start the API:
@@ -139,8 +152,15 @@ Gemini_API_KEY=your-gemini-api-key
 ANTHROPIC_API_KEY=your-anthropic-api-key
 
 TARIFF_RETRIEVAL_MODE=summaries
-TARIFF_RAG_TOP_K=5
-TARIFF_RAG_DENSE_WEIGHT=0.65
+TARIFF_RAG_TOP_K=6
+TARIFF_RAG_DENSE_WEIGHT=0.8
+TARIFF_RAG_CHUNK_MODE=token
+TARIFF_RAG_CHUNK_SIZE_TOKENS=500
+TARIFF_RAG_CHUNK_OVERLAP_TOKENS=100
+TARIFF_RAG_RERANKER=llm
+TARIFF_RAG_RERANK_MODEL=claude-sonnet-4-20250514
+TARIFF_RAG_RERANK_CONTEXT_CHARS=500
+TARIFF_RAG_RERANK_CHUNKS_PER_PAGE=3
 
 VOYAGE_API_KEY=your-voyage-api-key
 VOYAGE_EMBEDDING_MODEL=voyage-3.5-lite
@@ -153,8 +173,86 @@ There are two retrieval modes:
 
 | Mode | Value | Status |
 | --- | --- | --- |
-| Summaries | `TARIFF_RETRIEVAL_MODE=summaries` | Current working mode. The test results above were produced in this mode. |
-| RAG | `TARIFF_RETRIEVAL_MODE=rag` | Example implementation exists, but it still needs fine-tuning. It requires Voyage embeddings configuration. |
+| Summaries | `TARIFF_RETRIEVAL_MODE=summaries` | Baseline mode used to produce the accepted calculators. |
+| RAG | `TARIFF_RETRIEVAL_MODE=rag` | Tuned retrieval mode using Voyage embeddings, token chunks, hybrid scoring, and an Anthropic reranker. |
+
+## RAG Tuning Notes
+
+The first successful generation runs used summaries mode. In that mode, the PDF is summarized page by page, with each target page summarized using the previous page as context. The LangGraph agent then selected candidate pages from these summaries, inspected the source text, and saved the pages that actually supported each accepted calculator in `calculators_registry.json` under `evidence_pages`.
+
+Those accepted `evidence_pages` became the evaluation target for RAG. The script `rag_registry_eval.py` reads `calculators_registry.json`, keeps only records whose `code_path` contains `successful`, runs RAG for the first tariff in each record, and compares the returned pages with the saved evidence pages.
+
+RAG was tuned against that target rather than against final calculator output. The goal was to make retrieval return the pages that the summaries pipeline had already proven useful for rule extraction.
+
+The current fixed RAG profile is:
+
+```yaml
+retrieval:
+  candidate_k: 20
+  dense_weight: 0.8
+  chunk_mode: token
+  chunk_size_tokens: 500
+  chunk_overlap_tokens: 100
+
+reranker:
+  model: claude-sonnet-4-20250514
+  context_chars: 500
+  chunks_per_page: 3
+
+final_output:
+  top_k: 6
+```
+
+Run the RAG evaluation report:
+
+```bash
+python rag_registry_eval.py --output logs/rag_registry_eval.json
+```
+
+The report contains one experiment with the fixed profile, per-tariff retrieved pages, matched evidence pages, missing pages, precision, recall, and the reranked page list.
+
+### RAG Workflow
+
+```text
+target tariff
+  |
+  v
+LLM query expansion
+  |
+  v
+OCR page text
+  |
+  v
+token chunks
+  chunk_size=500, overlap=100
+  metadata: page_number, chunk_index, offsets
+  |
+  v
+Voyage embeddings cache
+  cache key includes PDF hash, model, chunk mode, chunk size, overlap
+  |
+  v
+hybrid retrieval
+  dense score from Voyage embeddings
+  BM25 lexical score from page text
+  dense_weight=0.8
+  |
+  v
+top 20 candidate pages
+  |
+  v
+Anthropic reranker
+  sees best chunks from each candidate page
+  plus 500 characters of before/after context
+  |
+  v
+top 6 final pages
+  |
+  v
+InspectPages / rule extraction
+```
+
+RAG returns pages, not raw chunks. Chunks are used internally so the embedding search can find specific tariff text, but scores are aggregated back to `metadata.page_number`. The reranker also ranks final pages: it receives the strongest chunks from the top candidate pages, then chooses the page order that should be inspected by the rule-extraction graph.
 
 Run rule generation for one tariff:
 
