@@ -20,7 +20,7 @@ This project generates and serves tariff calculation rules for port tariff PDFs.
 
 ## Current Test Results
 
-Results below are from `test_report/test_report_20260521_132410.json`. The run used `input_param.json` against the inference endpoint `/ui/infer`.
+Results below are from `test_report/test_report_20260521_132410.json`. This run was produced with the original summaries-based retrieval mode (`TARIFF_RETRIEVAL_MODE=summaries`) and used `input_param.json` against the inference endpoint `/ui/infer`.
 
 | Tariff | Expected | Actual | Error |
 | --- | ---: | ---: | ---: |
@@ -33,7 +33,7 @@ Results below are from `test_report/test_report_20260521_132410.json`. The run u
 
 `Running Lines` is included in the registry as the last generated attempt, but it was not accepted as a successful calculator because the result is outside the target tolerance.
 
-Latest local API smoke test: `test_report/test_report_20260609_172607.json`.
+Latest local API smoke test after tuning the RAG retrieval setup: `test_report/test_report_20260609_172607.json`. This run uses the current tuned RAG profile described below.
 
 | Tariff | Status | Expected | Actual | Error |
 | --- | ---: | ---: | ---: | ---: |
